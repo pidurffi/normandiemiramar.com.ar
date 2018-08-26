@@ -1,0 +1,223 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+
+
+{% block content %}
+
+	{{ render(controller('AppBundle:Default:promociones')) }}
+
+	<section class="cabanas" id="cabanas">
+		<div class="container">
+			<h2>Las habitaciones</h2>
+			<ul class="apartamentos-nav">
+				<li><a class="one active">Loft</a></li>
+				<li><a class="two">Dos ambientes</a></li>
+				<li><a class="three">Tres ambientes</a></li>
+			</ul>
+			<div class="gal-wrapper">
+				<div class="gal-1 on">
+					<div class="wrapper">
+						<div class="controls controls-1">
+							<span class="icon-arrow-left"></span>
+							<span class="icon-arrow-right"></span>
+						</div>
+						<div class="owl-cabanas-1">
+							{% for img in galeria_loft.galeria %}
+							<div class="item">
+								<img src="{{ asset('/uploads/galerias/gallery/' ~ img) }}" alt="">
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+					<ul>
+						<li><span>&check;</span>Cabañas con capacidad hasta 6 personas</li>
+						<li><span>&check;</span>2 dormitorios, baño completo, toilette, cocina completa (heladera, vajilla completa)</li>
+						<li><span>&check;</span>Calefacción, ventiladores de techo</li>
+						<li><span>&check;</span>Piscina descubierta climatizada (con sector para niños) y reposeras</li>
+						<li><span>&check;</span>Estacionamiento semi cubierto para autos de los huéspedes (un auto por cabaña)</li>
+						<li><span>&check;</span>Vidrios tonalizados</li>
+						<li><span>&check;</span>La mesa del comedor se extiende hasta una capacidad de 12 personas para ocaciones de recibir visitas</li>
+						<li><span>&check;</span>T.V. por cable</li>
+						<li><span>&check;</span>Reproductor de DVD</li>
+						<li><span>&check;</span>Juegos para chicos</li>
+						<li><span>&check;</span>Parrillas individuales</li>
+						<li><span>&check;</span>Caja de seguridad</li>
+					</ul>
+				</div>
+				<div class="gal-2">
+					<div class="wrapper">
+						<div class="controls controls-2">
+							<span class="icon-arrow-left"></span>
+							<span class="icon-arrow-right"></span>
+						</div>
+						<div class="owl-cabanas-2">
+							{% for img in galeria_2amb.galeria %}
+							<div class="item">
+								<img src="{{ asset('/uploads/galerias/gallery/' ~ img) }}" alt="">
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+					<ul>
+						<li><span>&check;</span>Cabañas con capacidad hasta 6 personas</li>
+						<li><span>&check;</span>2 dormitorios, baño completo, toilette, cocina completa (heladera, vajilla completa)</li>
+						<li><span>&check;</span>Calefacción, ventiladores de techo</li>
+						<li><span>&check;</span>Piscina descubierta climatizada (con sector para niños) y reposeras</li>
+						<li><span>&check;</span>Estacionamiento semi cubierto para autos de los huéspedes (un auto por cabaña)</li>
+						<li><span>&check;</span>Vidrios tonalizados</li>
+						<li><span>&check;</span>La mesa del comedor se extiende hasta una capacidad de 12 personas para ocaciones de recibir visitas</li>
+						<li><span>&check;</span>T.V. por cable</li>
+						<li><span>&check;</span>Reproductor de DVD</li>
+						<li><span>&check;</span>Juegos para chicos</li>
+						<li><span>&check;</span>Parrillas individuales</li>
+						<li><span>&check;</span>Caja de seguridad</li>
+					</ul>
+				</div>
+				<div class="gal-3">
+					<div class="wrapper">
+						<div class="controls controls-3">
+							<span class="icon-arrow-left"></span>
+							<span class="icon-arrow-right"></span>
+						</div>
+						<div class="owl-cabanas-3">
+							{% for img in galeria_3amb.galeria %}
+							<div class="item">
+								<img src="{{ asset('/uploads/galerias/gallery/' ~ img) }}" alt="">
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+					<ul>
+						<li><span>&check;</span>Cabañas con capacidad hasta 6 personas</li>
+						<li><span>&check;</span>2 dormitorios, baño completo, toilette, cocina completa (heladera, vajilla completa)</li>
+						<li><span>&check;</span>Calefacción, ventiladores de techo</li>
+						<li><span>&check;</span>Piscina descubierta climatizada (con sector para niños) y reposeras</li>
+						<li><span>&check;</span>Estacionamiento semi cubierto para autos de los huéspedes (un auto por cabaña)</li>
+						<li><span>&check;</span>Vidrios tonalizados</li>
+						<li><span>&check;</span>La mesa del comedor se extiende hasta una capacidad de 12 personas para ocaciones de recibir visitas</li>
+						<li><span>&check;</span>T.V. por cable</li>
+						<li><span>&check;</span>Reproductor de DVD</li>
+						<li><span>&check;</span>Juegos para chicos</li>
+						<li><span>&check;</span>Parrillas individuales</li>
+						<li><span>&check;</span>Caja de seguridad</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="gallery" id="gallery">
+		<div class="container">
+			<h2>Galería de fotos</h2>
+			<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+				<div class="row">
+					{% set i=0 %}
+					{% for img in galeria_ppal.galeria %}
+					{% set i=i+1 %}
+					<figure class="{% if i == 1 %}mobile-thumb {% endif %} col-sm-3" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+						<a href="{{ asset('/uploads/galerias/gallery/' ~ img) }}" itemprop="contentUrl" data-size="800x536">
+							<img src="{{ asset('/uploads/galerias/') }}{{ img|gallery_thumb(350,234) }}" itemprop="thumbnail" alt="Image description" />
+							<span class="mobile-label">Ver galeria</span>
+						</a>
+					</figure>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="services" id="services">
+		<div class="container">
+			<h2>Nuestros Servicios</h2>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="item">
+						<p><span class="icon-desayuno"></span>Desayuno Buffet</p>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="item">
+						<p><span class="icon-limpieza"></span>Servicio de mucama</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="item">
+						<p><span class="icon-cama"></span>Ropa blanca</p>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="item">
+						<p><span class="icon-wifi"></span>WI-FI en todo el hotel</p>
+					</div>
+				</div>
+			</div>
+            
+			<!--
+            <div class="row">
+				<div class="col-sm-6">
+					<div class="item">
+						<p><span class="icon-sombrilla"></span>Una sombrilla y dos reposeras para llevar a la playa</p>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="item">
+						<p><span class="icon-masaje"></span>Masajes (opcional)</p>
+					</div>
+				</div>
+			</div>
+            -->
+            
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="item">
+						<p><span class="icon-alarma"></span>Caja de seguridad en cada habitación</p>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="item">
+						<p><span class="icon-cuna"></span>Practicuna, sillita para comer y bañera para bebés</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="map" id="ubicacion">
+		<div class="container">
+			<h2>Ubicación</h2>
+		</div>
+		<div id="map"></div>
+	</section>
+
+	<section class="contact" id="contacto">
+		<div class="container">
+			<div class="title">
+				<h2>Contacto</h2>
+			</div>
+			<div class="row">
+				<form  id="form_contacto" method="post" onsubmit="return validar_form();">
+				<div class="col-sm-6">
+					<input type="text" placeholder="Nombre" required="required" id="form_nombre">
+					<input type="text" placeholder="Teléfono" required="required" id="form_telefono">
+					<input type="email" placeholder="Mail" required="required" id="form_email">
+				</div>
+				<div class="col-sm-6">
+					<textarea placeholder="Comentario" id="form_mensaje"></textarea>
+				</div>
+				<div class="col-sm-12 btn">
+					<a class="send">Enviar</a>
+					<div class="spinner" id="form_img_loading">
+						<div class="rect1"></div>
+						<div class="rect2"></div>
+						<div class="rect3"></div>
+						<div class="rect4"></div>
+						<div class="rect5"></div>
+					</div>
+				</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}	
