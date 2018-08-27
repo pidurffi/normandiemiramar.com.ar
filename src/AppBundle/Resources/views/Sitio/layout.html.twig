@@ -5,7 +5,7 @@
 <head><meta http-equiv="Content-Type" content="text/html; charset=gb18030">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Hotel Normandie</title>
+	<title>Hotel Normandie - Miramar</title>
 	<!-- CSS -->
 	<link href="{{ asset('bundles/app/stylesheets/screen.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
 	<link href="{{ asset('bundles/app/stylesheets/fonts.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -14,6 +14,17 @@
 	<link href="{{ asset('bundles/app/stylesheets/owl.theme.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
 	<link href="{{ asset('bundles/app/stylesheets/photoswipe.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
 	<link href="{{ asset('bundles/app/stylesheets/default-skin.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
 	<!-- GOOGLE FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
 	<!-- JS -->
@@ -30,16 +41,16 @@
   function initialize() {
 	var isDraggable = $(document).width() > 480 ? true : false;  
 	var ispanControl = $(document).width() > 480 ? true : false;
-	var myLatLng = {lat: -37.323141, lng: -57.020792};
+	var myLatLng = {lat: -38.271683, lng: -57.834588};
 	var marker = new google.maps.Marker({
 	   animation: google.maps.Animation.BOUNCE,
 	   position: myLatLng,
-	   title:"Solar Pampa"
+	   title:"Hotel Normandie - Miramar"
 	});
 	var mapCanvas = document.getElementById('map');
 	var mapOptions = {
-	  center: new google.maps.LatLng(-37.323141, -57.020792),
-	  zoom: 15,
+	  center: new google.maps.LatLng(-38.271683, -57.834588),
+	  zoom: 17,
 	  mapTypeControl: true,
 	  panControl:ispanControl,
 	  draggable: isDraggable,
@@ -70,7 +81,7 @@
 				</button>
 				<div class="logo"></div>
 					<div class="contact-info">
-						<p>(11) 15 4455 3333</p>
+						<p>(011) 15 3687-0116</p>
 					</div>
 					<nav>
 						<ul>
@@ -106,7 +117,7 @@
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="logo"></div>
-					<p>Calle 30 y Mar Azul <br>Las Gaviotas  <br>(02255) 15 50.7575 <br>reservas@ciromarino.com.ar</p>
+					<p>Calle 19 N° 910 esquina 18<br>Miramar, Buenos Aires<br>(011) 15 3687-0116 <br>info@normandiemiramar.com.ar</p>
 				</div>
 				<div class="col-sm-8">
 					<ul>
