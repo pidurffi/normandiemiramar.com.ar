@@ -369,7 +369,6 @@ body {
 			}
 		}
 		.item {
-			height: 500px;
 			img {
 				width: 100%;
 			}
@@ -389,12 +388,14 @@ body {
 		@include column-gap(20px);
 		@include column-rule-style(solid);
 		li {
-			margin: 20px 0;
-			font-size: 20px;
+			display: flex;
+			align-items: baseline;
+			margin-bottom: 10px;
+			font-size: 16px;
 			span {
 				display: inline-block;
 				margin-right: 10px;
-				font-size: 30px;
+				font-size: 20px;
 				font-weight: bold;
 				color: $blue;
 			}
