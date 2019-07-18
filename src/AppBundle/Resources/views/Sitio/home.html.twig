@@ -5,125 +5,112 @@
 
 	{{ render(controller('AppBundle:Default:promociones')) }}
 
-	{#   #}
+	
 	 <section class="cabanas" id="cabanas">
 		<div class="container">
 			<h2>Las habitaciones</h2>
 			<ul class="apartamentos-nav">
-				<li><a class="one active">Loft</a></li>
-				<li><a class="two">Dos ambientes</a></li>
-				<li><a class="three">Tres ambientes</a></li>
+				<li><a class="one active">Dobles</a></li>
+				<li><a class="two">Triples</a></li>
+				<li><a class="three">Departamentos</a></li>
 			</ul>
 			<div class="gal-wrapper">
 				<div class="gal-1 on">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="wrapper">
-								<div class="controls controls-1">
-									<span class="icon-arrow-left"></span>
-									<span class="icon-arrow-right"></span>
-								</div>
-								<div class="owl-cabanas-1">
-									{% for img in galeria_loft.galeria %}
-									<div class="item">
-										<img src="{{ asset('/uploads/galerias/gallery/' ~ img) }}" alt="">
-									</div>
-									{% endfor %}
-								</div>
-							</div>
+					<div class="wrapper">
+						<div class="controls controls-1">
+							<span class="icon-arrow-left"></span>
+							<span class="icon-arrow-right"></span>
 						</div>
-						<div class="col-md-6">
-							<ul>
-								<li><span>&check;</span>Cabañas con capacidad hasta 6 personas</li>
-								<li><span>&check;</span>2 dormitorios, baño completo, toilette, cocina completa (heladera, vajilla completa)</li>
-								<li><span>&check;</span>Calefacción, ventiladores de techo</li>
-								<li><span>&check;</span>Piscina descubierta climatizada (con sector para niños) y reposeras</li>
-								<li><span>&check;</span>Estacionamiento semi cubierto para autos de los huéspedes (un auto por cabaña)</li>
-								<li><span>&check;</span>Vidrios tonalizados</li>
-								<li><span>&check;</span>La mesa del comedor se extiende hasta una capacidad de 12 personas para ocaciones de recibir visitas</li>
-								<li><span>&check;</span>T.V. por cable</li>
-								<li><span>&check;</span>Reproductor de DVD</li>
-								<li><span>&check;</span>Juegos para chicos</li>
-								<li><span>&check;</span>Parrillas individuales</li>
-								<li><span>&check;</span>Caja de seguridad</li>
-							</ul>
+						<div class="owl-cabanas-1">
+							{% for img in galeria_loft.galeria %}
+							<div class="item">
+								<img src="{{ asset('/uploads/galerias/gallery/' ~ img) }}" alt="">
+							</div>
+							{% endfor %}
 						</div>
 					</div>
+					{#
+					<ul>
+						<li><span>&check;</span>Cabañas con capacidad hasta 6 personas</li>
+						<li><span>&check;</span>2 dormitorios, baño completo, toilette, cocina completa (heladera, vajilla completa)</li>
+						<li><span>&check;</span>Calefacción, ventiladores de techo</li>
+						<li><span>&check;</span>Piscina descubierta climatizada (con sector para niños) y reposeras</li>
+						<li><span>&check;</span>Estacionamiento semi cubierto para autos de los huéspedes (un auto por cabaña)</li>
+						<li><span>&check;</span>Vidrios tonalizados</li>
+						<li><span>&check;</span>La mesa del comedor se extiende hasta una capacidad de 12 personas para ocaciones de recibir visitas</li>
+						<li><span>&check;</span>T.V. por cable</li>
+						<li><span>&check;</span>Reproductor de DVD</li>
+						<li><span>&check;</span>Juegos para chicos</li>
+						<li><span>&check;</span>Parrillas individuales</li>
+						<li><span>&check;</span>Caja de seguridad</li>
+					</ul>
+					#}
 				</div>
 				<div class="gal-2">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="wrapper">
-								<div class="controls controls-2">
-									<span class="icon-arrow-left"></span>
-									<span class="icon-arrow-right"></span>
-								</div>
-								<div class="owl-cabanas-2">
-									{% for img in galeria_2amb.galeria %}
-									<div class="item">
-										<img src="{{ asset('/uploads/galerias/gallery/' ~ img) }}" alt="">
-									</div>
-									{% endfor %}
-								</div>
-							</div>
+					<div class="wrapper">
+						<div class="controls controls-2">
+							<span class="icon-arrow-left"></span>
+							<span class="icon-arrow-right"></span>
 						</div>
-						<div class="col-md-6">
-							<ul>
-								<li><span>&check;</span>Cabañas con capacidad hasta 6 personas</li>
-								<li><span>&check;</span>2 dormitorios, baño completo, toilette, cocina completa (heladera, vajilla completa)</li>
-								<li><span>&check;</span>Calefacción, ventiladores de techo</li>
-								<li><span>&check;</span>Piscina descubierta climatizada (con sector para niños) y reposeras</li>
-								<li><span>&check;</span>Estacionamiento semi cubierto para autos de los huéspedes (un auto por cabaña)</li>
-								<li><span>&check;</span>Vidrios tonalizados</li>
-								<li><span>&check;</span>La mesa del comedor se extiende hasta una capacidad de 12 personas para ocaciones de recibir visitas</li>
-								<li><span>&check;</span>T.V. por cable</li>
-								<li><span>&check;</span>Reproductor de DVD</li>
-								<li><span>&check;</span>Juegos para chicos</li>
-								<li><span>&check;</span>Parrillas individuales</li>
-								<li><span>&check;</span>Caja de seguridad</li>
-							</ul>
+						<div class="owl-cabanas-2">
+							{% for img in galeria_3amb.galeria %}
+							<div class="item">
+								<img src="{{ asset('/uploads/galerias/gallery/' ~ img) }}" alt="">
+							</div>
+							{% endfor %}
 						</div>
 					</div>
+					{#
+					<ul>
+						<li><span>&check;</span>Cabañas con capacidad hasta 6 personas</li>
+						<li><span>&check;</span>2 dormitorios, baño completo, toilette, cocina completa (heladera, vajilla completa)</li>
+						<li><span>&check;</span>Calefacción, ventiladores de techo</li>
+						<li><span>&check;</span>Piscina descubierta climatizada (con sector para niños) y reposeras</li>
+						<li><span>&check;</span>Estacionamiento semi cubierto para autos de los huéspedes (un auto por cabaña)</li>
+						<li><span>&check;</span>Vidrios tonalizados</li>
+						<li><span>&check;</span>La mesa del comedor se extiende hasta una capacidad de 12 personas para ocaciones de recibir visitas</li>
+						<li><span>&check;</span>T.V. por cable</li>
+						<li><span>&check;</span>Reproductor de DVD</li>
+						<li><span>&check;</span>Juegos para chicos</li>
+						<li><span>&check;</span>Parrillas individuales</li>
+						<li><span>&check;</span>Caja de seguridad</li>
+					</ul>
+					#}
 				</div>
 				<div class="gal-3">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="wrapper">
-								<div class="controls controls-3">
-									<span class="icon-arrow-left"></span>
-									<span class="icon-arrow-right"></span>
-								</div>
-								<div class="owl-cabanas-3">
-									{% for img in galeria_3amb.galeria %}
-									<div class="item">
-										<img src="{{ asset('/uploads/galerias/gallery/' ~ img) }}" alt="">
-									</div>
-									{% endfor %}
-								</div>
-							</div>
+					<div class="wrapper">
+						<div class="controls controls-3">
+							<span class="icon-arrow-left"></span>
+							<span class="icon-arrow-right"></span>
 						</div>
-						<div class="col-md-6">
-							<ul>
-								<li><span>&check;</span>Cabañas con capacidad hasta 6 personas</li>
-								<li><span>&check;</span>2 dormitorios, baño completo, toilette, cocina completa (heladera, vajilla completa)</li>
-								<li><span>&check;</span>Calefacción, ventiladores de techo</li>
-								<li><span>&check;</span>Piscina descubierta climatizada (con sector para niños) y reposeras</li>
-								<li><span>&check;</span>Estacionamiento semi cubierto para autos de los huéspedes (un auto por cabaña)</li>
-								<li><span>&check;</span>Vidrios tonalizados</li>
-								<li><span>&check;</span>La mesa del comedor se extiende hasta una capacidad de 12 personas para ocaciones de recibir visitas</li>
-								<li><span>&check;</span>T.V. por cable</li>
-								<li><span>&check;</span>Reproductor de DVD</li>
-								<li><span>&check;</span>Juegos para chicos</li>
-								<li><span>&check;</span>Parrillas individuales</li>
-								<li><span>&check;</span>Caja de seguridad</li>
-							</ul>
+						<div class="owl-cabanas-3">
+							{% for img in galeria_2amb.galeria %}
+							<div class="item">
+								<img src="{{ asset('/uploads/galerias/gallery/' ~ img) }}" alt="">
+							</div>
+							{% endfor %}
 						</div>
 					</div>
+					{#
+					<ul>
+						<li><span>&check;</span>Cabañas con capacidad hasta 6 personas</li>
+						<li><span>&check;</span>2 dormitorios, baño completo, toilette, cocina completa (heladera, vajilla completa)</li>
+						<li><span>&check;</span>Calefacción, ventiladores de techo</li>
+						<li><span>&check;</span>Piscina descubierta climatizada (con sector para niños) y reposeras</li>
+						<li><span>&check;</span>Estacionamiento semi cubierto para autos de los huéspedes (un auto por cabaña)</li>
+						<li><span>&check;</span>Vidrios tonalizados</li>
+						<li><span>&check;</span>La mesa del comedor se extiende hasta una capacidad de 12 personas para ocaciones de recibir visitas</li>
+						<li><span>&check;</span>T.V. por cable</li>
+						<li><span>&check;</span>Reproductor de DVD</li>
+						<li><span>&check;</span>Juegos para chicos</li>
+						<li><span>&check;</span>Parrillas individuales</li>
+						<li><span>&check;</span>Caja de seguridad</li>
+					</ul>
+					#}
 				</div>
 			</div>
 		</div>
 	</section> 
-	
 
 	<section class="gallery" id="gallery">
 		<div class="container">
