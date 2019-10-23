@@ -11,6 +11,8 @@
 /var/sessions/*
 !var/sessions/.gitkeep
 !var/SymfonyRequirements.php
+!var/bootstrap.php.cache
 /vendor/
 /public_html/bundles/
 /public_html/uploads/
+/public_html/error_log
