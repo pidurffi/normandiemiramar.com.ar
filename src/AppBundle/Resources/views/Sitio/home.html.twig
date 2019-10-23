@@ -1,0 +1,383 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% block content %}
+
+<!--==========================
+Intro Section
+============================-->         
+<section id="intro"> 
+    <div class="intro-container"> 
+        <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel"> 
+            <ol class="carousel-indicators"></ol>                     
+            <div class="carousel-inner" role="listbox"> 
+                <div class="carousel-item active"> 
+                    <div class="carousel-background">
+                        <img src="{{ asset('bundles/app/maquetado/img/intro-carousel/001.jpg') }}" alt="">
+                    </div>                             
+                    <div class="carousel-container"> 
+                        <div class="carousel-content"> 
+                            <h2>Mirador del Indio - Nuevos dueños</h2> 
+                            <p>Totalmente renovado!!</p> 
+                            <!-- <a href="#featured-services" class="btn-get-started scrollto">Get Started</a> --> 
+                        </div>                                 
+                    </div>                             
+                </div>                         
+                <div class="carousel-item"> 
+                    <div class="carousel-background">
+                        <img src="{{ asset('bundles/app/maquetado/img/intro-carousel/002.jpg') }}" alt="">
+                    </div>                             
+                    <div class="carousel-container"> 
+                        <div class="carousel-content"> 
+                        </div>                                 
+                    </div>                             
+                </div>                         
+                <div class="carousel-item"> 
+                    <div class="carousel-background">
+                        <img src="{{ asset('bundles/app/maquetado/img/intro-carousel/003.jpg') }}" alt="">
+                    </div>                             
+                    <div class="carousel-container"> 
+                        <div class="carousel-content"> 
+                            <!-- <h2>Piscina y solarium</h2> 
+                            <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p> 
+                            <a href="#featured-services" class="btn-get-started scrollto">Get Started</a> --> 
+                        </div>                                 
+                    </div>                             
+                </div>                                                 
+            </div>                     
+            <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">  <span class="carousel-control-prev-icon fas fa-angle-left" aria-hidden="true"></span>  <span class="sr-only">Previous</span></a>
+            <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">  <span class="carousel-control-next-icon fas fa-angle-right" aria-hidden="true"></span>  <span class="sr-only">Next</span></a>
+        </div>                 
+    </div>             
+</section>
+<!-- #intro --> 
+
+<main id="main">
+	<!--PROMOCIONES Section-->     
+
+	{{ render(controller('AppBundle:Default:promociones')) }}
+	
+	<!-- #PROMOCIONES --> 
+
+    <!--==========================
+      WhatsApp Section
+    ============================-->
+    <section id="call-to-action" class="wow fadeIn">
+      <div class="text-center">
+        <h3>WhatsApp directo !!!</h3>
+        <p>Hacé click acá y envianos tu consulta por WhatsApp, te responderemos inmediatamente</p>
+        <a href="https://wa.me/5491156441079" target="_blank"><i class="fab fa-whatsapp fa-10x"></i></a>
+      </div>
+    </section>
+    <!-- #WhatsApp -->
+
+    <!--==========================
+    El Complejo Section
+    ============================--> 
+    <section id="complejo" class="wow fadeIn">
+        <div class="container"> 
+            <header class="section-header wow fadeInUp"> 
+                <h3>El complejo</h3> 
+            </header>
+            <p>Bienvenidos a <strong>Mirador del Indio</strong>, un complejo de cabañas-aparts, en <strong>Las Gaviotas</strong>, donde Ud. puede disfrutar de la paz y tranquilidad que ofrecen estos increíbles paisajes, y a la vez, gozar de las comodidades de un ambiente creado para sentirse totalmente a gusto.</p>
+            <p>Desde allí, se percibe el sonido de los pájaros, rodeado del mar de pinos verdes que Mar de las Pampas propone hacia el norte, y mirando al sur, apreciar las acacias vírgenes y agrestes de Las Gaviotas. No lejos de allí, el faro Querandí y la reserva natural de dunas.</p>
+            <p>La suave brisa del mar, el encanto del bosque, la calidez de nuestras cabañas, y la amabilidad de nuestra gente es algo que no puede dejar de disfrutar Ud. y su familia.</p>
+            <p>Nuestro complejo está construido sobre una superficie de 3000 m² totalmente parquizados, en el sitio más alto de <strong>Mar de las Pampas y Las Gaviotas</strong>.</p>
+            <p>Lo invitamos a apreciar de la paz que les ofrecen las cabañas y el lugar, a disfrutar mientras la luz de la mañana se cuela, a través del bosque de <strong>Mar de las Pampas</strong>, por sus ventanas.</p>
+            <p>A metros de allí, el mar lo espera y también podrá optar por quedarse con nosotros y zambullirse en la piscina, hacer un asadito o simplemente hacer uso del Solarium.</p>
+            <p>Toda la naturaleza y el mejor servicio lo esperan.</p>
+
+            <div class="my-gallery" itemscope="" itemtype="http://schema.org/ImageGallery" data-pswp-uid="1"> 
+                <div class="row text-center text-lg-left">
+                    {% for gal in galeria.galeria %}
+                        <figure class="col-lg-3 col-md-4 col-xs-6">
+                            <a href="{{ asset('/uploads/galerias/gallery/') }}{{ gal }}" class="d-block mb-4 h-100" itemprop="contentUrl" data-size="800x535">
+                                <img itemprop="thumbnail" src="{{ asset('/uploads/galerias/') }}{{ gal|gallery_thumb(300,201) }}">
+                            </a>
+                        </figure>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- #El Complejo -->
+
+	<!--==========================
+    LOS APARTS Section
+    ============================-->
+    <section id="aparts"  class="section-bg" >
+      	<div class="container">
+
+	        <header class="section-header">
+	          <h3 class="section-title">Las Cabañas</h3>
+	        </header>
+	        
+	        <div class="row portfolio-container">
+              <div class="col-lg-6 col-md-6 portfolio-item wow fadeInUp">
+                <div class="portfolio-wrap">
+                    <figure>
+                    <a href="{{ url('cabana-4-personas') }}"><img src="{{ asset('bundles/app/maquetado/img/los-aparts/apart-4-personas.jpg') }}" class="img-fluid" alt="Apart 4 personas - Mirador del Indio - Las Gaviotas, Mar de las Pampas"></a>
+                    </figure>
+                    <div class="portfolio-info">
+                        <h4><a href="{{ path('cabana-4-personas') }}">Cabaña hasta 4/5 personas, 58 m²</a></h4>
+                        <p>En dos plantas, deck privado con parilla.<br>Puede agregarse una cama adicional al dormitorio principal.</p>
+                    </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6 portfolio-item wow fadeInUp">
+                    <div class="portfolio-wrap">
+                        <figure>
+                        <a href="{{ path('cabana-6-personas') }}"><img src="{{ asset('bundles/app/maquetado/img/los-aparts/apart-6-personas.jpg') }}" class="img-fluid" alt="Apart 6 personas - Mirador del Indio - Las Gaviotas, Mar de las Pampas"></a>
+                        </figure>
+                        <div class="portfolio-info">
+                            <h4><a href="{{ path('cabana-6-personas') }}">Cabañas hasta 6 personas, 73 m²</a></h4>
+                            <p>En dos plantas, 2 baños completos con ducha, deck privado con parrilla. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	        <br>
+	        <br>
+            <p>Las cabañas se diferencian de otros complejos por la cantidad de verde y la construcción de las mismas. Las paredes son dobles, de 30 cm de espesor, losa forrada en madera lo que evita que se escuchen sonidos y ruidos en planta baja cuando circulan por planta alta. Vidrios dobles, cerramiento de primer nivel, aisladas frío-calor.</p>
+            <p>Las cabañas están construídas en bloques de 2 unidades separadas entre sí por grandes espacios parquizados de 10 metros. Parque y plaza de juegos para niños (hamacas, etc). <br> Cada cabaña posee, en el exterior, un deck individual y exclusivo con su parrilla, mesa de plástico y sillas para la cantidad de huéspedes máximo por cabaña. (4 o 6) Están equipadas con: SMART-TV 32" color por cable en el living y LCD 24" en el dormitorio matrimonial, ventiladores de techo en cada habitación, ventiladores de pie 1 por cabaña.</p>
+            <p>Camas con somier. Horno tradicional, microondas, heladera con freezer. Elementos de cocina tales como ollas, asaderas, vajilla, platos cubiertos, vasos, tazas, etc. Ropa blanca (sabanas, toallones, toallas), toallas para la piscina, acolchados, cubre cama.</p>
+            <h4>Cabañas con capacidad hasta 4 personas</h4>
+            <p>La construcción de cada una abarca 57.68 m² entre planta baja y planta alta. Se componen de una habitación matrimonial (con placard) en planta alta y un baño (con bañera), mientras que en planta baja esta la cocina, 2 sofá cama, y mesa y 4 sillas de algarrobo.</p>
+            <h4>Cabañas con capacidad hasta 6 personas</h4>
+            <p>La construcción de cada una abarca 72.48 m² entre planta baja y planta alta. Se componen de una habitación matrimonial (con placard) en planta alta, una segunda habitación con 2 camas, (placard en el pasillo) y un baño (con bañera), mientras que en planta baja esta la cocina, un segundo baño completo, con ducha, 2 sofá cama, mesa y 6 sillas de algarrobo.</p>
+            
+            <!--<div class="my-gallery" itemscope="" itemtype="http://schema.org/ImageGallery" data-pswp-uid="1"> 
+                <div class="row text-center text-lg-left">
+                    {{ render(controller('AppBundle:Default:galeria',{galeria_id: 2})) }}
+                </div>
+            </div>-->        
+    	</div>
+	</section>
+    <!-- #los aparts -->
+
+
+    <!--==========================
+    Services Section
+    ============================-->             
+    <section id="servicios">
+        <div class="container"> 
+            <header class="section-header wow fadeInUp"> 
+                <h3>Servicios</h3> 
+                <p>En nuestras cabañas se brindan los siguientes servicios:</p> 
+            </header>                     
+            <div class="row"> 
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
+                    <div class="icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>                             
+                    <h4 class="title"><a href="">Servicio de ropa blanca y toallas</a></h4> 
+                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
+                </div>                      
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
+                    <div class="icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>                             
+                    <h4 class="title"><a href="">Servicio de mucama (sin lavado de vajilla)</a></h4> 
+                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
+                </div>                          
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
+                    <div class="icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>                             
+                    <h4 class="title"><a href="">Cajas de seguridad</a></h4> 
+                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
+                </div>                          
+                           
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
+                    <div class="icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>                             
+                    <h4 class="title"><a href="">SMART TV 32" en el living</a></h4> 
+                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
+                </div>  
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
+                    <div class="icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>                             
+                    <h4 class="title"><a href="">TV LCD 24" en el dormitorio principal</a></h4> 
+                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
+                </div>  
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
+                    <div class="icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>                             
+                    <h4 class="title"><a href="">Servicio de TV por Cable</a></h4> 
+                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
+                </div>  
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
+                    <div class="icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>                             
+                    <h4 class="title"><a href="">Juegos de mesa (se piden en administración)</a></h4> 
+                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
+                </div>    
+                       
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
+                    <div class="icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>                             
+                    <h4 class="title"><a href="">Cocinas totalmente equipadas (vajilla, vasos, tazas, asadera, ollas, etc)</a></h4> 
+                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
+                </div>   
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
+                    <div class="icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>                             
+                    <h4 class="title"><a href="">Horno convencional, heladera con freezer</a></h4> 
+                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
+                </div>
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
+                    <div class="icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>                             
+                    <h4 class="title"><a href="">Calefacción en todos los ambientes</a></h4> 
+                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
+                </div>
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
+                    <div class="icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>                             
+                    <h4 class="title"><a href="">Ventilador de techo en las habitaciones y ventilador de pie extra</a></h4> 
+                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
+                </div>
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
+                    <div class="icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>                             
+                    <h4 class="title"><a href="">Decks individuales de pino con parrilla, mesa y sillas (para la cantidad de habitantes máxima por cabaña)</a></h4> 
+                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
+                </div>
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
+                    <div class="icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>                             
+                    <h4 class="title"><a href="">Pileta de natación (12m x 6m)</a></h4> 
+                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
+                </div>
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
+                    <div class="icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>                             
+                    <h4 class="title"><a href="">Toallones para pileta (valor extra)</a></h4> 
+                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
+                </div>
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
+                    <div class="icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>                             
+                    <h4 class="title"><a href="">Solarium, con reposeras (junto a la pileta). <br>Sillas y sombrillas para la playa.</a></h4> 
+                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
+                </div>
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
+                    <div class="icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>                             
+                    <h4 class="title"><a href="">Plaza con juegos para chicos.</a></h4> 
+                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
+                </div>                 
+            </div>            
+        </div>                 
+    </section>
+               
+
+
+            <!--Google map-->
+            <section id="ubicacion" class="section-bg wow fadeInUp">
+                
+                    <div id="mapa" class="container-fluid mt-5 mb-5">
+                        <header class="section-header wow fadeInUp">
+                            <h3>Ubicación</h3>
+                        </header>
+                    </div>
+                    <div id="map-container" class="z-depth-1" style="height: 500px"></div>
+                
+            </section>
+
+            <section id="contact" class="section-bg wow fadeInUp"> 
+                <div class="container"> 
+                    <div class="section-header"> 
+                        <h3>Contacto</h3> 
+                        <p>Ahora también podés contactarnos por WhatsApp</p> 
+                    </div>                     
+                    <div class="row contact-info"> 
+                        <div class="col-md-4"> 
+                            <div class="contact-address"> 
+                                <i class="ion-ios-location-outline"></i> 
+                                <h3>Dirección</h3> 
+                                <address>Alte. Brown y Punta del Indio</address> 
+                            </div>                             
+                        </div>                         
+                        <div class="col-md-4"> 
+                            <div class="contact-phone"> 
+                                <i class="ion-ios-telephone-outline"></i> 
+                                <h3>Teléfono</h3> 
+                                <p>Reservas: <a href="https://wa.me/5491156441079">(011) 5644-1079</a></p>
+                                <!--<p>Contacto: <a href="tel:11 54140776">(011) 4202-5564</a></p>-->
+                            </div>                             
+                        </div>                         
+                        <div class="col-md-4"> 
+                            <div class="contact-email"> 
+                                <i class="ion-ios-email-outline"></i> 
+                                <h3>Email</h3> 
+                                <p><a href="mailto:info@miradordelindio.com.ar">info@miradordelindio.com.ar</a></p> 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                    <div class="form"> 
+                        <div id="sendmessage">Su consulta ha sido enviada. Gracias!</div>                         
+                        <div id="errormessage"></div>                         
+                        <form method="post" role="form" class="contactForm" id="form_contacto" onsubmit="return validar_form();"> 
+                            <div class="form-row"> 
+                                <div class="form-group col-md-4"> 
+                                    <input type="text" name="name" class="form-control" id="form_nombre" placeholder="Nombre" data-rule="minlen:4" data-msg="Por favor ingrese al menos 4 caracteres"/> 
+                                    <div class="validation"></div>                                     
+                                </div>                                 
+                                <div class="form-group col-md-4"> 
+                                    <input type="email" class="form-control" name="email" id="form_email" placeholder="Email" data-rule="email" data-msg="Por favor ingrese un email válido"/> 
+                                    <div class="validation"></div>                                     
+                                </div> 
+                                <div class="form-group col-md-4"> 
+                                    <input type="telefono" class="form-control" name="telefono" id="form_telefono" placeholder="Teléfono" data-rule="telefono" data-msg="Por favor ingrese su número de teléfono"/> 
+                                    <div class="validation"></div>                                     
+                                </div>                                 
+                            </div>                             
+                                                         
+                            <div class="form-group"> 
+                                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Por favor escriba un mensaje" id="form_mensaje" placeholder="Mensaje"></textarea>                                 
+                                <div class="validation"></div>                                 
+                            </div>                             
+                            <div class="text-center">
+                                {#
+
+                                <button type="submit">Enviar Mensaje</button>
+                                #}
+                                <a href="" class="send" id="enviar-mensaje">Enviar Mensaje</a>
+                                
+                                <script type="text/javascript">
+                                    $( '#$enviar-mensaje' ).click(function() {
+                                    fbq('track', 'Contact');
+                                </script>
+                                
+                                <div class="spinner" id="form_img_loading">
+                                    <div class="rect1"></div>
+                                    <div class="rect2"></div>
+                                    <div class="rect3"></div>
+                                    <div class="rect4"></div>
+                                    <div class="rect5"></div>
+                                </div>
+                            </div>                             
+                        </form>                         
+                    </div>                     
+                </div>                 
+            </section>
+            <!-- #contact --> 
+
+	
+</main>	
+{% endblock %}

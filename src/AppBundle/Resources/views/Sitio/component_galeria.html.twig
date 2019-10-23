@@ -1,0 +1,9 @@
+
+		{% for galeria in galerias %}
+		{% for gal in galeria.galeria %}
+
+			<div class="item"><img src="{{ asset('/uploads/galerias/gallery/') }}{{ gal }}"></div>
+
+		{% endfor %}
+		{% endfor %}
+	
