@@ -1,0 +1,81 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set miramar = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-historia') }}"><i class="fas fa-map-marked-alt"></i> Miramar</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-lugares-aeroclub-miramar') }}"><i class="fas fa-location-arrow"></i> Aeroclub Miramar</a>
+      </li>
+    </ul>
+    <a href="{{ url('miramar-lugares') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Paseos</a>
+  </div>
+</div>
+
+<!-- Tab navigation -->
+<div class="tab-nav">
+  <div class="tab-nav__holder">
+    <ul>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-historia') }}" class="button --text --tab-button">Historia</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-fotos') }}" class="button --text --tab-button">Fotos</a>
+      </li>
+      <li class="tab-nav__item --active">
+        <a href="{{ url('miramar-lugares') }}" class="button --text --tab-button">Para conocer</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-cerca') }}" class="button --text --tab-button">Cerca de Normandie</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Lugares contenido -->
+<section class="section tab-content">
+  <div class="section__holder">
+    <h2 class="section__title">Aeroclub Miramar</h2>
+    <figure class="section__image">
+      <img src="{{ asset('bundles/app/maquetado/images/places/aero-club-miramar.jpg') }}" alt="">
+    </figure>
+    <p class="section__text --highlight">ESTA ENTIDAD DE BIEN PÚBLICO, SE ENCARGA DE FOMENTAR LA AVIACIÓN CIVIL Y DEPORTIVA</p>
+    <p class="section__text">A 3 minutos del casco urbano, en el kilómetro 5.5 de la ruta provincial 77 podremos encontrar el Aeroclub Miramar. Esta importante entidad de bien público, se encarga de fomentar la aviación civil y deportiva, además de brindar su apoyo a la comunidad en todo momento. <br>Se puede acceder a él por la ruta provincial 77 que une la ciudad con la ruta provincial 88, allí se encuentra ubicado el Aeroclub Miramar, que fuera fundado el 24 de Octubre de 1953 por un grupo de jóvenes entusiastas, amantes de la aviación. <br>En este momento, el Aeroclub cuenta con 5 aeronaves.</p>
+    <ul class="section__list">
+      <li>Cessna 182 LV - LZY</li>
+      <li>Cessna 152 LV ASW</li>
+      <li>Piper PA 11 LV YOD</li>
+      <li>Stinson Reliant LV FYR</li>
+      <li>Planeador Schweitzer SGU 2.22 LV EFO</li>
+    </ul>
+    <h3 class="section__subtitle">Escuela de vuelo a vela</h3>
+    <p class="section__text">Con la incorporación del Schweizer SGU 2.22 la entidad consiguió un planeador biplaza de escuela y entrenamiento, gracias a esto comenzaron los cursos de "Piloto Planeador", como así también la habilitación para "Pilotos remolcadores". <br>La zona se presenta como un lugar óptimo para el vuelo a vela por las grandes térmicas que se forman en los campos de su alrededor, y por el fenómeno climatológico de la "brisa marina" que se produce en varias oportunidades por la cercanía que hay con el mar.</p>
+    <h3 class="section__subtitle">Información Aero Club Miramar</h3>
+    <ul class="section__list">
+      <li>Coord. geográficas: 38° 13´ S 57° 52´ W</li>
+      <li>Frecuencia de torre de control: 118.45</li>
+      <li>Frecuencia de Aeroclub: 123.20</li>
+      <li>Operaciones como visual no controlado</li>
+      <li>Combustible disponible: 100 LL</li>
+      <li>Casilla de correo nº 24, 7606, Miramar, BA.</li>
+    </ul>
+    <h3 class="section__subtitle">Vuelos de Bautismo</h3>
+    <p class="section__text">Disfrutá Miramar desde el aire, para tener un recuerdo inolvidable.</p>
+    <p class="section__text">Reservá tu vuelo al teléfono 0223 155 503012, todos los días después de las 17hs</p>
+    <p class="section__text">Todos los años, la subcomisión de Aeromodelismo del Aero Club Miramar, organiza el encuentro Volando Miramar, que en cada edición incorpora más pilotos locales y zonales. Es un encuentro familiar en donde se realizan distintas actividades y pruebas de los pilotos participantes.</p>
+  </div>
+</section>
+
+{% endblock %}

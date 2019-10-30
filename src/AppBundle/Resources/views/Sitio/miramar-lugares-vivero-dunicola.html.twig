@@ -1,0 +1,67 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set miramar = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-historia') }}"><i class="fas fa-map-marked-alt"></i> Miramar</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-lugares-aeroclub-miramar') }}"><i class="fas fa-location-arrow"></i> Vivero Dunícola</a>
+      </li>
+    </ul>
+    <a href="{{ url('miramar-lugares') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Paseos</a>
+  </div>
+</div>
+
+<!-- Tab navigation -->
+<div class="tab-nav">
+  <div class="tab-nav__holder">
+    <ul>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-historia') }}" class="button --text --tab-button">Historia</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-fotos') }}" class="button --text --tab-button">Fotos</a>
+      </li>
+      <li class="tab-nav__item --active">
+        <a href="{{ url('miramar-lugares') }}" class="button --text --tab-button">Para conocer</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-cerca') }}" class="button --text --tab-button">Cerca de Normandie</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Lugares contenido -->
+<section class="section tab-content">
+  <div class="section__holder">
+    <h2 class="section__title">Bosque Vivero Dunícola</h2>
+    <figure class="section__image">
+      <img src="{{ asset('bundles/app/maquetado/images/places/vivero-dunicola.jpg') }}" alt="">
+    </figure>
+    <p class="section__text --highlight">TIENE UNA EXTENSIÓN DE 502 HECTAREAS QUE SIRVEN DE PULMÓN A LA CIUDAD</p>
+    <p class="section__text">Un punto obligado para visitar, donde la naturaleza nos demuestra toda su majestuosidad. Un bosque de 502 hectáreas que se ofrece como un atractivo turístico para toda la familia.
+      <br>Su nombre se lo debe al gran naturalista argentino que realizara innumerables investigaciones en el sudeste de la provincia. Para conocer su origen, tendremos que remontarnos al año 1923, cuando el Ministerios de Asuntos Agrarios de la Provincia decide su creación para el estudio y el afianzamiento de los médanos de la costa provincial. La antigua estación experimental pasó a ser productora de especies forestales y de esta manera se convierte en un vivero, con el paso del tiempo llegó a ser el lugar con mayor cantidad de árboles madres del país.
+      <br>Actualmente, el vivero se encuentra en manos de la Municipalidad de General Alvarado, que lo utiliza como vivero y al mismo tiempo ha determinado un sector para emplearlo como parque recreativo. En este espacio, también podemos encontrar el Museo, la Gruta de Lourdes y las zonas de los fogones donde se puede ir a almorzar en familia, hacer un asado con los amigos, disfrutando de las ventajas de la vida al aire libre.
+      <br>Con sendas y caminos para recorrer, el paseo permitirá observar varias especies arbóreas especialmente pinos, acacias y eucaliptos en sus distintas variedades.
+      <br>En un escenario donde predomina la naturaleza nos es difícil resistirnos a disfrutar del ambiente acompañados por el incesante arrullo del mar, que se potencia con el aroma de la vegetación.
+      <br>Gruta de Lourdes
+      <br>Fue inaugurada y bendecida el 20 de abril de 1980, año dedicado a la Virgen María, su construcción a base de madera de pino del lugar y piedras cobija una replica de la imagen original de la virgen que se presentara a los pastores en Lourdes, Francia.
+      <br>Este rústico ambiente invita a la meditación y al recogimiento ya que en él se enfrenta el hombre a su espíritu en la intimidad con su creador. 
+      <br>El 11 de febrero se celebra una misa en su honor a la que asisten gran cantidad de fieles. Esta emplazada entre ambas secciones de fogones, de forma paralela al camino principal que recorre el vivero.</p>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set miramar = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-historia') }}"><i class="fas fa-map-marked-alt"></i> Miramar</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-lugares-aeroclub-miramar') }}"><i class="fas fa-location-arrow"></i> Paseo por los Médanos</a>
+      </li>
+    </ul>
+    <a href="{{ url('miramar-lugares') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Paseos</a>
+  </div>
+</div>
+
+<!-- Tab navigation -->
+<div class="tab-nav">
+  <div class="tab-nav__holder">
+    <ul>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-historia') }}" class="button --text --tab-button">Historia</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-fotos') }}" class="button --text --tab-button">Fotos</a>
+      </li>
+      <li class="tab-nav__item --active">
+        <a href="{{ url('miramar-lugares') }}" class="button --text --tab-button">Para conocer</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-cerca') }}" class="button --text --tab-button">Cerca de Normandie</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Lugares contenido -->
+<section class="section tab-content">
+    <div class="section__holder">
+      <h2 class="section__title">Paseos por los Médanos</h2>
+      <figure class="section__image">
+        <img src="{{ asset('bundles/app/maquetado/images/places/paseo-medanos.jpg') }}" alt="">
+      </figure>
+      <p class="section__text --highlight">UN RECORRIDO ÚNICO POR LAS PLAYAS AL SUR DE LA CIUDAD. UNA GRAN ACTIVIDAD FAMILIAR</p>
+      <p class="section__text">El recorrido de la excursión que parte desde la av. 23 esq. av. Costanera, por la playa y termina en la villa balnearia de Mar del Sur atraviesa dos arroyos y promete llevarlos por los diferentes médanos que el vivero dunícola Florentino Ameghino tiene para ofrecer.
+        <br>El camión amarillo 4x6 todo terreno les permitirá sortear los diferentes obstáculos naturales, y a la vez brinda una aventura única tanto para grandes y pequeños, que de seguro podrán disfrutar un encuentro con la naturaleza que brinda Miramar
+        <br>Atractivos de Miramar (Recorrido): Guiados por los principales atractivos, hace las veces de "Bus Turístico": es posible realizar el recorrido completo tipo excursión, o utilizarlo como un traslado hasta o desde cualquiera de los principales puntos. El recorrido permite acceder a una importante cantidad de atractivos y también realizar un paseo por los alrededores de Miramar obteniendo información de la ciudad y de cada uno de los puntos que se recorren.
+        <br>Atardecer en el Médano: Dejando atrás la ciudad por la costa del vivero, bajan atravesando playas vírgenes entre bosque y el mar hasta cruzar el Arroyo La Totora, al lado del imponente Médano Blanco, donde se deja la playa para introducirnos en línea de médanos por otros 5 km hasta el Arroyo La Ballenera y el Médano Grande. Breve parada para apreciar una pequeña cascada y minitreking hasta la desembocadura del Arroyo. Retorno hasta el Médano Blanco con parada para: sandboard, contemplación del paisaje y del atardecer. Regreso a Miramar.
+        <br>Mar del Sur por los Médanos: Mismo recorrido que "Atardecer en el Médano" hasta el Arroyo La Ballenera, se cruza el Arroyo y se pasa por las playas del Remanso hasta llegar a la Villa de Mar del Sur, donde se realiza una parada para conocer las playas, el Hotel Boulevard Atlántico y la Casa de los Caracoles; regreso por ruta asfaltada hasta el Bosque Energético, parada y regreso a Miramar.
+        <br>Informes y reservas: (0223) 155-276273 - Mail: lamaritima4x4@hotmail.com</p>
+    </div>
+  </section>
+
+{% endblock %}

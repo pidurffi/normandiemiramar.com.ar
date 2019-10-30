@@ -1,0 +1,195 @@
+// // // // LAYOUT
+
+.inside {
+  padding-top: size(100);
+  @media (min-width: 1024px) {
+    padding-top: size(120);
+  }
+}
+
+.section {
+  padding: size(80) 0;
+  &__holder {
+    margin: 0 auto;
+    width: 100%;
+    max-width: $container-width;
+  }
+  &__title {
+    position: relative;
+    margin-bottom: size(40);
+    font-size: size(24);
+    font-weight: $f-semi-bold;
+    letter-spacing: size(1);
+    text-align: center;
+    text-transform: uppercase;
+    color: $c-primary;
+    &:before {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      display: block;
+      content: '';
+      width: 100px;
+      height: 1px;
+      transform: translateX(-50%);
+      background-color: $c-primary;
+    }
+  }
+  &__text {
+    margin-bottom: size(20);
+    font-size: size(14);
+    line-height: size(24);
+    text-align: center;
+    .hotel {
+      font-size: size(16);
+      font-weight: $f-semi-bold;
+      color: $c-primary;
+    }
+    i {
+      font-size: size(20);
+      color: $c-primary;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &.content-inside {
+    .section__subtitle {
+      margin-bottom: size(10);
+      font-size: size(16);
+      font-weight: $f-semi-bold;
+      text-transform: uppercase;
+      color: $c-secondary;
+    }
+    .section__text {
+      text-align: left;
+    }
+    .button.--text {
+      color: $c-primary;
+    }
+  }
+  &.hotel {
+    .section__holder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    background-color: $c-grey;
+  }
+  &.tab-content {
+    padding: 0;
+    .section__holder {
+      padding: size(40);
+      background-color: $c-grey;
+      .section__title {
+        text-align: left;
+        &:before {
+          display: none;
+        }
+      }
+      .section__text {
+        text-align: left;
+        &.--highlight {
+          padding: size(20);
+          background-color: $c-secondary;
+        }
+      }
+      .section__image {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: size(300);
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+      .section__subtitle {
+        display: inline-block;
+        margin-bottom: size(10);
+        font-size: size(20);
+        font-weight: $f-semi-bold;
+        text-transform: uppercase;
+        color: $c-primary;
+        border-bottom: 1px solid $c-secondary;
+      }
+      .section__list {
+        margin: 0 0 size(20) size(40);
+        font-size: size(14);
+        list-style-type: disc;
+        li {
+          line-height: size(30);
+          i {
+            margin-right: size(10);
+            color: $c-tertiary;
+          }
+          .button {
+            color: $c-primary;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .tab-content__gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: size(10);
+      a {
+        display: block;
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+      &.--grid-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: size(40);
+      }
+    }
+  }
+  &.whatsapp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 200px 0;
+    background-image: url(../images/whatsapp/whatsapp-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    i {
+      font-size: size(150);
+      color: $c-whatsapp-light;
+      transition: color .25s ease;
+      &:hover {
+        color: $c-whatsapp-light-hover;
+      }
+    }
+    .section__title {
+      margin-bottom: size(20);
+      font-size: size(40);
+      &:before {
+        display: none;
+      }
+    }
+    .section__title, .section__text {
+      color: $c-white;
+    }
+  }
+  &.review {
+    background-color: $c-primary;
+    .section__title, .section__text {
+      color: $c-white;
+    }
+    .section__text {
+      .hotel {
+        color: $c-white;
+      }
+    }
+    .section__title {
+      &:before {
+        background-color: $c-white;
+      }
+    }
+  }
+}

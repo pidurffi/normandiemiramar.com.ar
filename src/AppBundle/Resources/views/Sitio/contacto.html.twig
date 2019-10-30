@@ -1,0 +1,64 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set contacto = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('contacto') }}"><i class="fas fa-phone"></i> Contacto</a>
+      </li>
+    </ul>
+    <a href="{{ url('home') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver al Inicio</a>
+  </div>
+</div>
+
+<!-- Contacto contenido -->
+<section class="section content-inside">
+  <div class="section__holder">
+    <div class="content-inside__grid">
+      <form action="" class="form content-inside__form">
+        <div class="form__item --name">
+          <label for="">Nombre</label>
+          <input type="text">
+        </div>
+        <div class="form__item --last-name">
+          <label for="">Apellido</label>
+          <input type="text">
+        </div>
+        <div class="form__item --email">
+          <label for="">Email</label>
+          <input type="text">
+        </div>
+        <div class="form__item --phone">
+          <label for="">Teléfono</label>
+          <input type="text">
+        </div>
+        <div class="form__item --message">
+          <label for="">Mensaje</label>
+          <textarea name="" id=""></textarea>
+        </div>
+        <div class="form__item --button">
+          <a href="" class="button --whatsapp --with-icon"><i class="fab fa-whatsapp"></i> Consultar por Whatsapp</a>
+          <a href="" class="button --primary">Enviar</a>
+        </div>
+      </form>
+      <div class="content-inside__description">
+        <figure class="content-inside__image">
+          <img src="{{ asset('bundles/app/maquetado/images/map/map.jpg') }}" alt="">
+        </figure>
+        <p class="content-inside__text"><i class="fas fa-phone"></i> (011) 5415.2464</p>
+        <p class="content-inside__text"><a href=""><i class="fas fa-envelope"></i> info@normandiemiramar.com.ar</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

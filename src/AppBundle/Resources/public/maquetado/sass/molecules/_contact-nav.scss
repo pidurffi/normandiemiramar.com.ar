@@ -1,0 +1,12 @@
+// // // // CONTACT NAV
+
+.contact-nav {
+  display: flex;
+  align-items: center;
+  li {
+    margin-left: size(20);
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

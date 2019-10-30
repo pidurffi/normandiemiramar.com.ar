@@ -1,0 +1,63 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set miramar = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-historia') }}"><i class="fas fa-map-marked-alt"></i> Miramar</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-lugares-aeroclub-miramar') }}"><i class="fas fa-location-arrow"></i> Parque de los Patricios</a>
+      </li>
+    </ul>
+    <a href="{{ url('miramar-lugares') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Paseos</a>
+  </div>
+</div>
+
+<!-- Tab navigation -->
+<div class="tab-nav">
+  <div class="tab-nav__holder">
+    <ul>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-historia') }}" class="button --text --tab-button">Historia</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-fotos') }}" class="button --text --tab-button">Fotos</a>
+      </li>
+      <li class="tab-nav__item --active">
+        <a href="{{ url('miramar-lugares') }}" class="button --text --tab-button">Para conocer</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-cerca') }}" class="button --text --tab-button">Cerca de Normandie</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Lugares contenido -->
+<section class="section tab-content">
+  <div class="section__holder">
+    <h2 class="section__title">Parque de los Patricios</h2>
+    <figure class="section__image">
+      <img src="{{ asset('bundles/app/maquetado/images/places/parque-patricios.jpg') }}" alt="">
+    </figure>
+    <p class="section__text --highlight">UN ESPACIO VERDE DE RECREACIÓN Y ESPARCIMIENTO, A METROS DEL MAR Y DEL CENTRO</p>
+    <p class="section__text">A escasos 300 mts. del mar, el Parque de los Patricios surge como un espacio verde de recreación y esparcimiento. Ubicado en la av. 9 entre calle 14 y calle 16, posee numerosos árboles, un lago artificial, pequeñas islas intercomunicadas con sendos puentes de madera y una plaza de juegos infantiles. 
+        <br>Una de las actividades que cuenta con un gran número de adeptos es la pesca, pudiendo capturar pequeñas mojarritas o bagres ya que con el arroyo El Durazno atravesándolo, este parque es ideal para pasar una tarde en familia o con amigos. 
+        <br>La completa plaza de juegos quizá sea la excusa perfecta para llevar a los niños y dejarse atrapar por este lugar donde es fácil encontrar un momento de tranquilidad en este refugio a pocos metros del mar, y a una 500 metros del centro de la ciudad de Miramar.
+        <br>Dueño de un paisaje acogedor, el parque se presta para pasar una jornada completa o como un ámbito para conocer y disfrutar por el tiempo que desee. 
+        <br>Los fines de semana se pueden alquilar botes a pedal.</p>
+  </div>
+</section>
+
+{% endblock %}

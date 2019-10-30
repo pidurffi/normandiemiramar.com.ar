@@ -1,0 +1,54 @@
+// // // // REVIEW
+
+.review {
+  &__item {
+    padding: size(40) size(100);
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: size(10);
+    font-size: size(20);
+    font-weight: $f-semi-bold;
+    font-style: italic;
+    text-transform: uppercase;
+    color: $c-secondary;
+  }
+  &__text {
+    font-size: size(14);
+    font-weight: $f-light;
+    font-style: italic;
+    color: $c-white;
+    i {
+      position: relative;
+      top: size(2.5);
+      font-size: size(20);
+      color: $c-secondary;
+      &:first-child {
+        margin-right: size(10);
+      }
+      &:last-child {
+        margin-left: size(10);
+      }
+    }
+  }
+  .owl-nav {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    button {
+      i {
+        font-size: size(50);
+        color: $c-tertiary;
+        transition: color .25s ease;
+      }
+      &:hover {
+        i {
+          color: $c-tertiary-hover;
+        }
+      }
+    }
+  }
+}

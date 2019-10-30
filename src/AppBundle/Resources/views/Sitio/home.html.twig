@@ -1,383 +1,176 @@
 {% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set home = true %}
+
 {% block content %}
 
-<!--==========================
-Intro Section
-============================-->         
-<section id="intro"> 
-    <div class="intro-container"> 
-        <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel"> 
-            <ol class="carousel-indicators"></ol>                     
-            <div class="carousel-inner" role="listbox"> 
-                <div class="carousel-item active"> 
-                    <div class="carousel-background">
-                        <img src="{{ asset('bundles/app/maquetado/img/intro-carousel/001.jpg') }}" alt="">
-                    </div>                             
-                    <div class="carousel-container"> 
-                        <div class="carousel-content"> 
-                            <h2>Mirador del Indio - Nuevos dueños</h2> 
-                            <p>Totalmente renovado!!</p> 
-                            <!-- <a href="#featured-services" class="btn-get-started scrollto">Get Started</a> --> 
-                        </div>                                 
-                    </div>                             
-                </div>                         
-                <div class="carousel-item"> 
-                    <div class="carousel-background">
-                        <img src="{{ asset('bundles/app/maquetado/img/intro-carousel/002.jpg') }}" alt="">
-                    </div>                             
-                    <div class="carousel-container"> 
-                        <div class="carousel-content"> 
-                        </div>                                 
-                    </div>                             
-                </div>                         
-                <div class="carousel-item"> 
-                    <div class="carousel-background">
-                        <img src="{{ asset('bundles/app/maquetado/img/intro-carousel/003.jpg') }}" alt="">
-                    </div>                             
-                    <div class="carousel-container"> 
-                        <div class="carousel-content"> 
-                            <!-- <h2>Piscina y solarium</h2> 
-                            <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p> 
-                            <a href="#featured-services" class="btn-get-started scrollto">Get Started</a> --> 
-                        </div>                                 
-                    </div>                             
-                </div>                                                 
-            </div>                     
-            <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">  <span class="carousel-control-prev-icon fas fa-angle-left" aria-hidden="true"></span>  <span class="sr-only">Previous</span></a>
-            <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">  <span class="carousel-control-next-icon fas fa-angle-right" aria-hidden="true"></span>  <span class="sr-only">Next</span></a>
-        </div>                 
-    </div>             
-</section>
-<!-- #intro --> 
-
-<main id="main">
-	<!--PROMOCIONES Section-->     
-
-	{{ render(controller('AppBundle:Default:promociones')) }}
-	
-	<!-- #PROMOCIONES --> 
-
-    <!--==========================
-      WhatsApp Section
-    ============================-->
-    <section id="call-to-action" class="wow fadeIn">
-      <div class="text-center">
-        <h3>WhatsApp directo !!!</h3>
-        <p>Hacé click acá y envianos tu consulta por WhatsApp, te responderemos inmediatamente</p>
-        <a href="https://wa.me/5491156441079" target="_blank"><i class="fab fa-whatsapp fa-10x"></i></a>
+<!-- Intro animation -->
+  <div class="intro">
+    <div class="owl-carousel intro-carousel">
+      <div class="intro__item one">
+        <p class="intro__text">
+          <span>A 300 metros del mar</span> <span>Y las principales áreas comerciales</span>
+        </p>
       </div>
-    </section>
-    <!-- #WhatsApp -->
+      <div class="intro__item two">
+          <p class="intro__text">
+            <span>Miramar, una ciudad apacible</span> <span>Dedicada a los niños y la familia</span>
+          </p>
+      </div>
+    </div>
+  </div>
 
-    <!--==========================
-    El Complejo Section
-    ============================--> 
-    <section id="complejo" class="wow fadeIn">
-        <div class="container"> 
-            <header class="section-header wow fadeInUp"> 
-                <h3>El complejo</h3> 
-            </header>
-            <p>Bienvenidos a <strong>Mirador del Indio</strong>, un complejo de cabañas-aparts, en <strong>Las Gaviotas</strong>, donde Ud. puede disfrutar de la paz y tranquilidad que ofrecen estos increíbles paisajes, y a la vez, gozar de las comodidades de un ambiente creado para sentirse totalmente a gusto.</p>
-            <p>Desde allí, se percibe el sonido de los pájaros, rodeado del mar de pinos verdes que Mar de las Pampas propone hacia el norte, y mirando al sur, apreciar las acacias vírgenes y agrestes de Las Gaviotas. No lejos de allí, el faro Querandí y la reserva natural de dunas.</p>
-            <p>La suave brisa del mar, el encanto del bosque, la calidez de nuestras cabañas, y la amabilidad de nuestra gente es algo que no puede dejar de disfrutar Ud. y su familia.</p>
-            <p>Nuestro complejo está construido sobre una superficie de 3000 m² totalmente parquizados, en el sitio más alto de <strong>Mar de las Pampas y Las Gaviotas</strong>.</p>
-            <p>Lo invitamos a apreciar de la paz que les ofrecen las cabañas y el lugar, a disfrutar mientras la luz de la mañana se cuela, a través del bosque de <strong>Mar de las Pampas</strong>, por sus ventanas.</p>
-            <p>A metros de allí, el mar lo espera y también podrá optar por quedarse con nosotros y zambullirse en la piscina, hacer un asadito o simplemente hacer uso del Solarium.</p>
-            <p>Toda la naturaleza y el mejor servicio lo esperan.</p>
-
-            <div class="my-gallery" itemscope="" itemtype="http://schema.org/ImageGallery" data-pswp-uid="1"> 
-                <div class="row text-center text-lg-left">
-                    {% for gal in galeria.galeria %}
-                        <figure class="col-lg-3 col-md-4 col-xs-6">
-                            <a href="{{ asset('/uploads/galerias/gallery/') }}{{ gal }}" class="d-block mb-4 h-100" itemprop="contentUrl" data-size="800x535">
-                                <img itemprop="thumbnail" src="{{ asset('/uploads/galerias/') }}{{ gal|gallery_thumb(300,201) }}">
-                            </a>
-                        </figure>
-                    {% endfor %}
-
-                </div>
-            </div>
+  <!-- Promos -->
+  <section class="section promo" id="promociones">
+    <div class="section__holder">
+      <h2 class="section__title">Nuestras promociones</h2>
+      <p class="section__text">Aprovecha nuestas promociones para venir a conocer el <span class="hotel">Hotel Normandie</span> en Miramar. Los mejores precios y descuentos para fines de semana largos y la temprada 2019 / 2020</p>
+      <div class="promo__grid">
+        <div class="promo__item">
+          <figure class="promo__image">
+            <img src="{{ asset('bundles/app/maquetado/images/promos/01.jpg') }}" alt="Promoción Octubre y Noviembre">
+          </figure>
+          <div class="promo__content">
+            <h3 class="promo__title">Octubre y Noviembre</h3>
+            <ul class="promo__list">
+              <li><i class="fas fa-check"></i>Doble $2.150</li>
+              <li><i class="fas fa-check"></i>Triple Estándar $2.280</li>
+              <li><i class="fas fa-check"></i>Triple De Luxe $2.540</li>
+              <li><i class="fas fa-check"></i>Cuádruple Estándar $2.800</li>
+              <li><i class="fas fa-check"></i>Cuádruple Superior $3.120</li>
+              <li><i class="fas fa-check"></i>Departamento 5/6 personas $3.640</li>
+            </ul>
+            <p class="promo__text">Tarifas por noche, por habitación</p>
+            <p class="promo__text">No incluye feriados</p>
+            <p class="promo__text">Desayuno incluido</p>
+            <p class="promo__text">La reserva se hace efectiva mediante transferencia o depósito bancario del 10% del importe total de la estadía</p>
+          </div>
+          <a href="" class="promo__button button --secondary --text">Ver más</a>
         </div>
-    </section>
+        <div class="promo__item">
+          <figure class="promo__image">
+            <img src="{{ asset('bundles/app/maquetado/images/promos/02.jpg') }}" alt="Promoción Temporada 2019 / 2020">
+          </figure>
+          <div class="promo__content">
+            <h3 class="promo__title">Temporada 2019 / 2020</h3>
+            <h4 class="promo__subtitle">Temporada alta del 18/12 al 14/02</h4>
+            <ul class="promo__list">
+              <li><i class="fas fa-check"></i>Doble $22.330</li>
+              <li><i class="fas fa-check"></i>Triple Estándar $23.240</li>
+              <li><i class="fas fa-check"></i>Triple De Luxe $28.210</li>
+              <li><i class="fas fa-check"></i>Cuádruple Estándar $30.940</li>
+              <li><i class="fas fa-check"></i>Cuádruple Superior $33.670</li>
+              <li><i class="fas fa-check"></i>Departamento 5/6 personas $37.310</li>
+            </ul>
+            <p class="promo__text">Tarifas por 7 noches</p>
+            <p class="promo__text">No incluye feriados</p>
+            <p class="promo__text">Desayuno incluido</p>
+            <p class="promo__text">La reserva se hace efectiva mediante transferencia o depósito bancario del 10% del importe total de la estadía</p>
+          </div>
+          <a href="" class="promo__button button --secondary --text">Ver más</a>
+        </div>
+        <div class="promo__item">
+          <figure class="promo__image">
+            <img src="{{ asset('bundles/app/maquetado/images/promos/03.jpg') }}" alt="Promoción Feriado Octubre">
+          </figure>
+          <div class="promo__content">
+            <h3 class="promo__title">Feriado Octubre</h3>
+            <ul class="promo__list">
+              <li><i class="fas fa-check"></i>Doble $2.410</li>
+              <li><i class="fas fa-check"></i>Triple Estándar $2.540</li>
+              <li><i class="fas fa-check"></i>Triple De Luxe $2.800</li>
+              <li><i class="fas fa-check"></i>Cuádruple Estándar $3.060</li>
+              <li><i class="fas fa-check"></i>Cuádruple Superior $3.380</li>
+              <li><i class="fas fa-check"></i>Departamento 5/6 personas $3.900</li>
+            </ul>
+            <p class="promo__text">Tarifas por noche, por habitación</p>
+            <p class="promo__text">No incluye feriados</p>
+            <p class="promo__text">Desayuno incluido</p>
+            <p class="promo__text">La reserva se hace efectiva mediante transferencia o depósito bancario del 10% del importe total de la estadía</p>
+          </div>
+          <a href="" class="promo__button button --secondary --text">Ver más</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- #El Complejo -->
+  <!-- Hotel -->
+  <section class="section hotel">
+    <div class="section__holder">
+      <h2 class="section__title">Hotel Normandie</h2>
+      <p class="section__text">El Hotel está ubicado en la zona céntrica de Miramar, a 300 metros del mar y las principales áreas comerciales, ofrecemos un servicio de excelente calidad, brindando a nuestros huéspedes la calidez de nuestra gente, para hacerlos sentir como en su hogar.</p>
+      <p class="section__text">Miramar, una ciudad apacible, dedicada a los niños y la familia. Miramar dispone de una magnífica costa, con amplias playas de suave arena, que brindan todas las posibilidades para disfrutar del sol y el mar.</p>
+      <a href="" class="section__button button --secondary --with-icon"><i class="fas fa-images"></i> Ver fotos del hotel</a>
+    </div>
+  </section>
 
-	<!--==========================
-    LOS APARTS Section
-    ============================-->
-    <section id="aparts"  class="section-bg" >
-      	<div class="container">
+  <!-- Whatsapp -->
+  <section class="section whatsapp">
+    <h2 class="section__title">Whatsapp directo !</h2>
+    <p class="section__text">Hacé click acá y envianos tu consulta por WhatsApp, te responderemos inmediatamente</p>
+    <a href="https://wa.me/5491154152464" target="_blank" class="whatsapp-cta">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </section>
 
-	        <header class="section-header">
-	          <h3 class="section-title">Las Cabañas</h3>
-	        </header>
-	        
-	        <div class="row portfolio-container">
-              <div class="col-lg-6 col-md-6 portfolio-item wow fadeInUp">
-                <div class="portfolio-wrap">
-                    <figure>
-                    <a href="{{ url('cabana-4-personas') }}"><img src="{{ asset('bundles/app/maquetado/img/los-aparts/apart-4-personas.jpg') }}" class="img-fluid" alt="Apart 4 personas - Mirador del Indio - Las Gaviotas, Mar de las Pampas"></a>
-                    </figure>
-                    <div class="portfolio-info">
-                        <h4><a href="{{ path('cabana-4-personas') }}">Cabaña hasta 4/5 personas, 58 m²</a></h4>
-                        <p>En dos plantas, deck privado con parilla.<br>Puede agregarse una cama adicional al dormitorio principal.</p>
-                    </div>
-                </div>
-              </div>
+  <!-- Location -->
+  <section class="section location" id="como-llegar">
+    <h2 class="section__title">Cómo llegar</h2>
+    <div class="section__holder">
+      <div class="location__map">
+        <img src="{{ asset('bundles/app/maquetado/images/map/map.jpg') }}">
+        <img src="images/map/map.jpg" alt="">
+      </div>
+      <div class="location__info">
+        <p class="section__text location__text">El <span class="hotel">Hotel Normandie</span> se encuentra en Miramar, provincia de Buenos Aires, sobre la Calle 19 N° 910 esquina 18</p>
+        <p class="section__text location__text">Miramar se encuentra ubicado en el sudeste de la Provincia de Buenos Aires (Latitud 38º 16' Sur, Longitud 57º 50' Oeste), a 450 Km. de la Ciudad Autónoma de Buenos Aires, por la ruta Provincial Nº 2; y a 45 Km. al Sur de Mar del Plata por la ruta Provincial Nº 11.</p>
+        <h3 class="location__title">Accesos</h3>
+        <p class="section__text location__text">Desde el Norte: Por ruta Provincial Nº 2 y ruta Provincial Nº 11, y por Ferrocarril Ferrobaires</p>
+        <p class="section__text location__text">Desde el Sur: Por ruta Provincial Nº 88 y ruta Provincial Nº 77</p>
+        <p class="section__text location__text">Desde el Noroeste: Por ruta Provincial Nº 226 y rutas 11 y 88</p>
+      </div>
+    </div>
+  </section>
 
-              <div class="col-lg-6 col-md-6 portfolio-item wow fadeInUp">
-                    <div class="portfolio-wrap">
-                        <figure>
-                        <a href="{{ path('cabana-6-personas') }}"><img src="{{ asset('bundles/app/maquetado/img/los-aparts/apart-6-personas.jpg') }}" class="img-fluid" alt="Apart 6 personas - Mirador del Indio - Las Gaviotas, Mar de las Pampas"></a>
-                        </figure>
-                        <div class="portfolio-info">
-                            <h4><a href="{{ path('cabana-6-personas') }}">Cabañas hasta 6 personas, 73 m²</a></h4>
-                            <p>En dos plantas, 2 baños completos con ducha, deck privado con parrilla. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-	        <br>
-	        <br>
-            <p>Las cabañas se diferencian de otros complejos por la cantidad de verde y la construcción de las mismas. Las paredes son dobles, de 30 cm de espesor, losa forrada en madera lo que evita que se escuchen sonidos y ruidos en planta baja cuando circulan por planta alta. Vidrios dobles, cerramiento de primer nivel, aisladas frío-calor.</p>
-            <p>Las cabañas están construídas en bloques de 2 unidades separadas entre sí por grandes espacios parquizados de 10 metros. Parque y plaza de juegos para niños (hamacas, etc). <br> Cada cabaña posee, en el exterior, un deck individual y exclusivo con su parrilla, mesa de plástico y sillas para la cantidad de huéspedes máximo por cabaña. (4 o 6) Están equipadas con: SMART-TV 32" color por cable en el living y LCD 24" en el dormitorio matrimonial, ventiladores de techo en cada habitación, ventiladores de pie 1 por cabaña.</p>
-            <p>Camas con somier. Horno tradicional, microondas, heladera con freezer. Elementos de cocina tales como ollas, asaderas, vajilla, platos cubiertos, vasos, tazas, etc. Ropa blanca (sabanas, toallones, toallas), toallas para la piscina, acolchados, cubre cama.</p>
-            <h4>Cabañas con capacidad hasta 4 personas</h4>
-            <p>La construcción de cada una abarca 57.68 m² entre planta baja y planta alta. Se componen de una habitación matrimonial (con placard) en planta alta y un baño (con bañera), mientras que en planta baja esta la cocina, 2 sofá cama, y mesa y 4 sillas de algarrobo.</p>
-            <h4>Cabañas con capacidad hasta 6 personas</h4>
-            <p>La construcción de cada una abarca 72.48 m² entre planta baja y planta alta. Se componen de una habitación matrimonial (con placard) en planta alta, una segunda habitación con 2 camas, (placard en el pasillo) y un baño (con bañera), mientras que en planta baja esta la cocina, un segundo baño completo, con ducha, 2 sofá cama, mesa y 6 sillas de algarrobo.</p>
-            
-            <!--<div class="my-gallery" itemscope="" itemtype="http://schema.org/ImageGallery" data-pswp-uid="1"> 
-                <div class="row text-center text-lg-left">
-                    {{ render(controller('AppBundle:Default:galeria',{galeria_id: 2})) }}
-                </div>
-            </div>-->        
-    	</div>
-	</section>
-    <!-- #los aparts -->
+  <!-- Users -->
+  <section class="section review">
+    <div class="section__holder">
+      <h2 class="section__title">Nuestros huéspedes</h2>
+      <p class="section__text">Conoce que opinan de nosotros los huéspedes que ya conocieron el <span class="hotel">Hotel Normandie</span></p>
+      <div class="owl-carousel review-carousel">
+        <div class="review__item">
+          <h3 class="review__title">Excelente! Lo recomiendo!</h3>
+          <p class="review__text">
+            <i class="fas fa-quote-left"></i>
+            Preciosas las instalaciones. Cómodo. Habitación (triple superior) muy amplia, dos espacios dividida por un baño amplio tambien. La comida riquísima y muy abundante. El personal excelente! Muy buena ubicacion, tranquilo, pero cerca de todo.
+            <i class="fas fa-quote-right"></i>
+          </p>
+        </div>
+        <div class="review__item">
+          <h3 class="review__title">Excelente comida</h3>
+          <p class="review__text">
+            <i class="fas fa-quote-left"></i>
+            No me hospedé en este hotel, pero si me recomendaron ir a comer. Fui a desayunar y había variedad de cosas para elegir. Después fui a cenar y la comida me encanto. También me gusto mucho la decoración del hotel.
+            <i class="fas fa-quote-right"></i>
+          </p>
+        </div>
+        <div class="review__item">
+          <h3 class="review__title">Lindas vacaciones</h3>
+          <p class="review__text">
+            <i class="fas fa-quote-left"></i>
+            Tuve una muy buena experiencia. El hotel está recién arreglado, la decoración es muy linda, el desayuno bastante variado y la atención muy agradable.
+            <i class="fas fa-quote-right"></i>
+          </p>
+        </div>
+        <div class="review__item">
+          <h3 class="review__title">Excelente lugar</h3>
+          <p class="review__text">
+            <i class="fas fa-quote-left"></i>
+            Tuve que viajar el fin de semana y fui sin reserva y me aconsejaron ir ahi la verdad el hotel es re lindo, super confortable, limpio, luminoso y el trato de primera. Es un hotel reciclado a nuevo la construcción es del año 50 y realmente parece que no tuviera mas de 50 años. Muy buen gusto. Es para volver.
+            <i class="fas fa-quote-right"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-
-    <!--==========================
-    Services Section
-    ============================-->             
-    <section id="servicios">
-        <div class="container"> 
-            <header class="section-header wow fadeInUp"> 
-                <h3>Servicios</h3> 
-                <p>En nuestras cabañas se brindan los siguientes servicios:</p> 
-            </header>                     
-            <div class="row"> 
-                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
-                    <div class="icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>                             
-                    <h4 class="title"><a href="">Servicio de ropa blanca y toallas</a></h4> 
-                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
-                </div>                      
-                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
-                    <div class="icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>                             
-                    <h4 class="title"><a href="">Servicio de mucama (sin lavado de vajilla)</a></h4> 
-                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
-                </div>                          
-                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
-                    <div class="icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>                             
-                    <h4 class="title"><a href="">Cajas de seguridad</a></h4> 
-                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
-                </div>                          
-                           
-                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
-                    <div class="icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>                             
-                    <h4 class="title"><a href="">SMART TV 32" en el living</a></h4> 
-                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
-                </div>  
-                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
-                    <div class="icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>                             
-                    <h4 class="title"><a href="">TV LCD 24" en el dormitorio principal</a></h4> 
-                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
-                </div>  
-                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
-                    <div class="icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>                             
-                    <h4 class="title"><a href="">Servicio de TV por Cable</a></h4> 
-                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
-                </div>  
-                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
-                    <div class="icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>                             
-                    <h4 class="title"><a href="">Juegos de mesa (se piden en administración)</a></h4> 
-                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
-                </div>    
-                       
-                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
-                    <div class="icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>                             
-                    <h4 class="title"><a href="">Cocinas totalmente equipadas (vajilla, vasos, tazas, asadera, ollas, etc)</a></h4> 
-                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
-                </div>   
-                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
-                    <div class="icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>                             
-                    <h4 class="title"><a href="">Horno convencional, heladera con freezer</a></h4> 
-                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
-                </div>
-                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
-                    <div class="icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>                             
-                    <h4 class="title"><a href="">Calefacción en todos los ambientes</a></h4> 
-                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
-                </div>
-                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
-                    <div class="icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>                             
-                    <h4 class="title"><a href="">Ventilador de techo en las habitaciones y ventilador de pie extra</a></h4> 
-                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
-                </div>
-                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
-                    <div class="icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>                             
-                    <h4 class="title"><a href="">Decks individuales de pino con parrilla, mesa y sillas (para la cantidad de habitantes máxima por cabaña)</a></h4> 
-                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
-                </div>
-                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
-                    <div class="icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>                             
-                    <h4 class="title"><a href="">Pileta de natación (12m x 6m)</a></h4> 
-                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
-                </div>
-                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
-                    <div class="icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>                             
-                    <h4 class="title"><a href="">Toallones para pileta (valor extra)</a></h4> 
-                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
-                </div>
-                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
-                    <div class="icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>                             
-                    <h4 class="title"><a href="">Solarium, con reposeras (junto a la pileta). <br>Sillas y sombrillas para la playa.</a></h4> 
-                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
-                </div>
-                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s"> 
-                    <div class="icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>                             
-                    <h4 class="title"><a href="">Plaza con juegos para chicos.</a></h4> 
-                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p> --> 
-                </div>                 
-            </div>            
-        </div>                 
-    </section>
-               
-
-
-            <!--Google map-->
-            <section id="ubicacion" class="section-bg wow fadeInUp">
-                
-                    <div id="mapa" class="container-fluid mt-5 mb-5">
-                        <header class="section-header wow fadeInUp">
-                            <h3>Ubicación</h3>
-                        </header>
-                    </div>
-                    <div id="map-container" class="z-depth-1" style="height: 500px"></div>
-                
-            </section>
-
-            <section id="contact" class="section-bg wow fadeInUp"> 
-                <div class="container"> 
-                    <div class="section-header"> 
-                        <h3>Contacto</h3> 
-                        <p>Ahora también podés contactarnos por WhatsApp</p> 
-                    </div>                     
-                    <div class="row contact-info"> 
-                        <div class="col-md-4"> 
-                            <div class="contact-address"> 
-                                <i class="ion-ios-location-outline"></i> 
-                                <h3>Dirección</h3> 
-                                <address>Alte. Brown y Punta del Indio</address> 
-                            </div>                             
-                        </div>                         
-                        <div class="col-md-4"> 
-                            <div class="contact-phone"> 
-                                <i class="ion-ios-telephone-outline"></i> 
-                                <h3>Teléfono</h3> 
-                                <p>Reservas: <a href="https://wa.me/5491156441079">(011) 5644-1079</a></p>
-                                <!--<p>Contacto: <a href="tel:11 54140776">(011) 4202-5564</a></p>-->
-                            </div>                             
-                        </div>                         
-                        <div class="col-md-4"> 
-                            <div class="contact-email"> 
-                                <i class="ion-ios-email-outline"></i> 
-                                <h3>Email</h3> 
-                                <p><a href="mailto:info@miradordelindio.com.ar">info@miradordelindio.com.ar</a></p> 
-                            </div>                             
-                        </div>                         
-                    </div>                     
-                    <div class="form"> 
-                        <div id="sendmessage">Su consulta ha sido enviada. Gracias!</div>                         
-                        <div id="errormessage"></div>                         
-                        <form method="post" role="form" class="contactForm" id="form_contacto" onsubmit="return validar_form();"> 
-                            <div class="form-row"> 
-                                <div class="form-group col-md-4"> 
-                                    <input type="text" name="name" class="form-control" id="form_nombre" placeholder="Nombre" data-rule="minlen:4" data-msg="Por favor ingrese al menos 4 caracteres"/> 
-                                    <div class="validation"></div>                                     
-                                </div>                                 
-                                <div class="form-group col-md-4"> 
-                                    <input type="email" class="form-control" name="email" id="form_email" placeholder="Email" data-rule="email" data-msg="Por favor ingrese un email válido"/> 
-                                    <div class="validation"></div>                                     
-                                </div> 
-                                <div class="form-group col-md-4"> 
-                                    <input type="telefono" class="form-control" name="telefono" id="form_telefono" placeholder="Teléfono" data-rule="telefono" data-msg="Por favor ingrese su número de teléfono"/> 
-                                    <div class="validation"></div>                                     
-                                </div>                                 
-                            </div>                             
-                                                         
-                            <div class="form-group"> 
-                                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Por favor escriba un mensaje" id="form_mensaje" placeholder="Mensaje"></textarea>                                 
-                                <div class="validation"></div>                                 
-                            </div>                             
-                            <div class="text-center">
-                                {#
-
-                                <button type="submit">Enviar Mensaje</button>
-                                #}
-                                <a href="" class="send" id="enviar-mensaje">Enviar Mensaje</a>
-                                
-                                <script type="text/javascript">
-                                    $( '#$enviar-mensaje' ).click(function() {
-                                    fbq('track', 'Contact');
-                                </script>
-                                
-                                <div class="spinner" id="form_img_loading">
-                                    <div class="rect1"></div>
-                                    <div class="rect2"></div>
-                                    <div class="rect3"></div>
-                                    <div class="rect4"></div>
-                                    <div class="rect5"></div>
-                                </div>
-                            </div>                             
-                        </form>                         
-                    </div>                     
-                </div>                 
-            </section>
-            <!-- #contact --> 
-
-	
-</main>	
 {% endblock %}

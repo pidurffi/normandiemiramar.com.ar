@@ -44,79 +44,265 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/cabana-4-personas", name="cabana-4-personas")
-     * @Template("AppBundle:Sitio:cabana-4-personas.html.twig")
+     * @Route("/", name="home")
+     * @Template("AppBundle:Sitio:home.html.twig")
      */
-    public function cabana4PersonasAction(Request $request)
+    public function homeAction(Request $request)
     {
         return array();
     }
 
     /**
-     * @Route("/cabana-6-personas", name="cabana-6-personas")
-     * @Template("AppBundle:Sitio:cabana-6-personas.html.twig")
+     * @Route("/habitaciones", name="habitaciones")
+     * @Template("AppBundle:Sitio:habitaciones.html.twig")
      */
-    public function cabana6PersonasAction(Request $request)
+    public function habitacionesAction(Request $request)
     {
         return array();
     }
-    
+
     /**
-     * @Route("/suite-2-personas", name="suite-2-personas")
-     * @Template("AppBundle:Sitio:suite-2-personas.html.twig")
+     * @Route("/habitacion-doble", name="habitacion-doble")
+     * @Template("AppBundle:Sitio:habitacion-doble.html.twig")
      */
-    public function suite2PersonasAction(Request $request)
+    public function habitacionDobleAction(Request $request)
     {
-    	return array();
+        return array();
     }
-    
+
     /**
-     * @Route("/suite-2-personas-con-parrilla", name="suite-2-personas-con-parrilla")
-     * @Template("AppBundle:Sitio:suite-2-personas-con-parrilla.html.twig")
+     * @Route("/habitacion-triple", name="habitacion-triple")
+     * @Template("AppBundle:Sitio:habitacion-triple.html.twig")
      */
-    public function dosPersonasClassicAction(Request $request)
+    public function habitacionTripleAction(Request $request)
     {
-    	return array();
+        return array();
     }
-    
+
     /**
-     * @Route("/apart-4-personas", name="apart-4-personas")
-     * @Template("AppBundle:Sitio:apart-4-personas.html.twig")
+     * @Route("/habitacion-cuadruple", name="habitacion-cuadruple")
+     * @Template("AppBundle:Sitio:habitacion-cuadruple.html.twig")
      */
-    public function apart4PersonasAction(Request $request)
+    public function habitacionCuadrupleAction(Request $request)
     {
-    	return array();
+        return array();
     }
-    
+
     /**
-     * @Route("/apart-6-personas", name="apart-6-personas")
-     * @Template("AppBundle:Sitio:apart-6-personas.html.twig")
+     * @Route("/departamento", name="departamento")
+     * @Template("AppBundle:Sitio:departamento.html.twig")
      */
-    public function apart6PersonasAction(Request $request)
+    public function departamentoAction(Request $request)
     {
-    	return array();
+        return array();
     }
-    
+
     /**
-     * @Route("/duplex-6-personas", name="duplex-6-personas")
-     * @Template("AppBundle:Sitio:duplex-6-personas.html.twig")
+     * @Route("/servicios", name="servicios")
+     * @Template("AppBundle:Sitio:servicios.html.twig")
      */
-    public function duplex6PersonasAction(Request $request)
+    public function serviciosAction(Request $request)
     {
-    	return array();
+        return array();
     }
-    
+
     /**
-     * @Route("/duplex-7-personas", name="duplex-7-personas")
-     * @Template("AppBundle:Sitio:duplex-7-personas.html.twig")
+     * @Route("/miramar-historia", name="miramar-historia")
+     * @Template("AppBundle:Sitio:miramar-historia.html.twig")
      */
-    public function duplex7PersonasAction(Request $request)
+    public function miramarHistoriaAction(Request $request)
     {
-    	return array();
+        return array();
     }
-    
-    
-    
+
+    /**
+     * @Route("/miramar-fotos", name="miramar-fotos")
+     * @Template("AppBundle:Sitio:miramar-fotos.html.twig")
+     */
+    public function miramarFotosAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/miramar-lugares", name="miramar-lugares")
+     * @Template("AppBundle:Sitio:miramar-lugares.html.twig")
+     */
+    public function miramarLugaresAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/miramar-lugares-aeroclub-miramar", name="miramar-lugares-aeroclub-miramar")
+     * @Template("AppBundle:Sitio:miramar-lugares-aeroclub-miramar.html.twig")
+     */
+    public function miramarLugaresAeroclubMiramarAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/miramar-lugares-arbol-tallado", name="miramar-lugares-arbol-tallado")
+     * @Template("AppBundle:Sitio:miramar-lugares-arbol-tallado.html.twig")
+     */
+    public function miramarLugaresArbolTalladoAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/miramar-lugares-bosque-energetico", name="miramar-lugares-bosque-energetico")
+     * @Template("AppBundle:Sitio:miramar-lugares-bosque-energetico.html.twig")
+     */
+    public function miramarLugaresBosqueEnergeticoAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/miramar-lugares-vivero-dunicola", name="miramar-lugares-vivero-dunicola")
+     * @Template("AppBundle:Sitio:miramar-lugares-vivero-dunicola.html.twig")
+     */
+    public function miramarLugaresViveroDunicolaAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/miramar-lugares-centinela-mar", name="miramar-lugares-centinela-mar")
+     * @Template("AppBundle:Sitio:miramar-lugares-centinela-mar.html.twig")
+     */
+    public function miramarLugaresCentinelaMarAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/miramar-lugares-cristo-hermandad", name="miramar-lugares-cristo-hermandad")
+     * @Template("AppBundle:Sitio:miramar-lugares-cristo-hermandad.html.twig")
+     */
+    public function miramarLugaresCristoHermandadAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/miramar-lugares-feria-artesanos", name="miramar-lugares-feria-artesanos")
+     * @Template("AppBundle:Sitio:miramar-lugares-feria-artesanos.html.twig")
+     */
+    public function miramarLugaresFeriaArtesanosAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/miramar-lugares-mar-sud", name="miramar-lugares-mar-sud")
+     * @Template("AppBundle:Sitio:miramar-lugares-mar-sud.html.twig")
+     */
+    public function miramarLugaresMarSudAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/miramar-lugares-monumentos-miramar", name="miramar-lugares-monumentos-miramar")
+     * @Template("AppBundle:Sitio:miramar-lugares-monumentos-miramar.html.twig")
+     */
+    public function miramarLugaresMonumentosMiramarAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/miramar-lugares-muelle-pescadores", name="miramar-lugares-muelle-pescadores")
+     * @Template("AppBundle:Sitio:miramar-lugares-muelle-pescadores.html.twig")
+     */
+    public function miramarLugaresMuellePescadoresAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/miramar-lugares-murales-bienal", name="miramar-lugares-murales-bienal")
+     * @Template("AppBundle:Sitio:miramar-lugares-murales-bienal.html.twig")
+     */
+    public function miramarLugaresMuralesBienalAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/miramar-lugares-museo-naturales", name="miramar-lugares-museo-naturales")
+     * @Template("AppBundle:Sitio:miramar-lugares-museo-naturales.html.twig")
+     */
+    public function miramarLugaresMuseoNaturalesAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/miramar-lugares-archivo-historico", name="miramar-lugares-archivo-historico")
+     * @Template("AppBundle:Sitio:miramar-lugares-archivo-historico.html.twig")
+     */
+    public function miramarLugaresArchivoHistoricoAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/miramar-lugares-parque-patricios", name="miramar-lugares-parque-patricios")
+     * @Template("AppBundle:Sitio:miramar-lugares-parque-patricios.html.twig")
+     */
+    public function miramarLugaresParquePatriciosAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/miramar-lugares-paseo-medanos", name="miramar-lugares-paseo-medanos")
+     * @Template("AppBundle:Sitio:miramar-lugares-paseo-medanos.html.twig")
+     */
+    public function miramarLugaresPaseoMedanosAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/miramar-lugares-playas-miramar", name="miramar-lugares-playas-miramar")
+     * @Template("AppBundle:Sitio:miramar-lugares-playas-miramar.html.twig")
+     */
+    public function miramarLugaresPlayasMiramarAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/miramar-lugares-turismo-rural", name="miramar-lugares-turismo-rural")
+     * @Template("AppBundle:Sitio:miramar-lugares-turismo-rural.html.twig")
+     */
+    public function miramarLugaresTurismoRuralAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/miramar-cerca", name="miramar-cerca")
+     * @Template("AppBundle:Sitio:miramar-cerca.html.twig")
+     */
+    public function miramarCercaAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/contacto", name="contacto")
+     * @Template("AppBundle:Sitio:contacto.html.twig")
+     */
+    public function contactoAction(Request $request)
+    {
+        return array();
+    }
     
     /**
      * @Route("/contacto-ajax",name="contacto-ajax")

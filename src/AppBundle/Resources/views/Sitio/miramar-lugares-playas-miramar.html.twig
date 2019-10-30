@@ -1,0 +1,63 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set miramar = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-historia') }}"><i class="fas fa-map-marked-alt"></i> Miramar</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-lugares-aeroclub-miramar') }}"><i class="fas fa-location-arrow"></i> Playas de Miramar</a>
+      </li>
+    </ul>
+    <a href="{{ url('miramar-lugares') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Paseos</a>
+  </div>
+</div>
+
+<!-- Tab navigation -->
+<div class="tab-nav">
+  <div class="tab-nav__holder">
+    <ul>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-historia') }}" class="button --text --tab-button">Historia</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-fotos') }}" class="button --text --tab-button">Fotos</a>
+      </li>
+      <li class="tab-nav__item --active">
+        <a href="{{ url('miramar-lugares') }}" class="button --text --tab-button">Para conocer</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-cerca') }}" class="button --text --tab-button">Cerca de Normandie</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Lugares contenido -->
+<section class="section tab-content">
+  <div class="section__holder">
+    <h2 class="section__title">Playas de Miramar</h2>
+    <figure class="section__image">
+       <img src="{{ asset('bundles/app/maquetado/images/places/playas-miramar.jpg') }}" alt="">
+    </figure>
+    <p class="section__text --highlight">TIENEN CERCA DE 10KM DE EXTENSIÓN Y SON IDEALES PARA SER DISFRUTADAS EN FAMILIA</p>
+    <p class="section__text">Con un largo de más de 10 km las playas de Miramar son ideales para ser disfrutadas en familia por su seguridad y tranquilidad en verano o su serenidad en invierno.
+      <br>Con el cuerpo de guardavidas de Miramar, velando por la seguridad de los bañistas en todo momento, el disfrutar del mar y de las playas se le sumas valores agregados, la seguridad y la tranquilidad. 
+      <br>Los deportes acuáticos, como el surf, el jet ski, la natación, o la pesca (Sección Deportes) suman para que las playas de la ciudad sean aprovechadas al máximo en su vacaciones de verano o sus escapadas en invierno. 
+      <br>Ud. puede disfrutar de la playa miramarense ya sea en los espacios públicos, o alquilar una sombrilla o una carpa en alguno de los más de 35 balnearios que la ciudad ofrece (Sección Balnearios) 
+      <br>De esta manera, las playas de la ciudad cuentan con alternativas para todos los gustos, con espacio amplios como los del sector norte, playas ubicadas en el centro de la ciudad, o espacios más agrestes como los del parador que se encuentra en el vivero dunícola</p>
+  </div>
+</section>
+
+{% endblock %}

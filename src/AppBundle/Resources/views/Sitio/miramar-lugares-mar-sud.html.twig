@@ -1,0 +1,63 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set miramar = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-historia') }}"><i class="fas fa-map-marked-alt"></i> Miramar</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-lugares-aeroclub-miramar') }}"><i class="fas fa-location-arrow"></i> Mar del Sud</a>
+      </li>
+    </ul>
+    <a href="{{ url('miramar-lugares') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Paseos</a>
+  </div>
+</div>
+
+<!-- Tab navigation -->
+<div class="tab-nav">
+  <div class="tab-nav__holder">
+    <ul>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-historia') }}" class="button --text --tab-button">Historia</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-fotos') }}" class="button --text --tab-button">Fotos</a>
+      </li>
+      <li class="tab-nav__item --active">
+        <a href="{{ url('miramar-lugares') }}" class="button --text --tab-button">Para conocer</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-cerca') }}" class="button --text --tab-button">Cerca de Normandie</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Lugares contenido -->
+<section class="section tab-content">
+  <div class="section__holder">
+    <h2 class="section__title">Mar del Sud</h2>
+    <figure class="section__image">
+      <img src="{{ asset('bundles/app/maquetado/images/places/mar-sud.jpg') }}" alt="">
+    </figure>
+    <p class="section__text --highlight">CERCA A MIRAMAR, A 17KM SE HA CONVERTIDO EN UN REFUGIO DE LOS QUE BUSCAN TRANQUILIDAD</p>
+    <p class="section__text">En 1834, <strong>la familia Otamendi</strong> adquiere 12 leguas cuadradas al sur de la sierra del Volcán, abarcando gran parte de lo que hoy es nuestro Partido. De esta manera, Mar del Sud se convierte en el ámbito de mayor trayectoria histórica de General Alvarado. Los pobladores fueron tomando posesión, lentamente, una vez que los aborígenes que fueron desplazados al sur de los Fuertes Tandil y Azul. Estos, llegaban a la zona atacándola con frecuentes maloneadas que dificultaban las <strong>Hotel de Mar del Sur - Bouleard Atlantic Hotel</strong> actividades de los colonizadores. 
+      <br>Ya en 1880 comienza a forjarse la idea de fundar un pueblo balneario que se convirtiera en el <strong>Gran Balneario Argentino</strong>. Para llevar acabo este plan se contrata a técnicos alemanes, para que lo ubiquen en el mejor lugar de la costa atlántica, y luego de un minucioso análisis, eligen el lugar donde hoy se emplaza la Villa, por cumplir con los requisitos para ser la ciudad balnearia ideal. En la década de 1880 se funda Mar del Sur, al norte del arroyo "La Carolina", en un área aproximadamente de 60 hectáreas compradas a Fernando Julián Otamendi, por los Srs. Juan Bautista Otamendi, Rómulo Otamendi, José María Calaza, Santiago Baravino, Julio Galona y el Dr. Rafael Herrera. 
+      <br>Comenzaron entonces a construir el <strong>Hotel Mar del Sur</strong>, pero fue destruido por el avance de los medanos, quedando aún hoy algunos vestigios de las primeras construcciones. Un año más tarde, Fernando Otamendi, entusiasmado con la ideal de crear ese gran balneario, realiza él loteo de sus tierras al sur del arroyo "La Carolina", fundando así el pueblo de Boulevard Atlántico, al lado de Mar del Sud, y con el tiempo tomará su nombre. Encarga el proyecto de parcelamiento y la venta de los lotes al Banco Constructor de la Plata, cuyo presidente era Carlos Schweitzer. Se construye por aquel entonces un gran hotel de estilo europeo, sin precedentes en la costa atlántica y uno de los primeros en la Argentina que atrajo a gran cantidad de turistas de todas partes del país. En la década de 1930, se afinca una colonia de Eslovenos y abren pequeñas industrias como fábricas de marcos, puertas y ventanas, muebles, ladrillos, etc. En 1946 se construye la <strong>Cooperativa Eléctrica</strong> y en solo tres meses, alcanzando un record nacional de la época, se pone en funcionamiento con 253 socios y una extensión de red de 8000 metros. Ya en 1950 despierta la ciudad y se constituye en un pujante balneario, que ya contaba con algunos comercios e industrias. 
+      <br>En 1951 se construye la <strong>Capilla de Santa Teresita</strong>. Por ese entonces, se empieza a retrasar el progreso ya que las industrias comienzan a trasladarse a Miramar por la falta de un camino asfaltado y de esa forma quedaban casi aislados del resto de la zona, hasta que el 5 de diciembre de 1987 se inaugura oficialmente la Ruta Provincial Nº 11 que une Miramar con Mar del Sud.
+      <br>En estos días se cuentan con importantes mejoras en la costa, construyéndose una escollera para contener la arena en la playa un importante nivel de inversión en la planta urbana.</p>
+  </div>
+</section>
+
+{% endblock %}

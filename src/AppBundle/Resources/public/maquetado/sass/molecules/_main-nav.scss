@@ -1,0 +1,20 @@
+// // // // MAIN NAV
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  &__item {
+    margin-left: size(15);
+    a {
+      &.--active {
+        &.--header {
+          color: $c-secondary;
+          border-bottom: 2px solid $c-secondary;
+        }
+      }
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

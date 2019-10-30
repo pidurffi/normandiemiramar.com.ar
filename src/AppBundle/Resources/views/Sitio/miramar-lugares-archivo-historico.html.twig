@@ -1,0 +1,64 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set miramar = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-historia') }}"><i class="fas fa-map-marked-alt"></i> Miramar</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-lugares-aeroclub-miramar') }}"><i class="fas fa-location-arrow"></i> Museo y Archivo Histórico de Miramar</a>
+      </li>
+    </ul>
+    <a href="{{ url('miramar-lugares') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Paseos</a>
+  </div>
+</div>
+
+<!-- Tab navigation -->
+<div class="tab-nav">
+  <div class="tab-nav__holder">
+    <ul>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-historia') }}" class="button --text --tab-button">Historia</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-fotos') }}" class="button --text --tab-button">Fotos</a>
+      </li>
+      <li class="tab-nav__item --active">
+        <a href="{{ url('miramar-lugares') }}" class="button --text --tab-button">Para conocer</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-cerca') }}" class="button --text --tab-button">Cerca de Normandie</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Lugares contenido -->
+<section class="section tab-content">
+  <div class="section__holder">
+    <h2 class="section__title">Museo y Archivo Histórico de Miramar</h2>
+    <figure class="section__image">
+      <img src="{{ asset('bundles/app/maquetado/images/places/archivo-historico.jpg') }}" alt="">
+    </figure>
+    <p class="section__text --highlight">SE ENCUENTRA EN EL CORAZÓN DEL VIVERO Y FUÉ RECIENTEMENTE RECONVERTIDO</p>
+    <p class="section__text">El museo de nuestra ciudad, emplazado en pleno corazón del vivero Florentino Ameghino, lleva por nombre Museo Punta Hermengo. 
+      <br>Comenzado el siglo XX José María Dupuy (hijo) asumió como Subprefecto de nuestra ciudad. Su función principal era la seguridad marítima y de los bañistas que llegaban a nuestra ciudad para pasar sus vacaciones.
+      <br>Las inquietudes de Dupuy fueron más allá de sus deberes ya que destinó su tiempo libre a la recolección de material de ciencias naturales que exponía posteriormente en un local del edificio de Subprefectura, ubicado en la rambla. Su amistad con el viajero naturalista Lorenzo Parodi hizo que se contactara con las más importantes personalidades científicas de su época, de lo cual existe una interesante documentación. 
+      <br>El mismo Parodi poseía una "chacra-museo" en lo que es hoy día la Diagonal R. Mitre. Dupuy dejó su cargo en 1930 y se trasladó a Quilmes llevándose su colección particular. Similar suerte corrió la colección de Parodi. Recién en la década de 1970, un grupo de entusiastas aficionados impulsó la idea del museo, que se concretó en 1973. Luego de un período de conflictos en el cual la mayor parte del material se pierde, en 1975-1976 la Municipalidad y una Comisión presidida por el Dr. Juan Manuel Duclós Peña y Roxana Sciorilli-Borrelli, solicitaron a las autoridades provinciales los edificios ubicados en el Vivero Dunícola "Florentino Ameghino", inaugurándose el museo en 1977. Se le asignaron también cinco hectáreas para su parque propio y futuras ampliaciones, y luego el vivero pasó a la Municipalidad de Miramar (1979). Hasta 1983 sobrevino otro lamentable retroceso para la institución y desde entonces se inició una lenta tarea de reestructuración.
+      <br>El museo Punta Hermengo, situado en el vivero, está dedicado al área histórica de la ciudad 
+      <br>La sección histórica nos deja observar carros de fines de siglo y una colección de fotografías que hacen jugar a la imaginación trasportándonos a la época de antaño cuando Miramar era una joven villa turística.</p>
+  </div>
+</section>
+
+{% endblock %}

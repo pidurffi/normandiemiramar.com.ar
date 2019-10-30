@@ -2,8 +2,8 @@
 parameters:
     database_host: 127.0.0.1
     database_port: null
-    database_name: normandi_2016
-    database_user: normandi_2016
+    database_name: normandie_db
+    database_user: normandie_us
     database_password: WIk0UGM4T5Nw    
     mailer_transport: smtp
     mailer_host: normandiemiramar.com.ar

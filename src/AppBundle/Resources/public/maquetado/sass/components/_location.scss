@@ -1,0 +1,25 @@
+// // // // MAP
+
+.location {
+  .section__holder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+  }
+  &__map {
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__title {
+    margin-bottom: size(10);
+    font-size: size(16);
+    font-weight: $f-semi-bold;
+    text-transform: uppercase;
+    color: $c-primary;
+  }
+  &__text {
+    text-align: left;
+  }
+}

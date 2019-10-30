@@ -1,0 +1,64 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set miramar = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-historia') }}"><i class="fas fa-map-marked-alt"></i> Miramar</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-lugares-aeroclub-miramar') }}"><i class="fas fa-location-arrow"></i> Centinela del Mar</a>
+      </li>
+    </ul>
+    <a href="{{ url('miramar-lugares') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Paseos</a>
+  </div>
+</div>
+
+<!-- Tab navigation -->
+<div class="tab-nav">
+  <div class="tab-nav__holder">
+    <ul>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-historia') }}" class="button --text --tab-button">Historia</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-fotos') }}" class="button --text --tab-button">Fotos</a>
+      </li>
+      <li class="tab-nav__item --active">
+        <a href="{{ url('miramar-lugares') }}" class="button --text --tab-button">Para conocer</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-cerca') }}" class="button --text --tab-button">Cerca de Normandie</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Lugares contenido -->
+<section class="section tab-content">
+  <div class="section__holder">
+    <h2 class="section__title">Centinela del Mar</h2>
+    <figure class="section__image">
+      <img src="{{ asset('bundles/app/maquetado/images/places/centinela-mar.jpg') }}" alt="">
+    </figure>
+    <p class="section__text --highlight">PARAÍSO DE PESCADORES Y CON GRANDES RECURSOS ARQUEOLÓGICOS DE DIFICIL ACCESO</p>
+    <p class="section__text">Formado por un puñado de casas, una capilla, una escuela rural que alberga a una decena de niños y un hotel, se encuentra ubicado en el extremo sur del partido a 35km de <strong>Mar del Sud</strong>, a pocos metros del arroyo La Nutria Mansa que constituye el límite con el partido vecino de Lobería.
+      <br>Este paraíso de pescadores y de recursos arqueológicos es de dificil acceso, ya que las únicas vías de acceso son caminos de tierra que en los día de lluvia se tornan en verdaderos desafíos, no obstante, el paseo por el campo hace que el viaje sea agradable y el lugar adonde se arriba es más que suficiente premio para la travesía emprendida.
+      <br>Si bien es posible hacer un paseo breve, una escapada a tomar unos mates en una playa diferente, la mayoría de las personas lo toman como una excursión de día completo e inclusive no son pocos los que, provistos de carpas y bolsas de dormir, se animan a quedarse un par de noches. Cuando usted llega se encontrará con un <strong>pequeño pueblito</strong>. Apenas ingresa, al lado de una enorme antena, hay una pequeña proveeduría, más adelante verá la pequeña y pintoresca capilla y el hotel. Puede buscar un camino que lo lleve a la playa o bien seguir avanzando hasta encontrar una tranquera que suele estar cerrada pero que es posible abrir pues no tiene candado. 
+      <br>Continuando por el camino al que da paso la tranquera usted llegará al arroyo La Nutria Mansa (en realidad, en ese punto desembocan en el arroyos El Pescado y en el arroyo La Malacara). Allí termina el camino y su viaje en automóvil y comienza su día de playa. <strong>Se encontrará con una playa excepcionalmente amplia</strong>, a lo lejos verá enormes médanos (algunos se observan forestados) y campos. 
+      <br>Las opciones son varias, puede simplemente quedarse a disfrutar de la playa, puede intentar pescar en el mar o en alguno de los arroyos, puede salir de expedición por los médanos mientras se hace el asado o lo que su imaginación le sugiera.Si desea salir de caminata o si ha llegado hasta aquí en un vehículo que le permita andar por la arena, le sugerimos algunos lugares que conocer, en cuanto a cómo llegar, le recomendamos que busque alguien que conozca pues no hay forma de describirle aquí cómo trancurre el camino entre los médanos. 
+      <br>Se puede llegar de dos maneras a <strong>Centinela del Mar</strong>. El más sencillo y seguro, aunque un poco más largo, requiere que usted tome la ruta 77 (continuación de la avenida 9) hasta la ruta 88 y tome la ruta que lo lleva a Necochea, poco después de haber cruzado el puente del arroyo El Pescado, encontrará el camino de tierra que lo llevará hacia este paraje, el recorrido por tierra desde este punto es de unos 17km. El otro camino comienza en Mar del Sud desde donde tendrá que recorrer unos 35km por la tierra.</p>
+  </div>
+</section>
+
+{% endblock %}

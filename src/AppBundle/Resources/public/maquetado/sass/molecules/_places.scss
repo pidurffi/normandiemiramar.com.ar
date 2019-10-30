@@ -1,0 +1,33 @@
+// // // // PLACES
+
+.places {
+  &__item {
+    background-color: $c-primary;
+    border-radius: 0 0 size(30) size(30);
+  }
+  &__photo {
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: size(20);
+  }
+  &__title {
+    margin-bottom: size(10);
+    font-size: size(14);
+    text-transform: uppercase;
+    color: $c-white;
+  }
+  &__description {
+    margin-bottom: size(20);
+    font-size: size(12);
+    color: $c-white;
+  }
+  &__button {
+    margin-left: auto;
+  }
+}

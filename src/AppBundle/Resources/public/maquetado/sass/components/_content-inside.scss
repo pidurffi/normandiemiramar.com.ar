@@ -1,0 +1,106 @@
+// // // // ROOMS INSIDE
+
+.content-inside {
+  &__grid {
+    display: grid;
+    grid-gap: size(40);
+    grid-template-columns: 1fr 1fr;
+  }
+  &__image {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: size(20);
+    height: size(200);
+    img {
+      width: 100%;
+    }
+  }
+  &__gallery {
+    display: grid;
+    grid-template-areas:
+      "main main main"
+      "thumb-1 thumb-2 thumb-3";
+    grid-template-rows: 400px 150px;
+    grid-gap: 5px;
+    &__thumb {
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        object-fit: cover;
+      }
+      &.--main-thumb {
+        grid-area: main;
+        position: relative;
+        .button {
+          position: absolute;
+          bottom: size(10);
+          right: size(10);
+        }
+      }
+    }
+    &__thumb-bar {
+      display: flex;
+      margin-top: size(5);
+      figure {
+        margin-left: size(5);
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  &__main-title {
+    margin-bottom: size(10);
+    font-size: size(24);
+    font-weight: $f-semi-bold;
+    text-transform: uppercase;
+    color: $c-primary;
+  }
+  &__title {
+    margin-bottom: size(10);
+    padding-bottom: size(10);
+    font-size: size(18);
+    font-weight: $f-semi-bold;
+    text-transform: uppercase;
+    color: $c-primary;
+    border-bottom: 1px solid $c-border;
+  }
+  &__subtitle {
+    margin-bottom: size(5);
+    font-size: size(14);
+    font-weight: $f-semi-bold;
+    text-transform: uppercase;
+    color: $c-secondary-hover;
+  }
+  &__text, &__list {
+    margin-bottom: size(20);
+    font-size: size(14);
+    i {
+      color: $c-tertiary;
+    }
+  }
+  &__list {
+    margin-left: size(20);
+    li {
+      line-height: size(20);
+      i {
+        margin-right: size(5);
+      }
+    }
+  }
+  &__form {
+    display: grid;
+    grid-template-areas: 
+      "name last-name"
+      "email phone"
+      "subject subject"
+      "message message"
+      "button button";
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-gap: size(20);
+  }
+}

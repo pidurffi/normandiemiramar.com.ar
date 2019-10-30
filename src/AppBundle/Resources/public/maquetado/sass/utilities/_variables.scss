@@ -1,0 +1,30 @@
+// // // // VARIABLES
+
+// Colors
+$c-primary: #313E64;
+$c-primary-hover: darken($c-primary, 10%);
+$c-secondary: #FFBA65;
+$c-secondary-hover: darken($c-secondary, 10%);
+$c-tertiary: #5FECBE;
+$c-tertiary-hover: darken($c-tertiary, 10%);
+$c-whatsapp: #128C7E;
+$c-whatsapp-hover: darken($c-whatsapp, 10%);
+$c-whatsapp-light: #25D366;
+$c-whatsapp-light-hover: darken($c-whatsapp-light, 10%);
+$c-white: #FFFFFF;
+$c-grey: #f1f1f1;
+$c-border: #cccccc;
+$c-form: #e8e8e8;
+$c-black: #000000;
+$c-black-tr: rgba(00, 00, 00, .5);
+$c-black-tr-hover: rgba(00, 00, 00, .75);
+$c-dark-background: #1b1d1f;
+
+// Font Weight
+$f-light: 300;
+$f-regular: 400;
+$f-medium: 500;
+$f-semi-bold: 600;
+
+// Layout
+$container-width: 1280px;
