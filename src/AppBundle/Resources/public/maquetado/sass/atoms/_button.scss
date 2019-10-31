@@ -4,7 +4,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: size(14) size(20);
+  padding: size(8) size(20);
   min-width: size(150);
   font-size: size(12);
   font-weight: $f-semi-bold;
@@ -48,7 +48,7 @@
   &.--with-icon {
     i {
       margin-right: size(10);
-      font-size: size(16);
+      font-size: size(24);
     }
   }
   &.--text {
