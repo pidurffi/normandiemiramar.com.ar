@@ -30,23 +30,6 @@ $(document).ready(function() {
   // Lightbox  general
   $("#lightgallery").lightGallery(); 
 
-  // Lightbox habitaciones
-  $('.content-inside__gallery__thumb.--main-thumb .button').on('click', function(){
-    $(this).lightGallery({
-      dynamic: true,
-      dynamicEl: [{
-        "src": 'images/rooms/big/doble.jpg',
-        'thumb': 'images/rooms/doble.jpg'
-      }, {
-        'src': 'images/rooms/big/triple.jpg',
-        'thumb': 'images/rooms/triple.jpg'
-      }, {
-        'src': 'images/rooms/big/departamento.jpg',
-        'thumb': 'images/rooms/doble.jpg'
-      }]
-    })
-  });
-
   // Smooth scroll for the menu and links with .scrollto classes
   $('#footer a, .main-nav a, #mobile-nav a, .scrollto').on('click', function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {

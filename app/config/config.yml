@@ -104,7 +104,7 @@ easy_admin:
             - { property: 'fechaVencimiento' }
             - { property: 'generica', label: 'Genérica' }
             - { property: 'descripcion' }
-            - { property: 'imagen', type: 'Comur\ImageBundle\Form\Type\CroppableImageType', type_options: { uploadConfig: { uploadUrl: 'uploads/promociones', webDir: 'uploads/promociones' }, cropConfig: { minWidth: 489, minHeight: 275 } } }
+            - { property: 'imagen', type: 'Comur\ImageBundle\Form\Type\CroppableImageType', type_options: { uploadConfig: { uploadUrl: 'uploads/promociones', webDir: 'uploads/promociones' }, cropConfig: { minWidth: 364, minHeight: 189 } } }
             - { property: 'orden' }
                   
             

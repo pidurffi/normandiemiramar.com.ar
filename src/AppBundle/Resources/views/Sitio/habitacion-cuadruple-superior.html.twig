@@ -9,15 +9,15 @@
   <div class="breadcrumb-holder">
     <ul>
       <li class="breadcrumb__item">
-        <a href=""><i class="fas fa-hotel"></i> Inicio</a>
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
         <i class="fas fa-chevron-right"></i>
       </li>
       <li class="breadcrumb__item --active">
-        <a href=""><i class="fas fa-home"></i> Habitaciones</a>
+        <a href="{{ url('habitaciones') }}"><i class="fas fa-home"></i> Habitaciones</a>
         <i class="fas fa-chevron-right"></i>
       </li>
       <li class="breadcrumb__item --active">
-        <a href=""><i class="fas fa-door-open"></i> Habitación Triple</a>
+        <a href="{{ url('cuadruple-superior') }}"><i class="fas fa-door-open"></i> Habitación Cuádruple Superior</a>
       </li>
     </ul>
     <a href="{{ url('habitaciones') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Habitaciones</a>
@@ -44,7 +44,7 @@
         </figure>
       </div>
       <div class="content-inside__description">
-        <h2 class="content-inside__main-title">Habitación Cuádruple</h2>
+        <h2 class="content-inside__main-title">Habitación Cuádruple Superior</h2>
         <p class="content-inside__text">Para 4 personas</p>
         <h3 class="content-inside__title">Servicios</h3>
         <ul class="content-inside__list">

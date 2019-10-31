@@ -19,8 +19,10 @@
     </div>
   </div>
 
-  <!-- Promos -->
-  <section class="section promo" id="promociones">
+  {# Promos #}
+  {{ render(controller('AppBundle:Default:promociones')) }}
+
+  {# <section class="section promo" id="promociones">
     <div class="section__holder">
       <h2 class="section__title">Nuestras promociones</h2>
       <p class="section__text">Aprovecha nuestas promociones para venir a conocer el <span class="hotel">Hotel Normandie</span> en Miramar. Los mejores precios y descuentos para fines de semana largos y la temprada 2019 / 2020</p>
@@ -91,7 +93,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> #}
 
   <!-- Hotel -->
   <section class="section hotel">

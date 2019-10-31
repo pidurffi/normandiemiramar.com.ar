@@ -22,7 +22,7 @@
     grid-template-areas:
       "main main main"
       "thumb-1 thumb-2 thumb-3";
-    grid-template-rows: 400px 150px;
+    grid-template-rows: 400px repeat(auto-fit, 150px);
     grid-gap: 5px;
     &__thumb {
       img {
@@ -32,7 +32,7 @@
         max-height: 100%;
         object-fit: cover;
       }
-      &.--main-thumb {
+      &:first-child {
         grid-area: main;
         position: relative;
         .button {
@@ -40,6 +40,28 @@
           bottom: size(10);
           right: size(10);
         }
+        &:before {
+          display: block;
+          font-family: 'Raleway', 'Font Awesome 5 Free';
+          content: "\f302  Ver galer\00ed a";
+          position: absolute;
+          bottom: size(20);
+          right: size(20);
+          padding: size(14) size(20);
+          font-size: size(12);
+          font-weight: $f-semi-bold;
+          letter-spacing: size(0.5);
+          color: $c-white;
+          border-radius: size(30);
+          background-color: $c-black-tr;
+          transition: background-color .25s ease;
+          &:hover {
+            background-color: $c-black-tr-hover;
+          }
+        }
+      }
+      &:nth-child(n+5) {
+        display: none;
       }
     }
     &__thumb-bar {

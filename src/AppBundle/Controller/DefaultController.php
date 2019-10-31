@@ -44,6 +44,18 @@ class DefaultController extends Controller
     }
 
     /**
+     * @Template("AppBundle:Sitio:component_galeria_default.html.twig")
+     */
+    public function galeriaDefaultAction(Request $request,$galeria_id=0) {
+    
+    	if(empty($galeria_id)) $galerias = $this->getDoctrine()->getRepository('AppBundle:Galeria')->findAll();
+    	else  $galerias = array($this->getDoctrine()->getRepository('AppBundle:Galeria')->find($galeria_id));
+    	
+    	return array('galerias'=>$galerias);
+    	
+    }
+
+    /**
      * @Route("/", name="home")
      * @Template("AppBundle:Sitio:home.html.twig")
      */
@@ -71,19 +83,37 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/habitacion-triple", name="habitacion-triple")
-     * @Template("AppBundle:Sitio:habitacion-triple.html.twig")
+     * @Route("/habitacion-triple-estandar", name="habitacion-triple-estandar")
+     * @Template("AppBundle:Sitio:habitacion-triple-estandar.html.twig")
      */
-    public function habitacionTripleAction(Request $request)
+    public function habitacionTripleEstandarAction(Request $request)
     {
         return array();
     }
 
     /**
-     * @Route("/habitacion-cuadruple", name="habitacion-cuadruple")
-     * @Template("AppBundle:Sitio:habitacion-cuadruple.html.twig")
+     * @Route("/habitacion-triple-luxe", name="habitacion-triple-luxe")
+     * @Template("AppBundle:Sitio:habitacion-triple-luxe.html.twig")
      */
-    public function habitacionCuadrupleAction(Request $request)
+    public function habitacionTripleLuxeAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/habitacion-cuadruple-estandar", name="habitacion-cuadruple-estandar")
+     * @Template("AppBundle:Sitio:habitacion-cuadruple-estandar.html.twig")
+     */
+    public function habitacionCuadrupleEstandarAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/habitacion-cuadruple-superior", name="habitacion-cuadruple-superior")
+     * @Template("AppBundle:Sitio:habitacion-cuadruple-superior.html.twig")
+     */
+    public function habitacionCuadrupleSuperiorAction(Request $request)
     {
         return array();
     }
@@ -93,6 +123,15 @@ class DefaultController extends Controller
      * @Template("AppBundle:Sitio:departamento.html.twig")
      */
     public function departamentoAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/estudio", name="estudio")
+     * @Template("AppBundle:Sitio:estudio.html.twig")
+     */
+    public function estudioAction(Request $request)
     {
         return array();
     }

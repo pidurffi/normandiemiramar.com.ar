@@ -9,15 +9,15 @@
   <div class="breadcrumb-holder">
     <ul>
       <li class="breadcrumb__item">
-        <a href=""><i class="fas fa-hotel"></i> Inicio</a>
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
         <i class="fas fa-chevron-right"></i>
       </li>
       <li class="breadcrumb__item --active">
-        <a href=""><i class="fas fa-home"></i> Habitaciones</a>
+        <a href="{{ url('habitaciones') }}"><i class="fas fa-home"></i> Habitaciones</a>
         <i class="fas fa-chevron-right"></i>
       </li>
       <li class="breadcrumb__item --active">
-        <a href=""><i class="fas fa-door-open"></i> Habitación Doble</a>
+        <a href="{{ url('habitacion-doble') }}"><i class="fas fa-door-open"></i> Habitación Doble</a>
       </li>
     </ul>
     <a href="{{ url('habitaciones') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Habitaciones</a>
@@ -28,20 +28,21 @@
 <section class="section content-inside">
   <div class="section__holder">
     <div class="content-inside__grid">
-      <div class="content-inside__gallery">
-        <figure class="content-inside__gallery__thumb --main-thumb">
+      <div class="content-inside__gallery" id="lightgallery">
+        {# <figure class="content-inside__gallery__thumb --main-thumb">
           <img src="{{ asset('bundles/app/maquetado/images/rooms/doble.jpg') }}" alt="Habitación Doble">
           <span class="button --hover-img --with-icon"><i class="fas fa-images"></i> Ver galería</span>
         </figure>
-        <figure class="content-inside__gallery__thumb --thumb-1">
+        <figure class="content-inside__gallery__thumb">
           <img src="{{ asset('bundles/app/maquetado/images/rooms/triple.jpg') }}" alt="Habitación Doble">
         </figure>
-        <figure class="content-inside__gallery__thumb --thumb-2">
+        <figure class="content-inside__gallery__thumb">
           <img src="{{ asset('bundles/app/maquetado/images/rooms/doble.jpg') }}" alt="Habitación Doble">
         </figure>
-        <figure class="content-inside__gallery__thumb --thumb-3">
+        <figure class="content-inside__gallery__thumb">
           <img src="{{ asset('bundles/app/maquetado/images/rooms/departamento.jpg') }}" alt="Habitación Doble">
-        </figure>
+        </figure> #}
+        {{ render(controller('AppBundle:Default:galeria',{galeria_id: 8})) }}
       </div>
       <div class="content-inside__description">
         <h2 class="content-inside__main-title">Habitación Doble</h2>

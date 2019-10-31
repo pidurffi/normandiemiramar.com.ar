@@ -1,22 +1,19 @@
-<section id="promociones"> 
-    <div class="container"> 
-        <header class="section-header"> 
-            <h3>Promociones</h3> 
-            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> --> 
-        </header>    
-
-        <div class="row about-cols"> 
-			{% for promocion in promociones %}
-            <div class="col-md-4 wow fadeInUp"> 
-                <div class="about-col"> 
-                    <div class="img"> 
-                        <img src="{{ asset('/uploads/promociones/' ~ promocion.imagen) }}" alt="Mirador del Indio" class="img-fluid">           
-                    </div>                                 
-                    <h2 class="title"><a href="#contact">{{ promocion.nombre }}</a></h2> 
-                    <p>{{ promocion.descripcion|nl2br}}</p> 
-                </div>                             
-            </div>   
-         	{% endfor %}
-        </div>                     
-    </div>                 
+<section class="section promo" id="promociones">
+  <div class="section__holder">
+    <h2 class="section__title">Nuestras promociones</h2>
+    <p class="section__text">Aprovecha nuestas promociones para venir a conocer el <span class="hotel">Hotel Normandie</span> en Miramar. Los mejores precios y descuentos para fines de semana largos y la temprada 2019 / 2020</p>
+    <div class="promo__grid">
+      {% for promocion in promociones %}
+      <div class="promo__item">
+        <figure class="promo__image">
+          <img src="{{ asset('/uploads/promociones/' ~ promocion.imagen) }}"> 
+        </figure>
+        <div class="promo__content">
+          <h3 class="promo__title">{{ promocion.nombre }}</h3>
+          <p class="promo__text">{{ promocion.descripcion|nl2br}}</p> 
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </section>

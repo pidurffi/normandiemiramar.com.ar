@@ -100,7 +100,7 @@
             </a>
           </li>
           <li>
-            <a href="" class="button --whatsapp --with-icon">
+            <a href="https://wa.me/5491154152464" target="_blank" class="button --whatsapp --with-icon">
               <i class="fab fa-whatsapp"></i>
               Chatea por Whatsapp
             </a>
@@ -174,12 +174,14 @@
   </footer>
 {# End Footer #}
 
-<!-- JavaScript Libraries -->         
-<script src="{{ asset('bundles/app/maquetado/js/jQuery.js') }}"></script>
-<script src="{{ asset('bundles/app/maquetado/js/easing.js') }}"></script>
-<script src="{{ asset('bundles/app/maquetado/js/lightbox.js') }}"></script>
-<script src="{{ asset('bundles/app/maquetado/js/slider.js') }}"></script>
-<script src="{{ asset('bundles/app/maquetado/js/contacto.js') }}"></script>
+  <!-- JavaScript Libraries -->         
+  <script src="{{ asset('bundles/app/maquetado/js/jQuery.js') }}"></script>
+  <script src="{{ asset('bundles/app/maquetado/js/easing.js') }}"></script>
+  <script src="{{ asset('bundles/app/maquetado/js/lightbox.js') }}"></script>
+  <script src="{{ asset('bundles/app/maquetado/js/slider.js') }}"></script>
+  <script src="{{ asset('bundles/app/maquetado/js/contacto.js') }}"></script>
+
+  {% block javascripts %}{% endblock %}
     
   <!-- Contact Form JavaScript File -->         
   <script src="{{ asset('bundles/app/maquetado/contactform/contactform.js') }}"></script>         
