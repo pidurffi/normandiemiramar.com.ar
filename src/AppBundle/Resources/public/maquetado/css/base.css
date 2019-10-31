@@ -801,9 +801,8 @@ section ul li, section p {
 .button.--with-icon i {
   margin-right: 0.625rem;
   font-size: 1.5rem;
-  font-weight: 300;
 }
-/* line 55, ../sass/atoms/_button.scss */
+/* line 54, ../sass/atoms/_button.scss */
 .button.--text {
   padding: 0;
   min-width: auto;
@@ -813,60 +812,60 @@ section ul li, section p {
   text-transform: uppercase;
   background-color: transparent;
 }
-/* line 63, ../sass/atoms/_button.scss */
+/* line 62, ../sass/atoms/_button.scss */
 .button.--text.--secondary {
   color: #FFBA65;
 }
-/* line 65, ../sass/atoms/_button.scss */
+/* line 64, ../sass/atoms/_button.scss */
 .button.--text.--secondary:hover {
   color: #ffa332;
 }
-/* line 69, ../sass/atoms/_button.scss */
+/* line 68, ../sass/atoms/_button.scss */
 .button.--text.--header {
   color: #FFFFFF;
 }
-/* line 71, ../sass/atoms/_button.scss */
+/* line 70, ../sass/atoms/_button.scss */
 .button.--text.--header:hover {
   color: #FFBA65;
 }
-/* line 75, ../sass/atoms/_button.scss */
+/* line 74, ../sass/atoms/_button.scss */
 .button.--text.--tab-button {
   font-weight: 600;
   color: #313E64;
 }
-/* line 78, ../sass/atoms/_button.scss */
+/* line 77, ../sass/atoms/_button.scss */
 .button.--text.--tab-button:hover {
   color: #202942;
 }
-/* line 82, ../sass/atoms/_button.scss */
+/* line 81, ../sass/atoms/_button.scss */
 .button.--text.--small {
   font-size: 0.75rem;
 }
-/* line 86, ../sass/atoms/_button.scss */
+/* line 85, ../sass/atoms/_button.scss */
 .button.--text.--with-icon i {
   margin-right: 0.3125rem;
   font-weight: 600;
 }
-/* line 91, ../sass/atoms/_button.scss */
+/* line 90, ../sass/atoms/_button.scss */
 .button.--text:hover {
   background-color: transparent;
 }
-/* line 95, ../sass/atoms/_button.scss */
+/* line 94, ../sass/atoms/_button.scss */
 .button.--icon {
   padding: 0;
   min-width: auto;
   border-radius: 0;
   font-weight: 400;
 }
-/* line 100, ../sass/atoms/_button.scss */
+/* line 99, ../sass/atoms/_button.scss */
 .button.--icon i {
   font-size: 1.25rem;
 }
-/* line 103, ../sass/atoms/_button.scss */
+/* line 102, ../sass/atoms/_button.scss */
 .button.--icon.--header {
   color: #FFFFFF;
 }
-/* line 105, ../sass/atoms/_button.scss */
+/* line 104, ../sass/atoms/_button.scss */
 .button.--icon.--header:hover {
   color: #FFBA65;
 }
