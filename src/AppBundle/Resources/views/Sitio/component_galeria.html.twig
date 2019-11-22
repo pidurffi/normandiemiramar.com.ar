@@ -5,10 +5,12 @@
       <a href="{{ asset('/uploads/galerias/gallery/') }}{{ gal }}" class="content-inside__gallery__thumb">
         <img src="{{ asset('/uploads/galerias/gallery/') }}{{ gal }}">
       </a>
+      {% elseif loop.index > 0 %}
+        <a href="{{ asset('/uploads/galerias/gallery/') }}{{ gal }}" class="content-inside__gallery__thumb">
+          <img src="{{ asset('/uploads/galerias/') }}{{ gal|gallery_thumb(489,275) }}">
+        </a>
+      {% else %}
     {% endif %}
-    <a href="{{ asset('/uploads/galerias/gallery/') }}{{ gal }}" class="content-inside__gallery__thumb">
-      <img src="{{ asset('/uploads/galerias/') }}{{ gal|gallery_thumb(489,275) }}">
-    </a>
   {% endfor %}
 {% endfor %}
 	
