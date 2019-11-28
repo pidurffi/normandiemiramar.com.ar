@@ -498,15 +498,16 @@ section ul li, section p {
 
 /* line 10, ../sass/utilities/_layout.scss */
 .section {
-  padding: 5rem 0;
+  padding: 1.25rem 0;
 }
 /* line 12, ../sass/utilities/_layout.scss */
 .section__holder {
   margin: 0 auto;
+  padding: 1.25rem;
   width: 100%;
   max-width: 1280px;
 }
-/* line 17, ../sass/utilities/_layout.scss */
+/* line 18, ../sass/utilities/_layout.scss */
 .section__title {
   position: relative;
   margin-bottom: 2.5rem;
@@ -517,7 +518,7 @@ section ul li, section p {
   text-transform: uppercase;
   color: #313E64;
 }
-/* line 26, ../sass/utilities/_layout.scss */
+/* line 27, ../sass/utilities/_layout.scss */
 .section__title:before {
   position: absolute;
   bottom: -20px;
@@ -529,29 +530,29 @@ section ul li, section p {
   transform: translateX(-50%);
   background-color: #313E64;
 }
-/* line 38, ../sass/utilities/_layout.scss */
+/* line 39, ../sass/utilities/_layout.scss */
 .section__text {
   margin-bottom: 1.25rem;
   font-size: 0.875rem;
   line-height: 1.5rem;
   text-align: center;
 }
-/* line 43, ../sass/utilities/_layout.scss */
+/* line 44, ../sass/utilities/_layout.scss */
 .section__text .hotel {
   font-size: 1rem;
   font-weight: 600;
   color: #313E64;
 }
-/* line 48, ../sass/utilities/_layout.scss */
+/* line 49, ../sass/utilities/_layout.scss */
 .section__text i {
   font-size: 1.25rem;
   color: #313E64;
 }
-/* line 52, ../sass/utilities/_layout.scss */
+/* line 53, ../sass/utilities/_layout.scss */
 .section__text:last-child {
   margin-bottom: 0;
 }
-/* line 57, ../sass/utilities/_layout.scss */
+/* line 58, ../sass/utilities/_layout.scss */
 .section.content-inside .section__subtitle {
   margin-bottom: 0.625rem;
   font-size: 1rem;
@@ -559,64 +560,64 @@ section ul li, section p {
   text-transform: uppercase;
   color: #FFBA65;
 }
-/* line 64, ../sass/utilities/_layout.scss */
+/* line 65, ../sass/utilities/_layout.scss */
 .section.content-inside .section__text {
   text-align: left;
 }
-/* line 67, ../sass/utilities/_layout.scss */
+/* line 68, ../sass/utilities/_layout.scss */
 .section.content-inside .button.--text {
   color: #313E64;
 }
-/* line 71, ../sass/utilities/_layout.scss */
+/* line 72, ../sass/utilities/_layout.scss */
 .section.hotel {
   background-color: #f1f1f1;
 }
-/* line 72, ../sass/utilities/_layout.scss */
+/* line 73, ../sass/utilities/_layout.scss */
 .section.hotel .section__holder {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-/* line 79, ../sass/utilities/_layout.scss */
+/* line 80, ../sass/utilities/_layout.scss */
 .section.tab-content {
   padding: 0;
 }
-/* line 81, ../sass/utilities/_layout.scss */
+/* line 82, ../sass/utilities/_layout.scss */
 .section.tab-content .section__holder {
-  padding: 2.5rem;
+  padding: 1.25rem;
   background-color: #f1f1f1;
 }
-/* line 84, ../sass/utilities/_layout.scss */
+/* line 85, ../sass/utilities/_layout.scss */
 .section.tab-content .section__holder .section__title {
   text-align: left;
 }
-/* line 86, ../sass/utilities/_layout.scss */
+/* line 87, ../sass/utilities/_layout.scss */
 .section.tab-content .section__holder .section__title:before {
   display: none;
 }
-/* line 90, ../sass/utilities/_layout.scss */
+/* line 91, ../sass/utilities/_layout.scss */
 .section.tab-content .section__holder .section__text {
   text-align: left;
 }
-/* line 92, ../sass/utilities/_layout.scss */
+/* line 93, ../sass/utilities/_layout.scss */
 .section.tab-content .section__holder .section__text.--highlight {
   padding: 1.25rem;
   background-color: #FFBA65;
 }
-/* line 97, ../sass/utilities/_layout.scss */
+/* line 98, ../sass/utilities/_layout.scss */
 .section.tab-content .section__holder .section__image {
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 18.75rem;
+  height: auto;
 }
-/* line 103, ../sass/utilities/_layout.scss */
+/* line 104, ../sass/utilities/_layout.scss */
 .section.tab-content .section__holder .section__image img {
   display: block;
   width: 100%;
 }
-/* line 108, ../sass/utilities/_layout.scss */
+/* line 109, ../sass/utilities/_layout.scss */
 .section.tab-content .section__holder .section__subtitle {
   display: inline-block;
   margin-bottom: 0.625rem;
@@ -626,47 +627,47 @@ section ul li, section p {
   color: #313E64;
   border-bottom: 1px solid #FFBA65;
 }
-/* line 117, ../sass/utilities/_layout.scss */
+/* line 118, ../sass/utilities/_layout.scss */
 .section.tab-content .section__holder .section__list {
   margin: 0 0 1.25rem 2.5rem;
   font-size: 0.875rem;
   list-style-type: disc;
 }
-/* line 121, ../sass/utilities/_layout.scss */
+/* line 122, ../sass/utilities/_layout.scss */
 .section.tab-content .section__holder .section__list li {
   line-height: 1.875rem;
 }
-/* line 123, ../sass/utilities/_layout.scss */
+/* line 124, ../sass/utilities/_layout.scss */
 .section.tab-content .section__holder .section__list li i {
   margin-right: 0.625rem;
   color: #5FECBE;
 }
-/* line 127, ../sass/utilities/_layout.scss */
+/* line 128, ../sass/utilities/_layout.scss */
 .section.tab-content .section__holder .section__list li .button {
   color: #313E64;
   text-decoration: underline;
 }
-/* line 134, ../sass/utilities/_layout.scss */
+/* line 135, ../sass/utilities/_layout.scss */
 .section.tab-content .tab-content__gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 0.625rem;
 }
-/* line 138, ../sass/utilities/_layout.scss */
+/* line 139, ../sass/utilities/_layout.scss */
 .section.tab-content .tab-content__gallery a {
   display: block;
 }
-/* line 140, ../sass/utilities/_layout.scss */
+/* line 141, ../sass/utilities/_layout.scss */
 .section.tab-content .tab-content__gallery a img {
   display: block;
   width: 100%;
 }
-/* line 145, ../sass/utilities/_layout.scss */
+/* line 146, ../sass/utilities/_layout.scss */
 .section.tab-content .tab-content__gallery.--grid-3 {
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 2.5rem;
+  grid-template-columns: 1fr;
+  grid-gap: 1.25rem;
 }
-/* line 151, ../sass/utilities/_layout.scss */
+/* line 152, ../sass/utilities/_layout.scss */
 .section.whatsapp {
   display: flex;
   flex-direction: column;
@@ -677,44 +678,87 @@ section ul li, section p {
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* line 160, ../sass/utilities/_layout.scss */
+/* line 161, ../sass/utilities/_layout.scss */
 .section.whatsapp i {
   font-size: 9.375rem;
   color: #25D366;
   transition: color .25s ease;
 }
-/* line 164, ../sass/utilities/_layout.scss */
+/* line 165, ../sass/utilities/_layout.scss */
 .section.whatsapp i:hover {
   color: #1da851;
 }
-/* line 168, ../sass/utilities/_layout.scss */
+/* line 169, ../sass/utilities/_layout.scss */
 .section.whatsapp .section__title {
   margin-bottom: 1.25rem;
   font-size: 2.5rem;
 }
-/* line 171, ../sass/utilities/_layout.scss */
+/* line 172, ../sass/utilities/_layout.scss */
 .section.whatsapp .section__title:before {
   display: none;
 }
-/* line 175, ../sass/utilities/_layout.scss */
+/* line 176, ../sass/utilities/_layout.scss */
 .section.whatsapp .section__title, .section.whatsapp .section__text {
   color: #FFFFFF;
 }
-/* line 179, ../sass/utilities/_layout.scss */
+/* line 180, ../sass/utilities/_layout.scss */
 .section.review {
   background-color: #313E64;
 }
-/* line 181, ../sass/utilities/_layout.scss */
+/* line 182, ../sass/utilities/_layout.scss */
 .section.review .section__title, .section.review .section__text {
   color: #FFFFFF;
 }
-/* line 185, ../sass/utilities/_layout.scss */
+/* line 186, ../sass/utilities/_layout.scss */
 .section.review .section__text .hotel {
   color: #FFFFFF;
 }
-/* line 190, ../sass/utilities/_layout.scss */
+/* line 191, ../sass/utilities/_layout.scss */
 .section.review .section__title:before {
   background-color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  /* line 10, ../sass/utilities/_layout.scss */
+  .section {
+    padding: 2.5rem 0;
+  }
+  /* line 198, ../sass/utilities/_layout.scss */
+  .section__holder {
+    padding: 0 2.5rem;
+  }
+  /* line 202, ../sass/utilities/_layout.scss */
+  .section.tab-content .section__holder {
+    padding: 2.5rem;
+  }
+  /* line 204, ../sass/utilities/_layout.scss */
+  .section.tab-content .section__holder .section__image {
+    height: 18.75rem;
+  }
+  /* line 208, ../sass/utilities/_layout.scss */
+  .section.tab-content .tab-content__gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* line 210, ../sass/utilities/_layout.scss */
+  .section.tab-content .tab-content__gallery.--grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 219, ../sass/utilities/_layout.scss */
+  .section.tab-content .tab-content__gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1280px) {
+  /* line 10, ../sass/utilities/_layout.scss */
+  .section {
+    padding: 5rem 0;
+  }
+  /* line 226, ../sass/utilities/_layout.scss */
+  .section__holder {
+    padding: 0;
+  }
 }
 
 /* line 3, ../sass/atoms/_logo.scss */
@@ -747,6 +791,7 @@ section ul li, section p {
   justify-content: center;
   padding: 0.5rem 1.25rem;
   min-width: 9.375rem;
+  height: 2.5rem;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.03125rem;
@@ -755,119 +800,127 @@ section ul li, section p {
   cursor: pointer;
   transition: background-color .25s ease, color .25s ease;
 }
-/* line 16, ../sass/atoms/_button.scss */
+/* line 17, ../sass/atoms/_button.scss */
 .button.--primary {
   background-color: #313E64;
 }
-/* line 18, ../sass/atoms/_button.scss */
+/* line 19, ../sass/atoms/_button.scss */
 .button.--primary:hover {
   background-color: #202942;
 }
-/* line 22, ../sass/atoms/_button.scss */
+/* line 23, ../sass/atoms/_button.scss */
 .button.--secondary {
   color: #000000;
   background-color: #FFBA65;
 }
-/* line 25, ../sass/atoms/_button.scss */
+/* line 26, ../sass/atoms/_button.scss */
 .button.--secondary:hover {
   background-color: #ffa332;
 }
-/* line 29, ../sass/atoms/_button.scss */
+/* line 30, ../sass/atoms/_button.scss */
 .button.--tertiary {
   color: #000000;
   background-color: #5FECBE;
 }
-/* line 32, ../sass/atoms/_button.scss */
+/* line 33, ../sass/atoms/_button.scss */
 .button.--tertiary:hover {
   background-color: #31e7ab;
 }
-/* line 36, ../sass/atoms/_button.scss */
+/* line 37, ../sass/atoms/_button.scss */
 .button.--hover-img {
   background-color: rgba(0, 0, 0, 0.5);
 }
-/* line 38, ../sass/atoms/_button.scss */
+/* line 39, ../sass/atoms/_button.scss */
 .button.--hover-img:hover {
   background-color: rgba(0, 0, 0, 0.75);
 }
-/* line 42, ../sass/atoms/_button.scss */
+/* line 43, ../sass/atoms/_button.scss */
 .button.--whatsapp {
   background-color: #128C7E;
 }
-/* line 44, ../sass/atoms/_button.scss */
+/* line 45, ../sass/atoms/_button.scss */
 .button.--whatsapp:hover {
   background-color: #0c5f55;
 }
-/* line 49, ../sass/atoms/_button.scss */
+/* line 50, ../sass/atoms/_button.scss */
 .button.--with-icon i {
   margin-right: 0.625rem;
   font-size: 1.5rem;
 }
-/* line 54, ../sass/atoms/_button.scss */
+/* line 55, ../sass/atoms/_button.scss */
 .button.--text {
   padding: 0;
   min-width: auto;
+  height: auto;
   border-radius: 0;
   font-size: 0.875rem;
   font-weight: 500;
   text-transform: uppercase;
   background-color: transparent;
 }
-/* line 62, ../sass/atoms/_button.scss */
+/* line 64, ../sass/atoms/_button.scss */
 .button.--text.--secondary {
   color: #FFBA65;
 }
-/* line 64, ../sass/atoms/_button.scss */
+/* line 66, ../sass/atoms/_button.scss */
 .button.--text.--secondary:hover {
   color: #ffa332;
 }
-/* line 68, ../sass/atoms/_button.scss */
+/* line 70, ../sass/atoms/_button.scss */
 .button.--text.--header {
   color: #FFFFFF;
 }
-/* line 70, ../sass/atoms/_button.scss */
+/* line 72, ../sass/atoms/_button.scss */
 .button.--text.--header:hover {
   color: #FFBA65;
 }
-/* line 74, ../sass/atoms/_button.scss */
+/* line 76, ../sass/atoms/_button.scss */
 .button.--text.--tab-button {
+  font-size: 0.75rem;
   font-weight: 600;
   color: #313E64;
 }
-/* line 77, ../sass/atoms/_button.scss */
+/* line 80, ../sass/atoms/_button.scss */
 .button.--text.--tab-button:hover {
   color: #202942;
 }
-/* line 81, ../sass/atoms/_button.scss */
+/* line 84, ../sass/atoms/_button.scss */
 .button.--text.--small {
   font-size: 0.75rem;
 }
-/* line 85, ../sass/atoms/_button.scss */
+/* line 88, ../sass/atoms/_button.scss */
 .button.--text.--with-icon i {
   margin-right: 0.3125rem;
   font-weight: 600;
 }
-/* line 90, ../sass/atoms/_button.scss */
+/* line 93, ../sass/atoms/_button.scss */
 .button.--text:hover {
   background-color: transparent;
 }
-/* line 94, ../sass/atoms/_button.scss */
+/* line 97, ../sass/atoms/_button.scss */
 .button.--icon {
   padding: 0;
   min-width: auto;
   border-radius: 0;
   font-weight: 400;
 }
-/* line 99, ../sass/atoms/_button.scss */
+/* line 102, ../sass/atoms/_button.scss */
 .button.--icon i {
   font-size: 1.25rem;
 }
-/* line 102, ../sass/atoms/_button.scss */
+/* line 105, ../sass/atoms/_button.scss */
 .button.--icon.--header {
   color: #FFFFFF;
 }
-/* line 104, ../sass/atoms/_button.scss */
+/* line 107, ../sass/atoms/_button.scss */
 .button.--icon.--header:hover {
   color: #FFBA65;
+}
+@media (min-width: 1024px) {
+  /* line 114, ../sass/atoms/_button.scss */
+  .button.--text.--tab-button {
+    font-size: 0.875rem;
+  }
 }
 
 /* line 3, ../sass/atoms/_hamburger.scss */
@@ -942,97 +995,125 @@ label {
   display: flex;
   align-items: center;
   margin: 0 auto;
-  padding: 1.25rem 0;
+  padding: 1.25rem 2.5rem;
   width: 100%;
   max-width: 1280px;
 }
+@media (min-width: 1280px) {
+  /* line 3, ../sass/molecules/_breadcrumb.scss */
+  .breadcrumb-holder {
+    padding: 1.25rem 0;
+  }
+}
 
-/* line 11, ../sass/molecules/_breadcrumb.scss */
+/* line 14, ../sass/molecules/_breadcrumb.scss */
 .breadcrumb {
-  display: flex;
+  display: none;
   align-items: center;
   background-color: #f1f1f1;
 }
-/* line 15, ../sass/molecules/_breadcrumb.scss */
+/* line 18, ../sass/molecules/_breadcrumb.scss */
 .breadcrumb ul {
   display: flex;
   align-items: center;
 }
-/* line 19, ../sass/molecules/_breadcrumb.scss */
+/* line 22, ../sass/molecules/_breadcrumb.scss */
 .breadcrumb__item {
+  display: flex;
+  align-items: center;
   margin-left: 1.25rem;
 }
-/* line 21, ../sass/molecules/_breadcrumb.scss */
+/* line 26, ../sass/molecules/_breadcrumb.scss */
 .breadcrumb__item a {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   margin-right: 1.25rem;
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.03125rem;
 }
-/* line 29, ../sass/molecules/_breadcrumb.scss */
+/* line 35, ../sass/molecules/_breadcrumb.scss */
 .breadcrumb__item i {
+  display: none;
   margin-right: 0.3125rem;
   font-size: 1.125rem;
   color: #FFBA65;
 }
-/* line 33, ../sass/molecules/_breadcrumb.scss */
+/* line 40, ../sass/molecules/_breadcrumb.scss */
 .breadcrumb__item i.fa-chevron-right {
+  display: block;
   color: #313E64;
 }
-/* line 37, ../sass/molecules/_breadcrumb.scss */
+/* line 45, ../sass/molecules/_breadcrumb.scss */
 .breadcrumb__item:first-child {
   margin-left: 0;
 }
+@media (min-width: 768px) {
+  /* line 14, ../sass/molecules/_breadcrumb.scss */
+  .breadcrumb {
+    display: flex;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 54, ../sass/molecules/_breadcrumb.scss */
+  .breadcrumb__item i {
+    display: block;
+  }
+}
 
-/* line 42, ../sass/molecules/_breadcrumb.scss */
+/* line 60, ../sass/molecules/_breadcrumb.scss */
 .breadcrumb__back-button {
   margin-left: auto;
 }
 
 /* line 5, ../sass/molecules/_form.scss */
-.form__item.--name {
-  grid-area: name;
-}
-/* line 8, ../sass/molecules/_form.scss */
-.form__item.--last-name {
-  grid-area: last-name;
-}
-/* line 11, ../sass/molecules/_form.scss */
-.form__item.--email {
-  grid-area: email;
-}
-/* line 14, ../sass/molecules/_form.scss */
-.form__item.--phone {
-  grid-area: phone;
-}
-/* line 17, ../sass/molecules/_form.scss */
-.form__item.--subject {
-  grid-area: subject;
-}
-/* line 20, ../sass/molecules/_form.scss */
-.form__item.--message {
-  grid-area: message;
-}
-/* line 23, ../sass/molecules/_form.scss */
 .form__item.--button {
-  grid-area: button;
   display: flex;
   align-items: center;
 }
-/* line 28, ../sass/molecules/_form.scss */
+/* line 9, ../sass/molecules/_form.scss */
 .form__item.--button .button:first-child {
   margin-left: auto;
 }
-/* line 31, ../sass/molecules/_form.scss */
+/* line 12, ../sass/molecules/_form.scss */
 .form__item.--button .button:last-child {
   margin-left: 1.25rem;
+}
+@media (min-width: 768px) {
+  /* line 20, ../sass/molecules/_form.scss */
+  .form__item.--name {
+    grid-area: name;
+  }
+  /* line 23, ../sass/molecules/_form.scss */
+  .form__item.--last-name {
+    grid-area: last-name;
+  }
+  /* line 26, ../sass/molecules/_form.scss */
+  .form__item.--email {
+    grid-area: email;
+  }
+  /* line 29, ../sass/molecules/_form.scss */
+  .form__item.--phone {
+    grid-area: phone;
+  }
+  /* line 32, ../sass/molecules/_form.scss */
+  .form__item.--subject {
+    grid-area: subject;
+  }
+  /* line 35, ../sass/molecules/_form.scss */
+  .form__item.--message {
+    grid-area: message;
+  }
+  /* line 38, ../sass/molecules/_form.scss */
+  .form__item.--button {
+    grid-area: button;
+  }
 }
 
 /* line 3, ../sass/molecules/_tab-nav.scss */
 .tab-nav {
-  margin-top: 2.5rem;
+  margin-top: 0rem;
 }
 /* line 5, ../sass/molecules/_tab-nav.scss */
 .tab-nav__holder {
@@ -1043,23 +1124,37 @@ label {
 /* line 10, ../sass/molecules/_tab-nav.scss */
 .tab-nav ul {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
-/* line 14, ../sass/molecules/_tab-nav.scss */
+/* line 15, ../sass/molecules/_tab-nav.scss */
 .tab-nav__item {
-  margin-left: 1.25rem;
   padding: 0.625rem 2.5rem;
   font-size: 0.875rem;
-  border-radius: 0.5rem 0.5rem 0 0;
   background-color: #FFFFFF;
 }
-/* line 20, ../sass/molecules/_tab-nav.scss */
+/* line 19, ../sass/molecules/_tab-nav.scss */
 .tab-nav__item.--active {
   background-color: #f1f1f1;
 }
-/* line 23, ../sass/molecules/_tab-nav.scss */
+/* line 22, ../sass/molecules/_tab-nav.scss */
 .tab-nav__item:first-child {
   margin-left: 0;
+}
+@media (min-width: 768px) {
+  /* line 3, ../sass/molecules/_tab-nav.scss */
+  .tab-nav {
+    margin-top: 2.5rem;
+  }
+  /* line 28, ../sass/molecules/_tab-nav.scss */
+  .tab-nav ul {
+    flex-direction: row;
+  }
+  /* line 31, ../sass/molecules/_tab-nav.scss */
+  .tab-nav__item {
+    margin-left: 1.25rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
 }
 
 /* line 4, ../sass/molecules/_places.scss */
@@ -1178,40 +1273,41 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 1.25rem;
   height: 75vh;
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
 }
-/* line 12, ../sass/components/_intro.scss */
+/* line 13, ../sass/components/_intro.scss */
 .intro__item.one {
   background-image: url(../images/intro/01s.jpg);
 }
-/* line 15, ../sass/components/_intro.scss */
+/* line 16, ../sass/components/_intro.scss */
 .intro__item.two {
   background-image: url(../images/intro/02s.jpg);
 }
 @media (min-width: 768px) {
-  /* line 21, ../sass/components/_intro.scss */
+  /* line 22, ../sass/components/_intro.scss */
   .intro__item.one {
     background-image: url(../images/intro/01m.jpg);
   }
-  /* line 24, ../sass/components/_intro.scss */
+  /* line 25, ../sass/components/_intro.scss */
   .intro__item.two {
     background-image: url(../images/intro/02m.jpg);
   }
 }
 @media (min-width: 1280px) {
-  /* line 31, ../sass/components/_intro.scss */
+  /* line 32, ../sass/components/_intro.scss */
   .intro__item.one {
     background-image: url(../images/intro/01.jpg);
   }
-  /* line 34, ../sass/components/_intro.scss */
+  /* line 35, ../sass/components/_intro.scss */
   .intro__item.two {
     background-image: url(../images/intro/02.jpg);
   }
 }
-/* line 39, ../sass/components/_intro.scss */
+/* line 40, ../sass/components/_intro.scss */
 .intro__text {
   font-size: 1.875rem;
   font-weight: 300;
@@ -1219,9 +1315,15 @@ label {
   text-align: center;
   color: #FFFFFF;
 }
-/* line 45, ../sass/components/_intro.scss */
+/* line 46, ../sass/components/_intro.scss */
 .intro__text span {
   display: block;
+}
+@media (min-width: 768px) {
+  /* line 51, ../sass/components/_intro.scss */
+  .intro__item {
+    padding: 0 1.25rem;
+  }
 }
 
 /* line 4, ../sass/components/_promo.scss */
@@ -1239,7 +1341,7 @@ label {
 /* line 14, ../sass/components/_promo.scss */
 .promo__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 60px;
 }
 /* line 19, ../sass/components/_promo.scss */
@@ -1301,11 +1403,23 @@ label {
 .promo__button {
   margin: auto 20px 20px auto;
 }
+@media (min-width: 768px) {
+  /* line 69, ../sass/components/_promo.scss */
+  .promo__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  /* line 74, ../sass/components/_promo.scss */
+  .promo__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 /* line 4, ../sass/components/_location.scss */
 .location .section__holder {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 40px;
 }
 /* line 10, ../sass/components/_location.scss */
@@ -1328,7 +1442,7 @@ label {
 
 /* line 4, ../sass/components/_review.scss */
 .review__item {
-  padding: 2.5rem 6.25rem;
+  padding: 1.25rem 3.125rem;
   text-align: center;
 }
 /* line 8, ../sass/components/_review.scss */
@@ -1381,12 +1495,18 @@ label {
 .review .owl-nav button:hover i {
   color: #31e7ab;
 }
+@media (min-width: 768px) {
+  /* line 55, ../sass/components/_review.scss */
+  .review__item {
+    padding: 2.5rem 6.25rem;
+  }
+}
 
 /* line 4, ../sass/components/_rooms.scss */
 .rooms__grid {
   display: grid;
-  grid-gap: 40px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  grid-template-columns: 1fr;
 }
 /* line 9, ../sass/components/_rooms.scss */
 .rooms__item {
@@ -1420,14 +1540,39 @@ label {
 .rooms__button {
   margin-top: auto;
 }
+@media (min-width: 768px) {
+  /* line 39, ../sass/components/_rooms.scss */
+  .rooms__grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 45, ../sass/components/_rooms.scss */
+  .rooms__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 
 /* line 4, ../sass/components/_content-inside.scss */
 .content-inside__grid {
-  display: grid;
-  grid-gap: 2.5rem;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+}
+/* line 7, ../sass/components/_content-inside.scss */
+.content-inside__grid.--single {
+  grid-template-columns: 1fr;
 }
 /* line 9, ../sass/components/_content-inside.scss */
+.content-inside__grid.--single .content-inside__image {
+  height: auto;
+}
+/* line 12, ../sass/components/_content-inside.scss */
+.content-inside__grid.--single .content-inside__form {
+  margin: 0 auto;
+  width: auto;
+}
+/* line 18, ../sass/components/_content-inside.scss */
 .content-inside__image {
   overflow: hidden;
   display: flex;
@@ -1436,18 +1581,23 @@ label {
   margin-bottom: 1.25rem;
   height: 12.5rem;
 }
-/* line 16, ../sass/components/_content-inside.scss */
+/* line 25, ../sass/components/_content-inside.scss */
 .content-inside__image img {
   width: 100%;
 }
-/* line 20, ../sass/components/_content-inside.scss */
+/* line 29, ../sass/components/_content-inside.scss */
 .content-inside__gallery {
+  order: 2;
   display: grid;
   grid-template-areas: "main main main" "thumb-1 thumb-2 thumb-3";
-  grid-template-rows: 400px repeat(auto-fit, 150px);
+  grid-template-rows: 200px repeat(auto-fit, 150px);
   grid-gap: 5px;
 }
-/* line 28, ../sass/components/_content-inside.scss */
+/* line 37, ../sass/components/_content-inside.scss */
+.content-inside__gallery__thumb {
+  display: none;
+}
+/* line 39, ../sass/components/_content-inside.scss */
 .content-inside__gallery__thumb img {
   display: block;
   width: 100%;
@@ -1455,18 +1605,19 @@ label {
   max-height: 100%;
   object-fit: cover;
 }
-/* line 35, ../sass/components/_content-inside.scss */
+/* line 46, ../sass/components/_content-inside.scss */
 .content-inside__gallery__thumb:first-child {
+  display: block;
   grid-area: main;
   position: relative;
 }
-/* line 38, ../sass/components/_content-inside.scss */
+/* line 50, ../sass/components/_content-inside.scss */
 .content-inside__gallery__thumb:first-child .button {
   position: absolute;
   bottom: 0.625rem;
   right: 0.625rem;
 }
-/* line 43, ../sass/components/_content-inside.scss */
+/* line 55, ../sass/components/_content-inside.scss */
 .content-inside__gallery__thumb:first-child:before {
   display: block;
   font-family: 'Raleway', 'Font Awesome 5 Free';
@@ -1483,28 +1634,28 @@ label {
   background-color: rgba(0, 0, 0, 0.5);
   transition: background-color .25s ease;
 }
-/* line 58, ../sass/components/_content-inside.scss */
+/* line 70, ../sass/components/_content-inside.scss */
 .content-inside__gallery__thumb:first-child:before:hover {
   background-color: rgba(0, 0, 0, 0.75);
 }
-/* line 63, ../sass/components/_content-inside.scss */
+/* line 75, ../sass/components/_content-inside.scss */
 .content-inside__gallery__thumb:nth-child(n+5) {
   display: none;
 }
-/* line 67, ../sass/components/_content-inside.scss */
+/* line 79, ../sass/components/_content-inside.scss */
 .content-inside__gallery__thumb-bar {
   display: flex;
   margin-top: 0.3125rem;
 }
-/* line 70, ../sass/components/_content-inside.scss */
+/* line 82, ../sass/components/_content-inside.scss */
 .content-inside__gallery__thumb-bar figure {
   margin-left: 0.3125rem;
 }
-/* line 72, ../sass/components/_content-inside.scss */
+/* line 84, ../sass/components/_content-inside.scss */
 .content-inside__gallery__thumb-bar figure:first-child {
   margin-left: 0;
 }
-/* line 78, ../sass/components/_content-inside.scss */
+/* line 90, ../sass/components/_content-inside.scss */
 .content-inside__main-title {
   margin-bottom: 0.625rem;
   font-size: 1.5rem;
@@ -1512,7 +1663,7 @@ label {
   text-transform: uppercase;
   color: #313E64;
 }
-/* line 85, ../sass/components/_content-inside.scss */
+/* line 97, ../sass/components/_content-inside.scss */
 .content-inside__title {
   margin-bottom: 0.625rem;
   padding-bottom: 0.625rem;
@@ -1522,7 +1673,7 @@ label {
   color: #313E64;
   border-bottom: 1px solid #cccccc;
 }
-/* line 94, ../sass/components/_content-inside.scss */
+/* line 106, ../sass/components/_content-inside.scss */
 .content-inside__subtitle {
   margin-bottom: 0.3125rem;
   font-size: 0.875rem;
@@ -1530,39 +1681,82 @@ label {
   text-transform: uppercase;
   color: #ffa332;
 }
-/* line 101, ../sass/components/_content-inside.scss */
+/* line 113, ../sass/components/_content-inside.scss */
 .content-inside__text, .content-inside__list {
   margin-bottom: 1.25rem;
   font-size: 0.875rem;
 }
-/* line 104, ../sass/components/_content-inside.scss */
+/* line 116, ../sass/components/_content-inside.scss */
 .content-inside__text i, .content-inside__list i {
   color: #5FECBE;
 }
-/* line 108, ../sass/components/_content-inside.scss */
+/* line 120, ../sass/components/_content-inside.scss */
 .content-inside__list {
   margin-left: 1.25rem;
 }
-/* line 110, ../sass/components/_content-inside.scss */
+/* line 122, ../sass/components/_content-inside.scss */
 .content-inside__list li {
   line-height: 1.25rem;
 }
-/* line 112, ../sass/components/_content-inside.scss */
+/* line 124, ../sass/components/_content-inside.scss */
 .content-inside__list li i {
   margin-right: 0.3125rem;
 }
-/* line 117, ../sass/components/_content-inside.scss */
+/* line 129, ../sass/components/_content-inside.scss */
 .content-inside__form {
   display: grid;
-  grid-template-areas: "name last-name" "email phone" "subject subject" "message message" "button button";
+  grid-template-columns: 1fr;
   grid-auto-rows: minmax(min-content, max-content);
   grid-gap: 1.25rem;
+}
+@media (min-width: 768px) {
+  /* line 138, ../sass/components/_content-inside.scss */
+  .content-inside__grid.--single .content-inside__image {
+    height: 12.5rem;
+  }
+  /* line 141, ../sass/components/_content-inside.scss */
+  .content-inside__grid.--single .content-inside__form {
+    width: 43.75rem;
+  }
+  /* line 146, ../sass/components/_content-inside.scss */
+  .content-inside__gallery {
+    grid-template-rows: 400px repeat(auto-fit, 150px);
+  }
+  /* line 148, ../sass/components/_content-inside.scss */
+  .content-inside__gallery__thumb {
+    display: block;
+  }
+  /* line 152, ../sass/components/_content-inside.scss */
+  .content-inside__form {
+    grid-template-columns: none;
+    grid-template-areas: "name last-name" "email phone" "subject subject" "message message" "button button";
+  }
+}
+@media (min-width: 1024px) {
+  /* line 163, ../sass/components/_content-inside.scss */
+  .content-inside__grid {
+    display: grid;
+    grid-gap: 2.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* line 168, ../sass/components/_content-inside.scss */
+  .content-inside__grid.--single .content-inside__image {
+    height: 25rem;
+  }
+  /* line 173, ../sass/components/_content-inside.scss */
+  .content-inside__description {
+    order: 2;
+  }
+  /* line 176, ../sass/components/_content-inside.scss */
+  .content-inside__gallery {
+    order: 1;
+  }
 }
 
 /* line 4, ../sass/components/_services.scss */
 .services__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   grid-auto-rows: 12.5rem;
   grid-gap: 2.5rem;
 }
@@ -1581,6 +1775,7 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 0 0 5rem;
   margin-bottom: 1.25rem;
   width: 5rem;
   height: 5rem;
@@ -1589,66 +1784,84 @@ label {
   border-radius: 3.125rem;
   background-color: #5FECBE;
 }
-/* line 31, ../sass/components/_services.scss */
+/* line 32, ../sass/components/_services.scss */
 .services__title {
   margin-bottom: 0.625rem;
   text-transform: uppercase;
   color: #313E64;
 }
-/* line 36, ../sass/components/_services.scss */
+/* line 37, ../sass/components/_services.scss */
 .services__text {
   font-size: 0.75rem;
+}
+@media (min-width: 768px) {
+  /* line 41, ../sass/components/_services.scss */
+  .services__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* line 44, ../sass/components/_services.scss */
+  .services__item {
+    padding: 0.625rem;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 49, ../sass/components/_services.scss */
+  .services__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  /* line 52, ../sass/components/_services.scss */
+  .services__item {
+    padding: 1.25rem;
+  }
 }
 
 /* line 3, ../sass/components/_footer.scss */
 .footer {
-  padding: 2.5rem 0;
+  padding: 2.5rem;
   background-color: #1b1d1f;
 }
 /* line 6, ../sass/components/_footer.scss */
 .footer__holder {
-  display: flex;
   align-items: flex-start;
   margin: 0 auto;
   max-width: 1280px;
 }
-/* line 12, ../sass/components/_footer.scss */
+/* line 11, ../sass/components/_footer.scss */
 .footer__item {
-  margin-left: 6.25rem;
-  max-width: 25%;
+  margin-top: 1.25rem;
+  text-align: center;
 }
-/* line 15, ../sass/components/_footer.scss */
+/* line 14, ../sass/components/_footer.scss */
 .footer__item:first-child {
-  margin-left: 0;
-  margin-right: auto;
+  margin-top: 0;
 }
-/* line 20, ../sass/components/_footer.scss */
+/* line 18, ../sass/components/_footer.scss */
 .footer__text, .footer__link {
   margin-top: 0.625rem;
   font-size: 0.75rem;
   color: #FFFFFF;
 }
-/* line 24, ../sass/components/_footer.scss */
+/* line 22, ../sass/components/_footer.scss */
 .footer__text i, .footer__link i {
   margin-right: 0.3125rem;
   font-size: 0.875rem;
   color: #5FECBE;
 }
-/* line 30, ../sass/components/_footer.scss */
+/* line 28, ../sass/components/_footer.scss */
 .footer__text {
   line-height: 1.25rem;
 }
-/* line 33, ../sass/components/_footer.scss */
+/* line 31, ../sass/components/_footer.scss */
 .footer__link {
   display: inline-block;
   text-decoration: underline;
   transition: color .25s ease;
 }
-/* line 37, ../sass/components/_footer.scss */
+/* line 35, ../sass/components/_footer.scss */
 .footer__link:hover {
   color: #FFBA65;
 }
-/* line 41, ../sass/components/_footer.scss */
+/* line 39, ../sass/components/_footer.scss */
 .footer__title {
   font-size: 1rem;
   font-weight: 600;
@@ -1656,24 +1869,57 @@ label {
   text-decoration: underline;
   color: #FFFFFF;
 }
-/* line 49, ../sass/components/_footer.scss */
+/* line 47, ../sass/components/_footer.scss */
 .footer__nav li {
   line-height: 1.875rem;
 }
-/* line 51, ../sass/components/_footer.scss */
+/* line 49, ../sass/components/_footer.scss */
 .footer__nav li a {
   font-size: 0.75rem;
   text-transform: uppercase;
   color: #FFFFFF;
   transition: color .25s ease;
 }
-/* line 56, ../sass/components/_footer.scss */
+/* line 54, ../sass/components/_footer.scss */
 .footer__nav li a i {
   margin-right: 0.3125rem;
   font-size: 0.875rem;
   color: #5FECBE;
 }
-/* line 61, ../sass/components/_footer.scss */
+/* line 59, ../sass/components/_footer.scss */
 .footer__nav li a:hover {
   color: #FFBA65;
+}
+@media (min-width: 768px) {
+  /* line 66, ../sass/components/_footer.scss */
+  .footer__holder {
+    display: flex;
+  }
+  /* line 69, ../sass/components/_footer.scss */
+  .footer__item {
+    margin-left: 2.5rem;
+    margin-top: 0;
+    max-width: 25%;
+    text-align: left;
+  }
+  /* line 74, ../sass/components/_footer.scss */
+  .footer__item:first-child {
+    margin-left: 0;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 80, ../sass/components/_footer.scss */
+  .footer__item {
+    margin-left: 6.25rem;
+  }
+  /* line 82, ../sass/components/_footer.scss */
+  .footer__item:first-child {
+    margin-right: auto;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 3, ../sass/components/_footer.scss */
+  .footer {
+    padding: 2.5rem 0;
+  }
 }

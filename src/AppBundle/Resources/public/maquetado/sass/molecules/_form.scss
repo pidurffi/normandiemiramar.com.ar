@@ -2,26 +2,7 @@
 
 .form {
   &__item {
-    &.--name {
-      grid-area: name;
-    }
-    &.--last-name {
-      grid-area: last-name;
-    }
-    &.--email {
-      grid-area: email;
-    }
-    &.--phone {
-      grid-area: phone;
-    }
-    &.--subject {
-      grid-area: subject;
-    }
-    &.--message {
-      grid-area: message;
-    }
     &.--button {
-      grid-area: button;
       display: flex;
       align-items: center;
       .button {
@@ -31,6 +12,31 @@
         &:last-child {
           margin-left: size(20);
         }
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    &__item {
+      &.--name {
+        grid-area: name;
+      }
+      &.--last-name {
+        grid-area: last-name;
+      }
+      &.--email {
+        grid-area: email;
+      }
+      &.--phone {
+        grid-area: phone;
+      }
+      &.--subject {
+        grid-area: subject;
+      }
+      &.--message {
+        grid-area: message;
+      }
+      &.--button {
+        grid-area: button;
       }
     }
   }

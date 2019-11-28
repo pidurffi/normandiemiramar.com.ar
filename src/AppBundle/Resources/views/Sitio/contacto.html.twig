@@ -23,8 +23,15 @@
 <!-- Contacto contenido -->
 <section class="section content-inside">
   <div class="section__holder">
-    <div class="content-inside__grid">
-      <form action="" class="form content-inside__form">
+    <div class="content-inside__grid --single">
+      <div class="content-inside__description">
+        <p class="content-inside__text"><i class="fas fa-phone"></i> (011) 5415.2464</p>
+        <p class="content-inside__text"><a href=""><i class="fas fa-envelope"></i> info@normandiemiramar.com.ar</a></p>
+        <figure class="content-inside__image">
+          <img src="{{ asset('bundles/app/maquetado/images/map/map.jpg') }}" alt="">
+        </figure>
+      </div>
+       <form action="" class="form content-inside__form">
         <div class="form__item --name">
           <label for="">Nombre</label>
           <input type="text">
@@ -50,13 +57,6 @@
           <a href="" class="button --primary">Enviar</a>
         </div>
       </form>
-      <div class="content-inside__description">
-        <figure class="content-inside__image">
-          <img src="{{ asset('bundles/app/maquetado/images/map/map.jpg') }}" alt="">
-        </figure>
-        <p class="content-inside__text"><i class="fas fa-phone"></i> (011) 5415.2464</p>
-        <p class="content-inside__text"><a href=""><i class="fas fa-envelope"></i> info@normandiemiramar.com.ar</a></p>
-      </div>
     </div>
   </div>
 </section>

@@ -6,6 +6,7 @@
   justify-content: center;
   padding: size(8) size(20);
   min-width: size(150);
+  height: size(40);
   font-size: size(12);
   font-weight: $f-semi-bold;
   letter-spacing: size(0.5);
@@ -54,6 +55,7 @@
   &.--text {
     padding: 0;
     min-width: auto;
+    height: auto;
     border-radius: 0;
     font-size: size(14);
     font-weight: $f-medium;
@@ -72,6 +74,7 @@
       }
     }
     &.--tab-button {
+      font-size: size(12);
       font-weight: $f-semi-bold;
       color: $c-primary;
       &:hover {
@@ -103,6 +106,13 @@
       color: $c-white;
       &:hover {
         color: $c-secondary;
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    &.--text {
+      &.--tab-button {
+        font-size: size(14);
       }
     }
   }

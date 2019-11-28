@@ -2,7 +2,7 @@
 
 .review {
   &__item {
-    padding: size(40) size(100);
+    padding: size(20) size(50);
     text-align: center;
   }
   &__title {
@@ -49,6 +49,11 @@
           color: $c-tertiary-hover;
         }
       }
+    }
+  }
+  @media (min-width: 768px) {
+    &__item {
+      padding: size(40) size(100);
     }
   }
 }
