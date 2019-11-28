@@ -73,6 +73,15 @@ class DefaultController extends Controller
         return array();
     }
 
+
+    /**
+     * @Template("AppBundle:Sitio:component_infohabitaciones.html.twig")
+     */
+    public function infohabitacionesAction(Request $request)
+    {
+        return array();
+    }
+
     /**
      * @Route("/habitacion-doble", name="habitacion-doble")
      * @Template("AppBundle:Sitio:habitacion-doble.html.twig")
@@ -119,10 +128,19 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/departamento", name="departamento")
+     * @Route("/departamento-para-5-personas", name="departamento")
      * @Template("AppBundle:Sitio:departamento.html.twig")
      */
     public function departamentoAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/departamento-para-6-personas", name="departamento6")
+     * @Template("AppBundle:Sitio:departamento6.html.twig")
+     */
+    public function departamento6Action(Request $request)
     {
         return array();
     }
@@ -132,6 +150,15 @@ class DefaultController extends Controller
      * @Template("AppBundle:Sitio:estudio.html.twig")
      */
     public function estudioAction(Request $request)
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/monoambiente-4-personas", name="monoambiente-4-personas")
+     * @Template("AppBundle:Sitio:monoambiente-4-personas.html.twig")
+     */
+    public function monoambiente4PersonasAction(Request $request)
     {
         return array();
     }

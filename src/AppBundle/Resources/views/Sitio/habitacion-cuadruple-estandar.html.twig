@@ -17,7 +17,7 @@
         <i class="fas fa-chevron-right"></i>
       </li>
       <li class="breadcrumb__item --active">
-        <a href="{{ url('cuadruple-estandar') }}"><i class="fas fa-door-open"></i> Habitación Cuádruple Estándar</a>
+        <a href="{{ url('habitacion-cuadruple-estandar') }}"><i class="fas fa-door-open"></i> Habitación Cuádruple Estándar</a>
       </li>
     </ul>
     <a href="{{ url('habitaciones') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Habitaciones</a>
@@ -28,20 +28,8 @@
 <section class="section content-inside">
   <div class="section__holder">
     <div class="content-inside__grid">
-      <div class="content-inside__gallery">
-        <figure class="content-inside__gallery__thumb --main-thumb">
-          <img src="{{ asset('bundles/app/maquetado/images/rooms/doble.jpg') }}" alt="Habitación Doble">
-          <span class="button --hover-img --with-icon"><i class="fas fa-images"></i> Ver galería</span>
-        </figure>
-        <figure class="content-inside__gallery__thumb --thumb-1">
-          <img src="{{ asset('bundles/app/maquetado/images/rooms/triple.jpg') }}" alt="Habitación Doble">
-        </figure>
-        <figure class="content-inside__gallery__thumb --thumb-2">
-          <img src="{{ asset('bundles/app/maquetado/images/rooms/doble.jpg') }}" alt="Habitación Doble">
-        </figure>
-        <figure class="content-inside__gallery__thumb --thumb-3">
-          <img src="{{ asset('bundles/app/maquetado/images/rooms/departamento.jpg') }}" alt="Habitación Doble">
-        </figure>
+      <div class="content-inside__gallery" id="lightgallery">
+        {{ render(controller('AppBundle:Default:galeria',{galeria_id: 6})) }}
       </div>
       <div class="content-inside__description">
         <h2 class="content-inside__main-title">Habitación Cuádruple Estándar</h2>
@@ -59,23 +47,7 @@
           <li><i class="fas fa-check"></i> Ascensor</li>
           <li><i class="fas fa-check"></i> Servicio de mucama y ropa blanca</li>
         </ul>
-        <h3 class="content-inside__title">Salón</h3>
-        <h4 class="content-inside__subtitle">Mañana</h4>
-        <p class="content-inside__text">Se sirve el desayuno buffet</p>
-        <h4 class="content-inside__subtitle">Mediodía</h4>
-        <p class="content-inside__text">Se habilita para el huésped que quiera comprar comida en algún lugar y comer ahí (así abaratan costos), el Hotel les provee la vajilla correspondiente y se hace cargo de la limpieza</p>
-        <h3 class="content-inside__title">Sala de juegos</h3>
-        <p class="content-inside__text">Para los niños (y no tan niños) tenemos a disposición y sin cargo alguno</p>
-        <ul class="content-inside__list">
-          <li><i class="fas fa-gamepad"></i> Mesa de ping pong</li>
-          <li><i class="fas fa-gamepad"></i> Metegol</li>
-          <li><i class="fas fa-gamepad"></i> Play Station</li>
-          <li><i class="fas fa-gamepad"></i> Juegos de mesa</li>
-        </ul>
-        <h3 class="content-inside__title">Además</h3>
-        <p class="content-inside__text">El Hotel dispone de una heladera para aquel pasajero que desee guardar algo (comida, bebida, medicamentos) y también un espacio para guardar sillas, reposeras, sombrillas etc para que no ocupen lugar en la habitación</p>
-        <p class="content-inside__text">Wi-Fi libre en todo el hotel</p>
-        <p class="content-inside__text">Cualquier duda, estamos a su disposición</p>
+        {{ render(controller('AppBundle:Default:infohabitaciones')) }}
       </div>
     </div>
   </div>

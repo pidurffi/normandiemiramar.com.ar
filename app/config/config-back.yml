@@ -77,7 +77,7 @@ fos_user:
     user_class: AppBundle\Entity\User    
     
 easy_admin:
-    site_name: 'Mirador del Indio'
+    site_name: 'Hotel Normandie'
     entities:
       Contacto:
         class: AppBundle\Entity\Contacto
