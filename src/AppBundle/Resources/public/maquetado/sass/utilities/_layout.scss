@@ -1,5 +1,11 @@
 // // // // LAYOUT
 
+body {
+  &.--no-scroll {
+    overflow: hidden;
+  }
+}
+
 .inside {
   padding-top: size(100);
   @media (min-width: 1024px) {

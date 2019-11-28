@@ -1,5 +1,19 @@
 $(document).ready(function() {
 
+  // Hamburger
+  $('.hamburger').on('click', function(){
+    $(this).find('i').toggleClass('fa-times');
+    $('nav').toggleClass('--open');
+    $('header').toggleClass('--open-nav');
+    $('body').toggleClass('--no-scroll');
+  });
+
+  $('nav a').on('click', function(){
+    $('nav').removeClass('--open');
+    $('header').removeClass('--open-nav');
+    $('body').removeClass('--no-scroll');
+  });
+
   // Intro carousel
   var introOwl = $('.intro-carousel');
   introOwl.owlCarousel({

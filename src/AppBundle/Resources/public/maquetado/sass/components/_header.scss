@@ -25,7 +25,7 @@
     .logo {
       grid-area: logo;
     }
-    nav, address {
+    address {
       display: none;
     }
     nav {
@@ -39,6 +39,9 @@
     }
   }
   &.--scrolled {
+    background-color: $c-black;
+  }
+  &.--open-nav {
     background-color: $c-black;
   }
   @media (min-width: 1024px) {
