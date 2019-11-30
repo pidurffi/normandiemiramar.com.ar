@@ -74,7 +74,7 @@
       }
     }
     &.--tab-button {
-      font-size: size(12);
+      font-size: size(10);
       font-weight: $f-semi-bold;
       color: $c-primary;
       &:hover {
@@ -109,7 +109,7 @@
       }
     }
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     &.--text {
       &.--tab-button {
         font-size: size(14);
