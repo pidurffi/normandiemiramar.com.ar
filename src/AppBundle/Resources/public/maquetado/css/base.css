@@ -1479,12 +1479,16 @@ nav.--open {
   grid-template-columns: 1fr;
   grid-gap: 40px;
 }
-/* line 10, ../sass/components/_location.scss */
+/* line 9, ../sass/components/_location.scss */
+.location__map {
+  height: 400px;
+}
+/* line 11, ../sass/components/_location.scss */
 .location__map img {
   display: block;
   width: 100%;
 }
-/* line 15, ../sass/components/_location.scss */
+/* line 16, ../sass/components/_location.scss */
 .location__title {
   margin-bottom: 0.625rem;
   font-size: 1rem;
@@ -1492,7 +1496,7 @@ nav.--open {
   text-transform: uppercase;
   color: #313E64;
 }
-/* line 22, ../sass/components/_location.scss */
+/* line 23, ../sass/components/_location.scss */
 .location__text {
   text-align: left;
 }
