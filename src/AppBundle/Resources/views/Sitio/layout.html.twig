@@ -18,16 +18,16 @@
     {# End Title & Metas #}
 		
 		<!-- Favicons -->
-		<link rel="shortcut icon" href="{{ asset('bundles/app/maquetado/img/favicon.ico') }}" type="image/x-icon" />
-		<link rel="apple-touch-icon" href="{{ asset('bundles/app/maquetado/img/apple-touch-icon.png') }}" />
-		<link rel="apple-touch-icon" sizes="57x57" href="{{ asset('bundles/app/maquetado/img/apple-touch-icon-57x57.png') }}" />
-		<link rel="apple-touch-icon" sizes="72x72" href="{{ asset('bundles/app/maquetado/img/apple-touch-icon-72x72.png') }}" />
-		<link rel="apple-touch-icon" sizes="76x76" href="{{ asset('bundles/app/maquetado/img/apple-touch-icon-76x76.png') }}" />
-		<link rel="apple-touch-icon" sizes="114x114" href="{{ asset('bundles/app/maquetado/img/apple-touch-icon-114x114.png') }}" />
-		<link rel="apple-touch-icon" sizes="120x120" href="{{ asset('bundles/app/maquetado/img/apple-touch-icon-120x120.png') }}" />
-		<link rel="apple-touch-icon" sizes="144x144" href="{{ asset('bundles/app/maquetado/img/apple-touch-icon-144x144.png') }}" />
-		<link rel="apple-touch-icon" sizes="152x152" href="{{ asset('bundles/app/maquetado/img/apple-touch-icon-152x152.png') }}" />
-		<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('bundles/app/maquetado/img/apple-touch-icon-180x180.png') }}" />
+		<link rel="shortcut icon" href="{{ asset('bundles/app/maquetado/images/favicon.ico') }}" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="{{ asset('bundles/app/maquetado/images/apple-touch-icon.png') }}" />
+		<link rel="apple-touch-icon" sizes="57x57" href="{{ asset('bundles/app/maquetado/images/apple-touch-icon-57x57.png') }}" />
+		<link rel="apple-touch-icon" sizes="72x72" href="{{ asset('bundles/app/maquetado/images/apple-touch-icon-72x72.png') }}" />
+		<link rel="apple-touch-icon" sizes="76x76" href="{{ asset('bundles/app/maquetado/images/apple-touch-icon-76x76.png') }}" />
+		<link rel="apple-touch-icon" sizes="114x114" href="{{ asset('bundles/app/maquetado/images/apple-touch-icon-114x114.png') }}" />
+		<link rel="apple-touch-icon" sizes="120x120" href="{{ asset('bundles/app/maquetado/images/apple-touch-icon-120x120.png') }}" />
+		<link rel="apple-touch-icon" sizes="144x144" href="{{ asset('bundles/app/maquetado/images/apple-touch-icon-144x144.png') }}" />
+		<link rel="apple-touch-icon" sizes="152x152" href="{{ asset('bundles/app/maquetado/images/apple-touch-icon-152x152.png') }}" />
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('bundles/app/maquetado/images/apple-touch-icon-180x180.png') }}" />
 
 		<meta property="og:title" content="Hotel Normandie - Miramar" />
 		<meta property="og:description" content="Hotel a 300 metros del mar y las principales áreas comerciales. Aprovecha nuestas promociones para venir a conocer el Hotel Normandie en Miramar."/>
@@ -52,22 +52,22 @@
     <link href="{{ asset('bundles/app/maquetado/css/base.css') }}" rel="stylesheet">
 
     {# Google map #}
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBocLFC5GH0pqztqWhG3i2HJbAW68xu8pQ"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaJw8REV5CNiAQbirsgFxKonBLjAankBM"></script>
     <script>
       function initialize() {
       var isDraggable = $(document).width() > 480 ? true : false;  
       var ispanControl = $(document).width() > 480 ? true : false;
       
-      var myLatLng = {lat: -37.339154, lng: -57.025952};
+      var myLatLng = {lat: -38.271683, lng: -57.834588};
       var marker = new google.maps.Marker({
         animation: google.maps.Animation.BOUNCE,
         position: myLatLng,
-        title:"Médanos Apart"
+        title:"Hotel Normandie - Miramar"
       });
       var mapCanvas = document.getElementById('map');
       var mapOptions = {
-        center: new google.maps.LatLng(-37.339154, -57.025952),
-        zoom: 17,
+        center: new google.maps.LatLng(-38.271683, -57.834588),
+        zoom: 16,
         mapTypeControl: true,
         panControl:ispanControl,
         draggable: isDraggable,

@@ -27,35 +27,34 @@
       <div class="content-inside__description">
         <p class="content-inside__text"><i class="fas fa-phone"></i> (011) 5415.2464</p>
         <p class="content-inside__text"><a href=""><i class="fas fa-envelope"></i> info@normandiemiramar.com.ar</a></p>
-        <figure class="content-inside__image">
-          <img src="{{ asset('bundles/app/maquetado/images/map/map.jpg') }}" alt="">
-        </figure>
       </div>
-       <form action="" class="form content-inside__form">
+       <form method="post" role="form" id="form_contacto" onsubmit="return validar_form();" class="contactForm form content-inside__form">
         <div class="form__item --name">
           <label for="">Nombre</label>
-          <input type="text">
+          <input type="text" name="name" id="form_nombre">
         </div>
         <div class="form__item --last-name">
           <label for="">Apellido</label>
-          <input type="text">
+          <input type="text" name="apellido" id="form_apellido">
         </div>
         <div class="form__item --email">
           <label for="">Email</label>
-          <input type="text">
+          <input type="email" id="form_email">
         </div>
         <div class="form__item --phone">
           <label for="">Teléfono</label>
-          <input type="text">
+          <input type="text" id="form_telefono">
         </div>
         <div class="form__item --message">
           <label for="">Mensaje</label>
-          <textarea name="" id=""></textarea>
+          <textarea name="" id="form_mensaje"></textarea>
         </div>
+        
         <div class="form__item --button">
-          <a href="https://wa.me/5491154152464" target="_blank" class="button --whatsapp --with-icon"><i class="fab fa-whatsapp"></i> Consultar por Whatsapp</a>
-          <a href="" class="button --primary">Enviar</a>
+          {#<a href="https://wa.me/5491154152464" target="_blank" class="button --whatsapp --with-icon"><i class="fab fa-whatsapp"></i> Consultar por Whatsapp</a> #}
+          <a href="" class="send button --primary">Enviar</a>
         </div>
+       
       </form>
     </div>
   </div>

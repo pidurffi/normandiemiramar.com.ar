@@ -935,7 +935,7 @@ body.--no-scroll {
 }
 
 /* line 3, ../sass/atoms/_input.scss */
-input[type="text"], textarea, select {
+input[type="text"], input[type="email"], textarea, select {
   display: block;
   padding: 0.625rem 1.25rem;
   width: 100%;
