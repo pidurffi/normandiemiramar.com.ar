@@ -8,13 +8,15 @@
     max-width: $container-width;
   }
   ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
   &__item {
-    padding: size(10) size(40);
-    font-size: size(14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: size(5);
+    text-align: center;
     background-color: $c-white;
     &.--active {
       background-color: $c-grey;
@@ -30,6 +32,7 @@
     }
     &__item {
       margin-left: size(20);
+      padding: size(10) size(40);
       border-radius: size(8) size(8) 0 0;
     }
   }

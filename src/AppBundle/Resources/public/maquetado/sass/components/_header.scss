@@ -15,7 +15,7 @@
   height: size(100);
   background-color: $c-black-tr;
   z-index: 1000;
-  transition: background-color 1s ease;
+  transition: background-color .25s ease;
   &__holder {
     display: flex;
     align-items: center;

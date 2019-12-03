@@ -38,9 +38,13 @@ nav {
     opacity: 1;
   }
   @media (min-width: 1024px) {
+    visibility: visible;
+    opacity: 1;
     position: static;
     .main-nav {
+      flex-direction: row;
       &__item {
+        margin-top: 0;
         margin-left: size(15);
       }
     }
