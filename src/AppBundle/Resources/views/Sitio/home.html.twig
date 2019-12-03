@@ -22,79 +22,6 @@
   {# Promos #}
   {{ render(controller('AppBundle:Default:promociones')) }}
 
-  {# <section class="section promo" id="promociones">
-    <div class="section__holder">
-      <h2 class="section__title">Nuestras promociones</h2>
-      <p class="section__text">Aprovecha nuestas promociones para venir a conocer el <span class="hotel">Hotel Normandie</span> en Miramar. Los mejores precios y descuentos para fines de semana largos y la temprada 2019 / 2020</p>
-      <div class="promo__grid">
-        <div class="promo__item">
-          <figure class="promo__image">
-            <img src="{{ asset('bundles/app/maquetado/images/promos/01.jpg') }}" alt="Promoción Octubre y Noviembre">
-          </figure>
-          <div class="promo__content">
-            <h3 class="promo__title">Octubre y Noviembre</h3>
-            <ul class="promo__list">
-              <li><i class="fas fa-check"></i>Doble $2.150</li>
-              <li><i class="fas fa-check"></i>Triple Estándar $2.280</li>
-              <li><i class="fas fa-check"></i>Triple De Luxe $2.540</li>
-              <li><i class="fas fa-check"></i>Cuádruple Estándar $2.800</li>
-              <li><i class="fas fa-check"></i>Cuádruple Superior $3.120</li>
-              <li><i class="fas fa-check"></i>Departamento 5/6 personas $3.640</li>
-            </ul>
-            <p class="promo__text">Tarifas por noche, por habitación</p>
-            <p class="promo__text">No incluye feriados</p>
-            <p class="promo__text">Desayuno incluido</p>
-            <p class="promo__text">La reserva se hace efectiva mediante transferencia o depósito bancario del 10% del importe total de la estadía</p>
-          </div>
-          <a href="" class="promo__button button --secondary --text">Ver más</a>
-        </div>
-        <div class="promo__item">
-          <figure class="promo__image">
-            <img src="{{ asset('bundles/app/maquetado/images/promos/02.jpg') }}" alt="Promoción Temporada 2019 / 2020">
-          </figure>
-          <div class="promo__content">
-            <h3 class="promo__title">Temporada 2019 / 2020</h3>
-            <h4 class="promo__subtitle">Temporada alta del 18/12 al 14/02</h4>
-            <ul class="promo__list">
-              <li><i class="fas fa-check"></i>Doble $22.330</li>
-              <li><i class="fas fa-check"></i>Triple Estándar $23.240</li>
-              <li><i class="fas fa-check"></i>Triple De Luxe $28.210</li>
-              <li><i class="fas fa-check"></i>Cuádruple Estándar $30.940</li>
-              <li><i class="fas fa-check"></i>Cuádruple Superior $33.670</li>
-              <li><i class="fas fa-check"></i>Departamento 5/6 personas $37.310</li>
-            </ul>
-            <p class="promo__text">Tarifas por 7 noches</p>
-            <p class="promo__text">No incluye feriados</p>
-            <p class="promo__text">Desayuno incluido</p>
-            <p class="promo__text">La reserva se hace efectiva mediante transferencia o depósito bancario del 10% del importe total de la estadía</p>
-          </div>
-          <a href="" class="promo__button button --secondary --text">Ver más</a>
-        </div>
-        <div class="promo__item">
-          <figure class="promo__image">
-            <img src="{{ asset('bundles/app/maquetado/images/promos/03.jpg') }}" alt="Promoción Feriado Octubre">
-          </figure>
-          <div class="promo__content">
-            <h3 class="promo__title">Feriado Octubre</h3>
-            <ul class="promo__list">
-              <li><i class="fas fa-check"></i>Doble $2.410</li>
-              <li><i class="fas fa-check"></i>Triple Estándar $2.540</li>
-              <li><i class="fas fa-check"></i>Triple De Luxe $2.800</li>
-              <li><i class="fas fa-check"></i>Cuádruple Estándar $3.060</li>
-              <li><i class="fas fa-check"></i>Cuádruple Superior $3.380</li>
-              <li><i class="fas fa-check"></i>Departamento 5/6 personas $3.900</li>
-            </ul>
-            <p class="promo__text">Tarifas por noche, por habitación</p>
-            <p class="promo__text">No incluye feriados</p>
-            <p class="promo__text">Desayuno incluido</p>
-            <p class="promo__text">La reserva se hace efectiva mediante transferencia o depósito bancario del 10% del importe total de la estadía</p>
-          </div>
-          <a href="" class="promo__button button --secondary --text">Ver más</a>
-        </div>
-      </div>
-    </div>
-  </section> #}
-
   <!-- Hotel -->
   <section class="section hotel">
     <div class="section__holder">
@@ -126,9 +53,7 @@
         <p class="section__text location__text">Desde el Sur: Por ruta Provincial Nº 88 y ruta Provincial Nº 77</p>
         <p class="section__text location__text">Desde el Noroeste: Por ruta Provincial Nº 226 y rutas 11 y 88</p>
       </div>
-      <div class="location__map">
-        <img src="{{ asset('bundles/app/maquetado/images/map/map.jpg') }}">
-      </div>
+      <div class="map-container"></div>
     </div>
   </section>
 
