@@ -1,0 +1,105 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set habitaciones = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('habitaciones') }}"><i class="fas fa-home"></i> Habitaciones</a>
+      </li>
+    </ul>
+    <a href="{{ url('home') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver al inicio</a>
+  </div>
+</div>
+
+<!-- Habitaciones home -->
+<section class="section rooms">
+  <div class="section__holder">
+    <h2 class="section__title">Nuestras habitaciones</h2>
+    <p class="section__text">El Normandie es un impactante y moderno edificio de 3 pisos (con ascensor), con cómodas habitaciones y todos los servicios, donde su staff se brinda 100% al huésped que lo visita.</p>
+    <div class="rooms__grid">
+      <div class="rooms__item">
+        <figure class="rooms__image">
+          <img src="{{ asset('bundles/app/maquetado/images/rooms/doble.jpg') }}" alt="Habitación Doble">
+        </figure>
+        <div class="rooms__content">
+          <h3 class="rooms__title">Habitación Doble</h3>
+          <a href="{{ url('habitacion-doble') }}" class="button --secondary rooms__button">Ver más</a>
+        </div>
+      </div>
+      <div class="rooms__item">
+        <figure class="rooms__image">
+          <img src="{{ asset('bundles/app/maquetado/images/rooms/triple.jpg') }}" alt="Habitación Triple">
+        </figure>
+        <div class="rooms__content">
+          <h3 class="rooms__title">Habitación Triple Estándar</h3>
+          <a href="{{ url('habitacion-triple-estandar') }}" class="button --secondary rooms__button">Ver más</a>
+        </div>
+      </div>
+      <div class="rooms__item">
+        <figure class="rooms__image">
+          <img src="{{ asset('bundles/app/maquetado/images/rooms/triple-superior.jpg') }}" alt="Habitación Triple">
+        </figure>
+        <div class="rooms__content">
+          <h3 class="rooms__title">Habitación Triple de Luxe</h3>
+          <a href="{{ url('habitacion-triple-luxe') }}" class="button --secondary rooms__button">Ver más</a>
+        </div>
+      </div>
+      <div class="rooms__item">
+        <figure class="rooms__image">
+          <img src="{{ asset('bundles/app/maquetado/images/rooms/cuadruple.jpg') }}" alt="Habitación Cuádruple">
+        </figure>
+        <div class="rooms__content">
+          <h3 class="rooms__title">Habitación Cuádruple Estándar</h3>
+          <a href="{{ url('habitacion-cuadruple-estandar') }}" class="button --secondary rooms__button">Ver más</a>
+        </div>
+      </div>
+      <div class="rooms__item">
+        <figure class="rooms__image">
+          <img src="{{ asset('bundles/app/maquetado/images/rooms/cuadruple-superior.jpg') }}" alt="Habitación Cuádruple">
+        </figure>
+        <div class="rooms__content">
+          <h3 class="rooms__title">Habitación Cuádruple Superior</h3>
+          <a href="{{ url('habitacion-cuadruple-superior') }}" class="button --secondary rooms__button">Ver más</a>
+        </div>
+      </div>
+      <div class="rooms__item">
+        <figure class="rooms__image">
+          <img src="{{ asset('bundles/app/maquetado/images/rooms/monoambiente-4pax.jpg') }}" alt="Departamento">
+        </figure>
+        <div class="rooms__content">
+          <h3 class="rooms__title">Monoambiente 4 personas</h3>
+          <a href="{{ url('monoambiente-4-personas') }}" class="button --secondary rooms__button">Ver más</a>
+        </div>
+      </div>
+      <div class="rooms__item">
+        <figure class="rooms__image">
+          <img src="{{ asset('bundles/app/maquetado/images/rooms/depto-5pax.jpg') }}" alt="Departamento 5 personas">
+        </figure>
+        <div class="rooms__content">
+          <h3 class="rooms__title">Departamento 5 personas</h3>
+          <a href="{{ url('departamento') }}" class="button --secondary rooms__button">Ver más</a>
+        </div>
+      </div>
+      <div class="rooms__item">
+        <figure class="rooms__image">
+          <img src="{{ asset('bundles/app/maquetado/images/rooms/depto-6pax.jpg') }}" alt="Departamento 6 personas">
+        </figure>
+        <div class="rooms__content">
+          <h3 class="rooms__title">Departamento 6 personas</h3>
+          <a href="{{ url('departamento6') }}" class="button --secondary rooms__button">Ver más</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

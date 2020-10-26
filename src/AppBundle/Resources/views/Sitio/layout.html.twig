@@ -1,68 +1,73 @@
 <!DOCTYPE html>
-
 <html lang="en">
+	<head>
+    {# Google Tag Manager #}
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PV75SDT');</script>
+    {# End Google Tag Manager #}
 
-<head><meta http-equiv="Content-Type" content="text/html; charset=gb18030">
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Hotel Normandie - Miramar</title>
-	<!-- CSS -->
-	<link href="{{ asset('bundles/app/stylesheets/screen.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
-	<link href="{{ asset('bundles/app/stylesheets/fonts.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
-	<link href="{{ asset('bundles/app/stylesheets/owl.carousel.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
-	<link href="{{ asset('bundles/app/stylesheets/owl.transitions.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
-	<link href="{{ asset('bundles/app/stylesheets/owl.theme.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
-	<link href="{{ asset('bundles/app/stylesheets/photoswipe.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
-	<link href="{{ asset('bundles/app/stylesheets/default-skin.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
+    {# Title & Metas #}
+		<meta charset="utf-8"> 
+    <title>Hotel Normadie - Miramar</title>         
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"> 
+    <meta name="description" content="Hotel a 300 metros del mar y las principales áreas comerciales. Aprovecha nuestas promociones para venir a conocer el Hotel Normandie en Miramar." />
+    <meta name="author" content="www.mardelaspampas.travel" /> 
+    {# End Title & Metas #}
+		
+		<!-- Favicons -->
+		<link rel="shortcut icon" href="{{ asset('bundles/app/maquetado/images/favicon.ico') }}" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="{{ asset('bundles/app/maquetado/images/apple-touch-icon.png') }}" />
+		<link rel="apple-touch-icon" sizes="57x57" href="{{ asset('bundles/app/maquetado/images/apple-touch-icon-57x57.png') }}" />
+		<link rel="apple-touch-icon" sizes="72x72" href="{{ asset('bundles/app/maquetado/images/apple-touch-icon-72x72.png') }}" />
+		<link rel="apple-touch-icon" sizes="76x76" href="{{ asset('bundles/app/maquetado/images/apple-touch-icon-76x76.png') }}" />
+		<link rel="apple-touch-icon" sizes="114x114" href="{{ asset('bundles/app/maquetado/images/apple-touch-icon-114x114.png') }}" />
+		<link rel="apple-touch-icon" sizes="120x120" href="{{ asset('bundles/app/maquetado/images/apple-touch-icon-120x120.png') }}" />
+		<link rel="apple-touch-icon" sizes="144x144" href="{{ asset('bundles/app/maquetado/images/apple-touch-icon-144x144.png') }}" />
+		<link rel="apple-touch-icon" sizes="152x152" href="{{ asset('bundles/app/maquetado/images/apple-touch-icon-152x152.png') }}" />
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('bundles/app/maquetado/images/apple-touch-icon-180x180.png') }}" />
 
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-	<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
-	<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
-	<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
-	<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
-	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
-	<!-- GOOGLE FONTS -->
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/39f2458975.js"></script>
-	<!-- JS -->
-	<script type="text/javascript" src="{{ asset('bundles/app/js/jquery-2.2.3.min.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('bundles/app/js/functions.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('bundles/app/js/gallery.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('bundles/app/js/owl.carousel.min.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('bundles/app/js/photoswipe.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('bundles/app/js/photoswipe-ui.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('bundles/app/js/scroll.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('bundles/app/js/contacto.js') }}"></script>
-	<script src="https://maps.google.com/maps/api/js?key=AIzaSyCaJw8REV5CNiAQbirsgFxKonBLjAankBM"></script>
-	
-    <!-- Global site tag (gtag.js) - Google Ads: 712666228 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-712666228"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+		<meta property="og:title" content="Hotel Normandie - Miramar" />
+		<meta property="og:description" content="Hotel a 300 metros del mar y las principales áreas comerciales. Aprovecha nuestas promociones para venir a conocer el Hotel Normandie en Miramar."/>
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.normandiemiramar.com.ar/" >
+    {# !!!!!!!!!!!! VER FORMATO Y SUBIR UNA FOTO ESPECÍFICA PARA LAS REDES SOCIALES #}
+		<meta property="og:image" content="https://www.normandiemiramar.com.ar/comob_r1_c1.jpg" />
+		<meta property="og:site_name" content="https://www.normandiemiramar.com.ar/" />
+		<meta name="google-site-verification" content="tXpIjFIjgNWKEHgY9mD1ewH6tArxdUf0P6tUX6kcXF4" />
+
+		<!-- Google Fonts -->         
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600|Roboto+Slab:300,400&display=swap" rel="stylesheet">
     
-    gtag('config', 'AW-712666228');
-    </script>
-	
+    
+    <!-- Libraries CSS Files -->
+    <link href="{{ asset('bundles/app/maquetado/css/animate.css') }}" rel="stylesheet"> 
+    <link href="{{ asset('bundles/app/maquetado/css/fontawesome.css') }}" rel="stylesheet"> 
+    <link href="{{ asset('bundles/app/maquetado/css/lightbox.css') }}" rel="stylesheet"> 
+    <link href="{{ asset('bundles/app/maquetado/css/slider.css') }}" rel="stylesheet"> 
+
+    <!-- Main Stylesheet File -->         
+    <link href="{{ asset('bundles/app/maquetado/css/base.css') }}" rel="stylesheet">
+
+    {# Google map 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaJw8REV5CNiAQbirsgFxKonBLjAankBM"></script>
     <script>
-    function initialize() {
-        var isDraggable = $(document).width() > 480 ? true : false;  
-        var ispanControl = $(document).width() > 480 ? true : false;
-        var myLatLng = {lat: -38.271683, lng: -57.834588};
-        var marker = new google.maps.Marker({
+      function initialize() {
+      var isDraggable = $(document).width() > 480 ? true : false;  
+      var ispanControl = $(document).width() > 480 ? true : false;
+      
+      var myLatLng = {lat: -38.271683, lng: -57.834588};
+      var marker = new google.maps.Marker({
         animation: google.maps.Animation.BOUNCE,
         position: myLatLng,
         title:"Hotel Normandie - Miramar"
-        });
-        var mapCanvas = document.getElementById('map');
-        var mapOptions = {
+      });
+      var mapCanvas = document.getElementById('map');
+      var mapOptions = {
         center: new google.maps.LatLng(-38.271683, -57.834588),
-        zoom: 17,
+        zoom: 16,
         mapTypeControl: true,
         panControl:ispanControl,
         draggable: isDraggable,
@@ -71,127 +76,153 @@
         rotateControl: true,
         scrollwheel: false,
         mapTypeId: google.maps.MapTypeId.SATELLITE
-        }
-        var map = new google.maps.Map(mapCanvas, mapOptions);
-        marker.setMap(map);
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-</head>
+      }
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+      marker.setMap(map);
+      }
+      
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>#}
+	</head>
 
-<body>
+<body class="{% if interna is defined and interna %} inside {% endif %}">
 
-	<section class="intro" id="home">
-		
-		<header>
-			<div class="container">
-				
-				
-				<div class="logo"></div>
-				
-				
-				<div class="nav-wrapper">
-				    <span class="ws-phone">
-				        <a href=""><i class="fab fa-whatsapp"></i> (011) 5415.2464</a>
-				    </span>
-				    <span class="ws-phone --green">
-				        <a target="_blank" href="https://wa.me/5491154152464"><i class="fab fa-whatsapp"></i> Chatea por Whatsapp</a>
-				    </span>
-				    <nav>
-    					<ul>
-    						<li><a data-scroll href="#banners">El Hotel</a></li>
-							{# <li><a data-scroll href="#cabanas">Las Habitaciones</a></li> #}
-							<li><a data-scroll href="#gallery">Galería de Fotos</a></li>
-							<li><a data-scroll href="#services">Servicios</a></li>
-							<li><a data-scroll href="#ubicacion">Ubicación</a></li>
-							<li><a data-scroll href="#contact">Contacto</a></li>
-    					</ul>
-    				</nav>
-				</div>
-				<button class="hamburger hamburger--spin" type="button">
-					<span class="hamburger-box">
-						<span class="hamburger-inner"></span>
-					</span>
-				</button>
-				<div class="contact-wrapper">
-    				<ul class="social-nav">
-    					<li><a><i class="fab fa-facebook-f"></i></a></li>
-    					<li><a><i class="fab fa-twitter"></i></a></li>
-    				</ul>
-    				<div class="contact-info">
-    					<a href="mailto:info@normandiemiramar.com.ar?Subject=Consulta%20Caba&ntilde;as%20Ciromarino" target="_top">info@normandiemiramar.com.ar</a>
-    				</div>
-				</div>
-			</div>
-		</header>
-		<div class="owl-main-slider">
-			<div class="item one"></div>
-			<div class="item two"></div>
-		</div>
-		<a data-scroll href="#banners">
-			<span class="icon-arrow-down"></span>
-		</a>
-	</section>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__holder">
+      <!-- Logo -->
+      <a href="{{ url('home') }}" class="logo" title="Ir al inicio">
+        <h1>Hotel Normandie | Miramar</h1>
+        <figure>
+          <img src="{{ asset('bundles/app/maquetado/images/logo.png') }}" alt="Hotel Normandie | Miramar">
+        </figure>
+      </a>
+      <!-- Main nav -->
+      <nav role="navigation">
+        <ul class="main-nav">
+          <li class="main-nav__item">
+            <a href="{{ url('home') }}" class="main-nav__link button --text --header {% if home is defined and home %} --active {% endif %}">Inicio</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="{{ url('habitaciones') }}" class="main-nav__link button --text --header {% if habitaciones is defined and habitaciones %} --active {% endif %}">Habitaciones</a>
+          </li>
+          <li class="main-nav__item">
+            <a {% if app.request.attributes.get('_route') == 'home' %} href="#promociones"{% else %} href="{{ path('home') }}#promociones"{% endif %} class="main-nav__link button --text --header">Promociones</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="{{ url('servicios') }}" class="main-nav__link button --text --header {% if servicios is defined and servicios %} --active {% endif %}">Servicios</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="{{ url('miramar-historia') }}" class="main-nav__link button --text --header {% if miramar is defined and miramar %} --active {% endif %}">Miramar</a>
+          </li>
+          <li class="main-nav__item">
+            <a {% if app.request.attributes.get('_route') == 'home' %} href="#como-llegar"{% else %} href="{{ path('home') }}#como-llegar"{% endif %} class="main-nav__link button --text --header">Como llegar</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="{{ url('contacto') }}" class="main-nav__link button --text --header {% if contacto is defined and contacto %} --active {% endif %}">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Contact nav -->
+      <address>
+        <ul class="contact-nav">
+          <li>
+            <a href="tel:01154152464" class="button --text --small --with-icon --header">
+              <i class="fas fa-phone"></i>
+              (011) 5415.2464
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/5491154152464" target="_blank" class="button --whatsapp --with-icon">
+              <i class="fab fa-whatsapp"></i>
+              Chatea por Whatsapp
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/hotel_normandie/" target="_blank" class="button --icon --header">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/hotelnormandiemiramar/" target="_blank" class="button --icon --header">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+        </ul>
+      </address>
+      <!-- Hamburger button | Mobile only -->
+      <button class="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
 
-	{% block content %}{% endblock %}
 
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="logo"></div>
-					<p>Calle 19 N° 910 esquina 18<br>Miramar, Buenos Aires<br>(011) 15 5415-2464 <br>info@normandiemiramar.com.ar</p>
-				</div>
-				<div class="col-sm-8">
-					<ul>
-						<li><a data-scroll href="#banners">El Hotel</a></li>
-						{# <li><a data-scroll href="#cabanas">Las Habitaciones</a></li> #}
-						<li><a data-scroll href="#gallery">Galería de Fotos</a></li>
-						<li><a data-scroll href="#services">Servicios</a></li>
-						<li><a data-scroll href="#ubicacion">Ubicación</a></li>
-						<li><a data-scroll href="#contact">Contacto</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</footer>
+{% block content %}
+{% endblock %}
 
-	<!-- lightbox layout -->
-	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="pswp__bg"></div>
-		<div class="pswp__scroll-wrap">
-			<div class="pswp__container">
-				<div class="pswp__item"></div>
-				<div class="pswp__item"></div>
-				<div class="pswp__item"></div>
-			</div>
-			<div class="pswp__ui pswp__ui--hidden">
-				<div class="pswp__top-bar">
-					<div class="pswp__counter"></div>
-					<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-					<button class="pswp__button pswp__button--share" title="Share"></button>
-					<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-					<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-					<div class="pswp__preloader">
-						<div class="pswp__preloader__icn">
-							<div class="pswp__preloader__cut">
-								<div class="pswp__preloader__donut"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-					<div class="pswp__share-tooltip"></div>
-				</div>
-				<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-				<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-				<div class="pswp__caption">
-					<div class="pswp__caption__center"></div>
-				</div>
-			</div>
-		</div>
-	</div>
+{# Footer #}
+<footer class="footer">
+    <div class="footer__holder">
+      <div class="footer__item">
+        <a href="" class="logo" title="Ir al inicio">
+          <figure>
+            <img src="{{ asset('bundles/app/maquetado/images/logo.png') }}" alt="Hotel Normandie | Miramar">
+          </figure>
+        </a>
+        <p class="footer__text"><i class="fas fa-map-marker-alt"></i> Calle 19 N° 910 esquina 18, Miramar, Buenos Aires</p>
+        <p class="footer__text">El Hotel está ubicado en la zona céntrica de Miramar, a 300 metros del mar y las principales áreas comerciales, ofrecemos un servicio de excelente calidad, brindando a nuestros huéspedes la calidez de nuestra gente, para hacerlos sentir como en su hogar.</p>
+      </div>
+      <div class="footer__item">
+        <h3 class="footer__title">Complejo</h3>
+        <ul class="footer__nav">
+          <li><a href="">Inicio</a></li>
+          <li><a href="">El hotel</a></li>
+          <li><a href="">Promociones</a></li>
+          <li><a href="">Servicios</a></li>
+          <li><a href="">Fotos</a></li>
+          <li><a href="">Miramar</a></li>
+          <li><a href="">Ubicación</a></li>
+          <li><a href="">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer__item">
+        <h3 class="footer__title">Miramar</h3>
+        <ul class="footer__nav">
+          <li><a href="">Como llegar</a></li>
+          <li><a href="">Donde ir</a></li>
+          <li><a href="">Historia</a></li>
+          <li><a href="">Fotos</a></li>
+        </ul>
+      </div>
+      <div class="footer__item">
+        <h3 class="footer__title">Contactanos</h3>
+        <ul class="footer__nav">
+          <li><a href="tel:01154152464"><i class="fas fa-phone"></i> (011) 5415-2464</a></li>
+          <li><a href="https://wa.me/5491154152464" target="_blank"><i class="fab fa-whatsapp"></i> Chatea por Whatsapp</a></li>
+          <li><a href="mailto:info@normandiemiramar.com.ar"><i class="fas fa-envelope"></i> info@normandiemiramar.com.ar</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+{# End Footer #}
 
+  <!-- JavaScript Libraries -->         
+  <script src="{{ asset('bundles/app/maquetado/js/jQuery.js') }}"></script>
+  <script src="{{ asset('bundles/app/maquetado/js/easing.js') }}"></script>
+  <script src="{{ asset('bundles/app/maquetado/js/lightbox.js') }}"></script>
+  <script src="{{ asset('bundles/app/maquetado/js/slider.js') }}"></script>
+  <script src="{{ asset('bundles/app/maquetado/js/contacto.js') }}"></script>
+
+  {% block javascripts %}{% endblock %}
+    
+  <!-- Contact Form JavaScript File -->         
+  <script src="{{ asset('bundles/app/maquetado/contactform/contactform.js') }}"></script>         
+  <!-- Template Main Javascript File -->         
+  <script src="{{ asset('bundles/app/maquetado/js/functions.js') }}"></script>      
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PV75SDT"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 </body>
-
 </html>

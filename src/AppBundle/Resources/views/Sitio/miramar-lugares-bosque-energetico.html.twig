@@ -1,0 +1,60 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set miramar = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-historia') }}"><i class="fas fa-map-marked-alt"></i> Miramar</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-lugares-aeroclub-miramar') }}"><i class="fas fa-location-arrow"></i> Bosque Energético</a>
+      </li>
+    </ul>
+    <a href="{{ url('miramar-lugares') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Paseos</a>
+  </div>
+</div>
+
+<!-- Tab navigation -->
+<div class="tab-nav">
+  <div class="tab-nav__holder">
+    <ul>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-historia') }}" class="button --text --tab-button">Historia</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-fotos') }}" class="button --text --tab-button">Fotos</a>
+      </li>
+      <li class="tab-nav__item --active">
+        <a href="{{ url('miramar-lugares') }}" class="button --text --tab-button">Para conocer</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-cerca') }}" class="button --text --tab-button">Cerca de Normandie</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Lugares contenido -->
+<section class="section tab-content">
+  <div class="section__holder">
+    <h2 class="section__title">Bosque Energético</h2>
+    <figure class="section__image">
+      <img src="{{ asset('bundles/app/maquetado/images/places/bosque-energetico.jpg') }}" alt="">
+    </figure>
+    <p class="section__text --highlight">TAMBIÉN SE LO LLAMA BOSQUE OSCURO, UN LUGAR ICÓNICO DE LA CIUDAD DE MIRAMAR</p>
+    <p class="section__text">Uno de los principales paseos de la ciudad es este bosque que se alza en el Vivero Dunícola, camino a Mar del Sur. Debido a sus particularidades, este hermoso espacio natural convoca a miles de turistas a lo largo de todo el año. <br>El Bosque Energético o Monte Oscuro, es un rodal que durante años ha llamado la atención de visitantes y residentes debido a que allí se suscita una energía muy particular. Calma y serenidad son características que atraen y llaman a la reflexión. <br>En este espacio, las personas buscan recogimiento y conectarse con la naturaleza, ya sea caminando, meditando o abrazándose a los árboles. Una de los "experimentos" que llevan adelante los visitantes es poner dos ramitas una en posición vertical y otra montada sobre la punta de la anterior de manera horizontal, encontrando equilibrio. <br>Dentro de los mitos que rodean este grupo de pinos es que debajo se encuentra un meteorito que cayó a miles de años y de allí surge esta energía. Por otra parte hay quienes dicen que en ese lugar se encontraba un cementerio aborigen. <br>El lugar, ha sido objeto de estudio por parte de un grupo de científicos que no han detectado ninguna irregularidad, cuestión que no evita que cientos de turistas se acerquen a este ámbito que reúne a estos viejos especímenes de pino que se encuentran tan juntos que apenas permiten el paso de la luz solar. <br>El lugar merece conocerse ya que, aunque se encuentre algo deteriorado por el paso de tanta gente, mantiene su magia y su extraño clima, no solo es un sitio en perpetua penumbra sino que cuando se penetra en él lo sonidos parecen apagarse.
+      Debido a que varias tormentas y las visitas al lugar habían dañado bastante el lugar, se han realizado algunos trabajos de reforestación al tiempo de tomar algunas medidas para evitar su destrucción. <br>Para acceder al lugar es necesario recorrer un par de kilómetros por la ruta 11 desde Miramar hacia Mar del Sur y podrán encontrarlo debidamente demarcado a mano izquierda. También se puede acceder desde otros puntos del vivero pero llegar de esta manera es más complicado.</p>
+  </div>
+</section>
+
+{% endblock %}

@@ -52,11 +52,11 @@ doctrine:
             charset: utf8mb4
             collate: utf8mb4_unicode_ci
         # if using pdo_sqlite as your database driver:
-        #   1. add the path in parameters.yml
-        #     e.g. database_path: "%kernel.root_dir%/data/data.db3"
-        #   2. Uncomment database_path in parameters.yml.dist
-        #   3. Uncomment next line:
-        #     path:     "%database_path%"
+        # 1. add the path in parameters.yml
+        # e.g. database_path: "%kernel.root_dir%/data/data.db3"
+        # 2. Uncomment database_path in parameters.yml.dist
+        # 3. Uncomment next line:
+        # path: "%database_path%"
 
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
@@ -90,7 +90,7 @@ easy_admin:
         form:
           fields:
             - { property: 'nombre' }
-            - { property: 'galeria', type: 'Comur\ImageBundle\Form\Type\CroppableGalleryType', type_options: { uploadConfig: { uploadUrl: 'uploads/galerias', webDir: 'uploads/galerias' }, cropConfig: { minWidth: 800, minHeight: 535, thumbs: { 0: { maxWidth: 350, maxHeight: 234, useAsFieldImage: true }  } } } }
+            - { property: 'galeria', type: 'Comur\ImageBundle\Form\Type\CroppableGalleryType', type_options: { uploadConfig: { uploadUrl: 'uploads/galerias', webDir: 'uploads/galerias' }, cropConfig: { minWidth: 800, minHeight: 535, thumbs: { 0: { maxWidth: 300, maxHeight: 201, useAsFieldImage: true }, 1: { maxWidth: 489, maxHeight: 275, useAsFieldImage: true }, 2: { maxWidth: 215, maxHeight: 144, useAsFieldImage: true }  } } } }
       Promocion:
         class: AppBundle\Entity\Promocion
         label: 'Promociones'
@@ -102,7 +102,7 @@ easy_admin:
             - { property: 'nombre' }
             - { property: 'fechaPublicacion' }
             - { property: 'fechaVencimiento' }
-            - { property: 'generica' }
+            - { property: 'generica', label: 'Genérica' }
             - { property: 'descripcion' }
             - { property: 'imagen', type: 'Comur\ImageBundle\Form\Type\CroppableImageType', type_options: { uploadConfig: { uploadUrl: 'uploads/promociones', webDir: 'uploads/promociones' }, cropConfig: { minWidth: 364, minHeight: 189 } } }
             - { property: 'orden' }

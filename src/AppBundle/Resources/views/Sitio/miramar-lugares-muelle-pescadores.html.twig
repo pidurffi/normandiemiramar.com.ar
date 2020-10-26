@@ -1,0 +1,66 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set miramar = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-historia') }}"><i class="fas fa-map-marked-alt"></i> Miramar</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-lugares-aeroclub-miramar') }}"><i class="fas fa-location-arrow"></i> Muelle de Pescadores</a>
+      </li>
+    </ul>
+    <a href="{{ url('miramar-lugares') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Paseos</a>
+  </div>
+</div>
+
+<!-- Tab navigation -->
+<div class="tab-nav">
+  <div class="tab-nav__holder">
+    <ul>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-historia') }}" class="button --text --tab-button">Historia</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-fotos') }}" class="button --text --tab-button">Fotos</a>
+      </li>
+      <li class="tab-nav__item --active">
+        <a href="{{ url('miramar-lugares') }}" class="button --text --tab-button">Para conocer</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-cerca') }}" class="button --text --tab-button">Cerca de Normandie</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Lugares contenido -->
+<section class="section tab-content">
+  <div class="section__holder">
+    <h2 class="section__title">Muelle de Pescadores</h2>
+    <figure class="section__image">
+      <img src="{{ asset('bundles/app/maquetado/images/places/muelle-pescadores.jpg') }}" alt="">
+    </figure>
+    <p class="section__text --highlight">APARTE DE SER UN GRAN LUGAR PARA PESCAR ES TAMBIÉN UN BUEN PUNTO FOTOGRÁFICO</p>
+    <p class="section__text">El primer muelle de pescadores formaba parte de la primera rambla y resultó destruido por el mismo temporal que arrasó aquella, corría el año 1910. Este primer muelle, construido de madera, estaba en el extremo sudoeste de la rambla y medía 10 metros de longitud por 4 metros de ancho.
+      <br>En septiembre del año 1917 se construyó otro, también de madera, unos metros más al sur de la ubicación actual. Esta construcción tampoco pudo soportar los embates del clima y del mar y como consecuencia de ello los miramarenses comenzaron a pensar en una obra más duradera.
+      <br>El 21 de mayo de 1926 se autorizó la construcción de uno de hormigón, más importante y la obra comenzó el 31 de agosto de ese mismo año.
+      <br>El proyecto original era una estructura de hormigón armado de 180 metros de largo aunque por diversas cuestiones no logró concretarse. Posteriormente, dos grandes temporales destruyeron parte de la estructura. El primero, ocurrido el 31 de mayo de 1929 (apenas unos meses de haberlo terminado), se llevó unos 60 metros y otro el 6 de mayo de 1931, le quitó otros 20 metros. Luego de esto el muelle quedó reducido a la longitud que tiene en la actualidad. 
+      <br>Luego de estar cerrado por dos años, debido a las obras necesarias para garantizar la seguridad de los visitantes, el Muelle de Pescadores de la ciudad de Miramar fue reinagurado en noviembre de 2012.
+      <br>Debido a la erosión producida por el constante embate de las olas el muelle atraviesa su tercer modificación  tendiente a brindar seguridad en su estructura. En está última obra, se cambiaron los pilotes principales y se realizaron nuevos en su tramo final, además de cambiar el sistema de iluminación, mejorar el sector de bachas para limpieza de los pescados y se realizaron modificaciones buscando mejoras para los pescadores.
+      <br>Este clásico paseo de la ciudad, ubicado en avenida Costanera y 37 ofrece una estupenda vista del centro de Miramar y de los balnearios del sector norte, como también del golf. Asía el sur, se puede ver la zona de acantilados del vivero, el Cristo de la Hermandad y la plaza del bicentenario.
+      <br>Esta vista es ideal para ver el amanecer en el mar o por la noche la aparición de la luna, ofreciéndose como un punto panorámico inigualable.</p>
+  </div>
+</section>
+
+{% endblock %}

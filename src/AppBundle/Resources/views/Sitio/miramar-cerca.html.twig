@@ -1,0 +1,93 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set miramar = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-historia') }}"><i class="fas fa-map-marked-alt"></i> Miramar</a>
+      </li>
+    </ul>
+    <a href="{{ url('home') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver al Inicio</a>
+  </div>
+</div>
+
+<!-- Tab navigation -->
+<div class="tab-nav">
+  <div class="tab-nav__holder">
+    <ul>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-historia') }}" class="button --text --tab-button">Historia</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-fotos') }}" class="button --text --tab-button">Fotos</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-lugares') }}" class="button --text --tab-button">Para conocer</a>
+      </li>
+      <li class="tab-nav__item --active">
+        <a href="{{ url('miramar-cerca') }}" class="button --text --tab-button">Cerca de Normandie</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Habitaciones home -->
+<section class="section tab-content">
+  <div class="section__holder">
+    <h2 class="section__title">Lugares cerca del hotel</h2>
+    <p class="section__text">Acá podés encontrar los mejores lugares cerca del hotel para disfrutar al máximo de tus vacaciones</p>
+    <h3 class="section__subtitle">Los 10 mejores lugares para comer en Miramar</h3>
+    <ul class="section__list">
+      <li><b>Nanni Cocinero</b> <br><i class="fas fa-map-marker-alt"></i> Avenida 9 1485 <br> <i class="fas fa-utensils"></i> Tipo de comida: Argentina y Sudamericana <br> <a href="https://www.google.com/maps/place/Nanni+Cocinero/@-38.2643729,-57.835459,15z/data=!4m5!3m4!1s0x0:0xfc9f758fc9f36b5c!8m2!3d-38.2643729!4d-57.835459" target="__blank" class="button --text">Ir a Nanni Cocinero</a></li>
+      <li><b>Romeo Restaurant</b> <br><i class="fas fa-map-marker-alt"></i> Avenida 37 entre 18 y 20 <br> <i class="fas fa-utensils"></i> Tipo de comida: Internacional <br> <a href="https://www.google.com/maps/place/Romeo+Restaurant/@-38.2779211,-57.842404,15z/data=!4m2!3m1!1s0x0:0x54bcf37ab8f270d9?sa=X&ved=2ahUKEwjp48bQ7a_lAhXvIbkGHf81BIUQ_BIwCnoECAoQCA" target="__blank" class="button --text">Ir a Romeo Restaurant</a></li>
+      <li><b>Hugo Chocolate Sosa</b> <br><i class="fas fa-map-marker-alt"></i> Calle 35 1432 <br> <i class="fas fa-utensils"></i> Tipo de comida: Postres, Argentina y Sudamericana <br> <a href="https://www.google.com/maps/place/Hugo+Chocolate+Sosa/@-38.2736386,-57.8460116,15z/data=!4m2!3m1!1s0x0:0x304b872d65cd7d37?sa=X&ved=2ahUKEwiaodT87a_lAhUPGLkGHTCPCFcQ_BIwE3oECA8QCA" target="__blank" class="button --text">Ir a Hugo Chocolate Sosa</a></li>
+      <li><b>El Pescador Romano</b> <br><i class="fas fa-map-marker-alt"></i> Calle 22 1022 <br> <i class="fas fa-utensils"></i> Tipo de comida: Mariscos e Internacional <br> <a href="https://www.google.com/maps/place/El+Pescador+Romano+Da+Silvana/@-38.270767,-57.836025,15z/data=!4m2!3m1!1s0x0:0x1b3043e8299a8c2f?sa=X&ved=2ahUKEwjM9paQ7q_lAhVfHLkGHa-4Cb8Q_BIwE3oECA8QCA" target="__blank" class="button --text">Ir a El Pescador Romano</a></li>
+      <li><b>Fortunato</b> <br><i class="fas fa-map-marker-alt"></i> Calle 21 1458 <br> <i class="fas fa-utensils"></i> Tipo de comida: Argentina, Europea y Contemporánea <br> <a href="https://www.google.com/maps/place/Fortunato+Restaurant/@-38.2687449,-57.840347,15z/data=!4m2!3m1!1s0x0:0x736b1ab615568b1e?sa=X&ved=2ahUKEwiU4aW87q_lAhXkKLkGHc5vC1UQ_BIwCnoECA8QCA" target="__blank" class="button --text">Ir a Fortunato</a></li>
+      <li><b>Don Avelino</b> <br><i class="fas fa-map-marker-alt"></i> Calle 19, esquina 40 <br> <i class="fas fa-utensils"></i> Tipo de comida: Churrasquería, Parrillada y Argentina <br> <a href="https://www.google.com/maps/place/Parrilla+Don+Avelino/@-38.2644407,-57.843905,15z/data=!4m2!3m1!1s0x0:0x6c883dfd1546253d?sa=X&ved=2ahUKEwjZ_NDZ7q_lAhUlF7kGHcZTDmUQ_BIwE3oECA4QCA" target="__blank" class="button --text">Ir a Don Avelino</a></li>
+      <li><b>Circulo de Amigos</b> <br><i class="fas fa-map-marker-alt"></i> 9 de Julio 1426 <br> <i class="fas fa-utensils"></i> Tipo de comida: Mariscos, Argentina y Sudamericana <br> <a href="https://www.google.com/maps/place/C%C3%ADrculo+de+Amigos/@-38.2693586,-57.8381121,15z/data=!4m2!3m1!1s0x0:0x26f2ff8d32d684e0?sa=X&ved=2ahUKEwi9t9b07q_lAhXECtQKHZ76ADMQ_BIwE3oECA8QCA" target="__blank" class="button --text">Ir a Circulo de Amigos</a></li>
+      <li><b>Mickey</b> <br><i class="fas fa-map-marker-alt"></i> Calle 21 686 <br> <i class="fas fa-utensils"></i> Tipo de comida: Comida rápida, Argentina y Sudamericana <br> <a href="https://www.google.com/maps/place/Mickey/@-38.2738969,-57.8336537,15z/data=!4m2!3m1!1s0x0:0xe572852ed209c430?sa=X&ved=2ahUKEwjIxaOP76_lAhWAELkGHamxDCYQ_BIwE3oECA8QCA" target="__blank" class="button --text">Ir a Mickey</a></li>
+      <li><b>Lo de Jorge Rivarola</b> <br><i class="fas fa-map-marker-alt"></i> Av. Costanera 2083 <br> <i class="fas fa-utensils"></i> Tipo de comida: Churrasquería, Parrillada y Argentina <br> <a href="https://www.google.com/maps/place/Lo+de+Jorge+Rivarola/@-38.284897,-57.836118,15z/data=!4m2!3m1!1s0x0:0x2c37bd292a6468e5?sa=X&ved=2ahUKEwjr2uil76_lAhXoHbkGHeu-B6MQ_BIwCnoECA8QCA" target="__blank" class="button --text">Ir a Lo de Jorge Rivarola</a></li>
+      <li><b>Las Moras Resto Lounge</b> <br><i class="fas fa-map-marker-alt"></i> Calle 26 1035 <br> <i class="fas fa-utensils"></i> Tipo de comida: Internacional, Argentina y Sudamericana <br> <a href="https://www.google.com/maps/place/Las+Moras/@-38.26924,-57.8385719,15z/data=!4m2!3m1!1s0x0:0x7dced5622b4a246c?sa=X&ved=2ahUKEwixw9DI76_lAhU9LLkGHU2yAcwQ_BIwE3oECA8QCA" target="__blank" class="button --text">Ir a Las Moras Resto Lounge</a></li>
+    </ul>
+    <h3 class="section__subtitle">Bares y Cervecerías</h3>
+    <ul class="section__list">
+      <li><b>The Ruc</b> <br><i class="fas fa-map-marker-alt"></i> Calle 20 1069 <br> <a href="https://www.google.com/maps/place/The+Ruc/@-38.2714899,-57.8359672,15z/data=!4m2!3m1!1s0x0:0x73ff3d01ae98f85a?sa=X&ved=2ahUKEwjYvK6o8K_lAhUhIbkGHdp5DsQQ_BIwCnoECA8QCA" target="__blank" class="button --text">Ir a The Ruc</a></li>
+      <li><b>Estación Beerlin</b> <br><i class="fas fa-map-marker-alt"></i> Calle 20 1121 <br> <a href="https://www.google.com/maps/place/Estaci%C3%B3n+Beerlin/@-38.271834,-57.836417,15z/data=!4m2!3m1!1s0x0:0xe51e8ab990aed1bb?sa=X&ved=2ahUKEwjmoeW68K_lAhWDHbkGHf7iCpgQ_BIwCnoECA8QCA" target="__blank" class="button --text">Ir a Estación Beerlin</a></li>
+      <li><b>Ebi Roll's</b> <br><i class="fas fa-map-marker-alt"></i> Calle 21 1439 <br> <a href="https://www.google.com/maps/place/Ebi+Roll's/@-38.268915,-57.839887,15z/data=!4m2!3m1!1s0x0:0xeb47afbd308a0908?sa=X&ved=2ahUKEwjq9rjN8K_lAhX0ErkGHaEoCbYQ_BIwE3oECA4QCA" target="__blank" class="button --text">Ir a Ebi Roll's</a></li>
+      <li><b>La Biere</b> <br><i class="fas fa-map-marker-alt"></i> Av. Costanera 602 <br> <a href="https://www.google.com/maps/place/La+Biere+Cerveceria+Artesanal+Local/@-38.2713872,-57.8287764,15z/data=!4m2!3m1!1s0x0:0xcd043db45417280e?sa=X&ved=2ahUKEwiYuN7k8K_lAhVjGbkGHVvWBZMQ_BIwE3oECA8QCA" target="__blank" class="button --text">Ir a La Biere</a></li>
+      <li><b>Beer Shop</b> <br><i class="fas fa-map-marker-alt"></i> Calle 23 1163 <br> <a href="https://www.google.com/maps/place/Beer+Shop+%26+Almac%C3%A9n+de+Vinos/@-38.2712677,-57.8383237,15z/data=!4m2!3m1!1s0x0:0xfbd07321307d406e?sa=X&ved=2ahUKEwj80Zv78K_lAhUoHbkGHSbzACcQ_BIwCnoECA8QCA" target="__blank" class="button --text">Ir a Beer Shop</a></li>
+      <li><b>Hister Beer Garden</b> <br><i class="fas fa-map-marker-alt"></i> Calle 20 1130 <br> <a href="https://www.google.com/maps/place/Hister+Beer+Garden/@-38.271898,-57.8364692,15z/data=!4m2!3m1!1s0x0:0x2176f3166b807e65?sa=X&ved=2ahUKEwiiksSP8a_lAhUZJrkGHcx6AJ8Q_BIwE3oECA4QCA" target="__blank" class="button --text">Ir a Hister Beer Garden</a></li>
+      <li><b>Munchen</b> <br><i class="fas fa-map-marker-alt"></i> Calle 30 1054 <br> <a href="https://www.google.com/maps/place/Munchen+Miramar+Cerveza+Artesanal/@-38.2681321,-57.8401511,15z/data=!4m2!3m1!1s0x0:0x372c449bf1938349?sa=X&ved=2ahUKEwix3pel8a_lAhWXGLkGHaRACS4Q_BIwCnoECA8QCA" target="__blank" class="button --text">Ir a Munchen</a></li>
+    </ul>
+    <h3 class="section__subtitle">Rotiserías</h3>
+    <ul class="section__list">
+      <li><b>Rotimar</b> <br><i class="fas fa-map-marker-alt"></i> Calle 19 898 <br> <a href="https://www.google.com/maps/place/Rotimar/@-38.2717828,-57.8345903,15z/data=!4m2!3m1!1s0x0:0xbc44517dfef68ace?sa=X&ved=2ahUKEwie1KiOjLDlAhWyFbkGHXE5AfEQ_BIwCnoECAsQCA" target="__blank" class="button --text">Ir a Rotimar</a></li>
+      <li><b>El Cocinero</b> <br><i class="fas fa-map-marker-alt"></i> Calle 19 860 <br> <a href="https://www.google.com/maps/place/Rotiseria+El+Cocinero/@-38.2719556,-57.8342156,15z/data=!4m2!3m1!1s0x0:0x28f3ee15cc0d1dd3?sa=X&ved=2ahUKEwjG8oWsjLDlAhX2HbkGHRbfBOUQ_BIwCnoECA8QCA" target="__blank" class="button --text">Ir a El Cocinero</a></li>
+      <li><b>El Rey del Pollo</b> <br><i class="fas fa-map-marker-alt"></i> Calle 21 731 <br> <a href="https://www.google.com/maps/place/El+Rey+del+Pollo/@-38.2734252,-57.8337134,15z/data=!4m5!3m4!1s0x0:0xf5e1e0012e0673a0!8m2!3d-38.2734252!4d-57.8337134" target="__blank" class="button --text">Ir a El Rey del Pollo</a></li>
+      <li><b>La Taba</b> <br><i class="fas fa-map-marker-alt"></i> Calle 14 1181 <br> <a href="https://www.google.com/maps/place/La+Taba/@-38.2741908,-57.834374,15z/data=!4m5!3m4!1s0x0:0xc46d2b6f4beb0639!8m2!3d-38.2741908!4d-57.834374" target="__blank" class="button --text">Ir a La Taba</a></li>
+      <li><b>Rio Napole</b> <br><i class="fas fa-map-marker-alt"></i> Calle 30 1123 <br> <a href="https://www.google.com/maps/place/Rotiseria+Rio+Napole/@-38.2685223,-57.8408682,15z/data=!4m5!3m4!1s0x0:0x4311b62e9f35db44!8m2!3d-38.2685223!4d-57.8408682" target="__blank" class="button --text">Ir a Rio Napole</a></li>
+      <li><b>Susana Comidas Caseras</b> <br><i class="fas fa-map-marker-alt"></i> Calle 29 1425 <br> <a href="https://www.google.com/maps/place/Susana+Comidas+Caseras/@-38.2716589,-57.8434814,15z/data=!4m2!3m1!1s0x0:0xb2cbdfaa890a8525?sa=X&ved=2ahUKEwiKnMuAjbDlAhVzBtQKHawjC-4Q_BIwCnoECAoQCA" target="__blank" class="button --text">Ir a Susana Comidas Caseras</a></li>
+    </ul>
+    <h3 class="section__subtitle">Supermercados y Almacenes</h3>
+    <ul class="section__list">
+      <li><b>Dia</b> <br><i class="fas fa-map-marker-alt"></i> Calle 23 1036 <br> <a href="https://www.google.com/maps/place/Supermercados+DIA/@-38.2722521,-57.8375082,15z/data=!4m2!3m1!1s0x0:0xa524f33862f1c73a?sa=X&ved=2ahUKEwjO3Z79jbDlAhVFGLkGHTz2ATsQ_BIwCnoECA8QCA" target="__blank" class="button --text">Ir a Dia</a></li>
+      <li><b>Don Próspero</b> <br><i class="fas fa-map-marker-alt"></i> Calle 24 1228 <br> <a href="https://www.google.com/maps/place/Don+Pr%C3%B3spero-Almac%C3%A9n/@-38.271477,-57.839053,15z/data=!4m2!3m1!1s0x0:0x3e9277f143a66460?sa=X&ved=2ahUKEwiBheWXjrDlAhWnHLkGHcmnABAQ_BIwGnoECA0QCA" target="__blank" class="button --text">Ir a Don Próspero</a></li>
+      <li><b>Nuevo San Andrés</b> <br><i class="fas fa-map-marker-alt"></i> Calle 25 1270 <br> <a href="https://www.google.com/maps/place/Nuevo+San+Andres/@-38.2714923,-57.8405016,15z/data=!4m2!3m1!1s0x0:0x4958c58204c5a72?sa=X&ved=2ahUKEwj_t8SrjrDlAhUgJrkGHW_9B0YQ_BIwCnoECA4QCA" target="__blank" class="button --text">Ir a Nuevo San Andrés</a></li>
+      <li><b>Super Asia</b> <br><i class="fas fa-map-marker-alt"></i> Calle 19 1234 <br> <a href="https://www.google.com/maps/place/Super+Asia/@-38.2696505,-57.837696,15z/data=!4m2!3m1!1s0x0:0x3fe66c8c4921cdcc?sa=X&ved=2ahUKEwiUzf-4jrDlAhUqH7kGHWsyCTMQ_BIwCnoECA8QCA" target="__blank" class="button --text">Ir a Super Asia</a></li>
+      <li><b>Petit Autoservicio</b> <br><i class="fas fa-map-marker-alt"></i> Calle 21 683 <br> <a href="https://www.google.com/maps/place/Petit+Autoservicio/@-38.273897,-57.833226,15z/data=!4m2!3m1!1s0x0:0x13ac3b2cb96781e3?sa=X&ved=2ahUKEwiajrzJjrDlAhUUH7kGHTmkD6gQ_BIwC3oECA0QCA" target="__blank" class="button --text">Ir a Petit Autoservicio</a></li>
+      <li><b>Supermercado Toledo</b> <br><i class="fas fa-map-marker-alt"></i> Calle 23 1799 <br> <a href="https://www.google.com/maps/place/Supermercado+Toledo/@-38.2669394,-57.844534,15z/data=!4m2!3m1!1s0x0:0xfa132ed1ec2ea457?sa=X&ved=2ahUKEwi4hajnjrDlAhUpJLkGHVosA34Q_BIwCnoECA0QCA" target="__blank" class="button --text">Ir a Supermercado Toledo</a></li>
+      <li><b>Supermercado Vea</b> <br><i class="fas fa-map-marker-alt"></i> Calle 21 1699 <br> <a href="https://www.google.com/maps/place/Supermercado+Vea+Miramar/@-38.2664122,-57.8431333,15z/data=!4m5!3m4!1s0x0:0x23ce913e020d83f3!8m2!3d-38.2664122!4d-57.8431333" target="__blank" class="button --text">Ir a Supermercado Vea</a></li>
+    </ul>
+  </div>
+</section>
+
+{% endblock %}

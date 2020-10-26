@@ -1,0 +1,8 @@
+{% for galeria in galerias %}
+  {% for gal in galeria.galeria %}
+    <a href="{{ asset('/uploads/galerias/gallery/') }}{{ gal }}">
+      <img src="{{ asset('/uploads/galerias/') }}{{ gal|gallery_thumb(489,275) }}">
+    </a>
+  {% endfor %}
+{% endfor %}
+	

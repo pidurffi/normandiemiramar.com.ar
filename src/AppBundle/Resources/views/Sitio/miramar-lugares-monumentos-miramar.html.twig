@@ -1,0 +1,62 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set miramar = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-historia') }}"><i class="fas fa-map-marked-alt"></i> Miramar</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-lugares-aeroclub-miramar') }}"><i class="fas fa-location-arrow"></i> Monumentos de Miramar</a>
+      </li>
+    </ul>
+    <a href="{{ url('miramar-lugares') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Paseos</a>
+  </div>
+</div>
+
+<!-- Tab navigation -->
+<div class="tab-nav">
+  <div class="tab-nav__holder">
+    <ul>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-historia') }}" class="button --text --tab-button">Historia</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-fotos') }}" class="button --text --tab-button">Fotos</a>
+      </li>
+      <li class="tab-nav__item --active">
+        <a href="{{ url('miramar-lugares') }}" class="button --text --tab-button">Para conocer</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-cerca') }}" class="button --text --tab-button">Cerca de Normandie</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Lugares contenido -->
+<section class="section tab-content">
+  <div class="section__holder">
+    <h2 class="section__title">Monumentos de Miramar</h2>
+    <figure class="section__image">
+      <img src="{{ asset('bundles/app/maquetado/images/places/monumentos-miramar.jpg') }}" alt="">
+    </figure>
+    <p class="section__text --highlight">DISTINTAS PIEZAS QUE HACEN AL PATRIMONIO CULTURAL DE LA CIUDAD DE MIRAMAR</p>
+    <p class="section__text">El paseo comienza en la entrada a la ciudad de Miramar, en las plazoletas ubicadas al margen de la diagonal Illia en su intersección con la Avenida 9 y la calle 11. <strong>El monumento a los Niños</strong> que se inauguró en 1969 es obra del escultor Pablo Hanemann, la pieza fue realizada en hormigón y tiene como particularidad la repetición de sus motivos principales. A escasos metros se encuentra el trabajo de Guillermo Gaggini que se conoce como el <strong>monumento a los Inmigrantes</strong>, hecha en bronce pesa alrededor de 4500 kilos, alcanzando los 3,20 metros de altura.
+      <br>En la avenida costanera y la calle 25 podemos observar una copia de "La Pureza", del consagrado escultor argentino Alfredo Bigatti. Su original fue galardonada con el primer premio del Salón Nacional en 1926.
+      <br><strong>"El hombre y el mar"</strong> es el título de la escultura de Antonio Auriti Primavera, ubicada en la avenida costanera y 33, hecha en cemento y hormigón fue inaugurada en 1987.
+      <br>El recorrido termina en el centro de la ciudad, donde encontramos el monumento al General Alvarado, este trabajo de Florencio Sánchez Zinny conmemora la memoria del héroe salteño quien da nombre al distrito. En las plazas centrales podemos hallar gran cantidad de obras como el monumento a la madre, el recordatorio a las víctimas de la AMIA, la <strong>talla "Madre Naturaleza"</strong> llevada a cabo en 2009 por los artesanos Cristian Bustamante, Eduardo Seheber, Norberto Miller, Eduardo Roovers y Néstor Garbiso. Y también se encuentra el monumento dedicado a los <strong>caídos en Malvinas</strong> y distintas piezas que hacen al patrimonio cultural de la ciudad de Miramar.</p>
+  </div>
+</section>
+
+{% endblock %}

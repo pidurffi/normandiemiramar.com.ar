@@ -1,0 +1,58 @@
+// // // // INTRO
+
+.intro {
+  &__item {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: size(20) size(20) size(60) size(20);
+    height: 50vh;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    &.one {
+      background-image: url(../images/intro/01s.jpg)
+    }
+    &.two {
+      background-image: url(../images/intro/02s.jpg)
+    }
+  }
+  @media (min-width: 768px) {
+    &__item {
+      align-items: center;
+      padding: 0 size(20);
+      height: 75vh;
+      &.one {
+        background-image: url(../images/intro/01m.jpg);
+      }
+      &.two {
+        background-image: url(../images/intro/02m.jpg);
+      }
+    }
+  }
+  @media (min-width: 1280px) {
+    &__item {
+      &.one {
+        background-image: url(../images/intro/01.jpg);
+      }
+      &.two {
+        background-image: url(../images/intro/02.jpg);
+      }
+    }
+  }
+  &__text {
+    font-size: size(30);
+    font-weight: $f-light;
+    text-transform: uppercase;
+    text-align: center;
+    color: $c-white;
+    span {
+      display: block;
+    }
+  }
+  @media (min-width: 768px) {
+    &__item {
+      padding: 0 size(20);
+    }
+  }
+}

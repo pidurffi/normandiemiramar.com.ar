@@ -1,0 +1,66 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set miramar = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-historia') }}"><i class="fas fa-map-marked-alt"></i> Miramar</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-lugares-aeroclub-miramar') }}"><i class="fas fa-location-arrow"></i> Feria de Artesanos</a>
+      </li>
+    </ul>
+    <a href="{{ url('miramar-lugares') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Paseos</a>
+  </div>
+</div>
+
+<!-- Tab navigation -->
+<div class="tab-nav">
+  <div class="tab-nav__holder">
+    <ul>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-historia') }}" class="button --text --tab-button">Historia</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-fotos') }}" class="button --text --tab-button">Fotos</a>
+      </li>
+      <li class="tab-nav__item --active">
+        <a href="{{ url('miramar-lugares') }}" class="button --text --tab-button">Para conocer</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-cerca') }}" class="button --text --tab-button">Cerca de Normandie</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Lugares contenido -->
+<section class="section tab-content">
+  <div class="section__holder">
+    <h2 class="section__title">Feria de Artesanos</h2>
+    <figure class="section__image">
+      <img src="{{ asset('bundles/app/maquetado/images/places/feria-artesanos.jpg') }}" alt="">
+    </figure>
+    <p class="section__text --highlight">DE LAS MÁS GRANDES DEL PAÍS, POR LA CANTIDAD DE ARTESANOS COMO POR SUS PRODUCTOS</p>
+    <p class="section__text">La Feria Artesanal Municipal se ha convertido en uno más de los atractivos de la ciudad y está catalogada como una de las más importantes del país, tanto por la cantidad de artesanos que la componen como por la calidad, que la distingue por la precisa selección de sus miembros. 
+      <br>A continuación se detallan los rubros que componen la Feria: 
+      <br>Madera: Tallada, grabado, taraceado, calado, maqueteado, ensamblado, etc. Metal: Alambre: Retorcido, tejido, martillado. Chapa: Calado, cincelado, soldado, embutido, esmaltado, grabado con ácido, fresas, buriles, gubias, limas, etc. Cuero: Todas las aplicaciones. Textiles Telar: Pretelar, cestería, esterillado, mallas, redes, torsionados. Telar: Gasas, tela, faz de trama, faz de urdimbre, tubular o doble tela, faja. Telar de Reserva: Ikat, plangi. Otros Textiles: Crochet, macramé, trenzado, encaje de aguja, tejidos con pelo. Otros Materiales Tradicionales: Pastas modelables, cerámica, vidrio, fibras naturales, calidoscopio, pinturas sobre cera o parafina o goma espuma, etc 
+      <br>En el Paseo de los Artesanos, ubicado en la plaza del anfiteatro se pueden encontrar piezas exclusivas y diseños originales, además de recuerdos de la ciudad de Miramar. 
+      <br>Con el paso del tiempo el paseo se fue ampliando y actualmente se encuentra techado, pudiendo disfrutarse tanto en temporada como durante los fines de semana de invierno.</p>
+    <h3 class="section__subtitle">Feria de Microemprendedores</h3>
+    <p class="section__text">En la Plaza del Skate Park se ubica el paseo de los Microemprendedores, que complementa la feria artesanal con propuestas que se diferencian por su tipo de construcción, que deja de ser específicamente artesanal para contar con procesos algo más complejos. 
+      <br>Integrada íntegramente por emprendedores locales, esta propuesta surge como necesidad de ofrecer un punto de venta para quienes contando con la capacidad emprendedora carecían de fuerza de venta y este espacio les otorgó una posibilidad concreta de continuar su proceso de crecimiento.</p>
+  </div>
+</section>
+
+{% endblock %}

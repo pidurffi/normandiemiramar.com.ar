@@ -1,0 +1,62 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set miramar = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-historia') }}"><i class="fas fa-map-marked-alt"></i> Miramar</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-lugares-aeroclub-miramar') }}"><i class="fas fa-location-arrow"></i> Museo de Ciencias Naturales</a>
+      </li>
+    </ul>
+    <a href="{{ url('miramar-lugares') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Paseos</a>
+  </div>
+</div>
+
+<!-- Tab navigation -->
+<div class="tab-nav">
+  <div class="tab-nav__holder">
+    <ul>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-historia') }}" class="button --text --tab-button">Historia</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-fotos') }}" class="button --text --tab-button">Fotos</a>
+      </li>
+      <li class="tab-nav__item --active">
+        <a href="{{ url('miramar-lugares') }}" class="button --text --tab-button">Para conocer</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-cerca') }}" class="button --text --tab-button">Cerca de Normandie</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Lugares contenido -->
+<section class="section tab-content">
+  <div class="section__holder">
+    <h2 class="section__title">Museo de Ciencias Naturales</h2>
+    <figure class="section__image">
+      <img src="{{ asset('bundles/app/maquetado/images/places/ciencias-naturales.jpg') }}" alt="">
+    </figure>
+    <p class="section__text --highlight">RECIENTEMENTE INAUGURADO, EL MUSEO DE PALEONTOLÓGICA Y CIENCIAS NATURALES SE ENCUENTRA EN LA ENTRADA PRINCIPAL</p>
+    <p class="section__text">Este nuevo espacio se ubica en una de las antiguas casas de huéspedes de la ciudad construída en el año 30 del siglo pasado. Remodelada para alojar al nuevo museo se preservó su valor patrimonial, en una puesta en valor que permite también disfrutar de este hermoso chalet.</p>
+    <p class="section__text">El Museo de Ciencias se separa del edificio anterior donde compartía espacio con la muestra de historia del Distrito. La idea de este nuevo ámbito de Miramar se desarrolló en conjunto con la Fundación AZARA y el Municipio de General Alvarado, que gestionarán en conjunto el crecimiento del Museo.</p>
+    <p class="section__text">La muestra se distribuye en ocho salas de exhibiciones, que incluyen grandes esqueletos de megafauna prehistórica, fósiles regionales, la historia del “Hombre de Miramar” basado en antiguas hipótesis de los hermanos Ameghino, piezas de arqueología local, una exhibición marina, entre otras. Además, el Museo cuenta con modernos laboratorios de preparación y estudio, oficinas y depósitos para las colecciones.</p>
+    <p class="section__text">En las inmediaciones de este nuevo Museo, hay esculturas de tamaño natural de animales que habitaron esta zona, que generan un ambiente perfecto, rodeados de añejos árboles para prepararse para una experiencia única y son una excusa perfecta para pasar un momento en familia inolvidable.</p>
+  </div>
+</section>
+
+{% endblock %}

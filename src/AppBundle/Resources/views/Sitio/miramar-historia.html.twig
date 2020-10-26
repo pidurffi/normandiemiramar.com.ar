@@ -1,0 +1,59 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set miramar = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-historia') }}"><i class="fas fa-map-marked-alt"></i> Miramar</a>
+      </li>
+    </ul>
+    <a href="{{ url('home') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver al Inicio</a>
+  </div>
+</div>
+
+<!-- Tab navigation -->
+<div class="tab-nav">
+  <div class="tab-nav__holder">
+    <ul>
+      <li class="tab-nav__item --active">
+        <a href="{{ url('miramar-historia') }}" class="button --text --tab-button">Historia</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-fotos') }}" class="button --text --tab-button">Fotos</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-lugares') }}" class="button --text --tab-button">Para conocer</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-cerca') }}" class="button --text --tab-button">Cerca de Normandie</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Habitaciones home -->
+<section class="section tab-content">
+  <div class="section__holder">
+    <h2 class="section__title">Historia de Miramar</h2>
+    <p class="section__text">Lo que actualmente conocemos como Miramar fue en un principio parte del establecimiento de campo llamado "El Saboyardo" de Don Fortunato de la Plaza. Su cuñado, José Maria Dupuy, quien tenía un gran conocimiento de estas playas y seguía paso a paso los adelantos que vivía la ciudad de Mar del Plata, compartió con él la idea de fundar un pueblo balneario en estas costas cuando corría el año 1887.</p>
+    <p class="section__text">En ese mismo año, el Ing. Rómulo Otamendi , ayudado por el agrimensor Eugenio Moy, y su emprendedor sobrino José Maria Dupuy realizaron los planos de Miramar inspirados en las normas urbanísticas de La Plata. En octubre de 1887 Dupuy le envía un telegrama a Fortunato de la Plaza desde Buenos Aires, donde con estas breves palabras le dice: "Buenos Aires, 30 de octubre de 1887 -llegado el momento de dar nombre al pueblo, yo opino Mira Mar. Rómulo indica Trouville o Gijón. Contéstame tu resolución- José Maria Dupuy".</p>
+    <p class="section__text">De la plaza le contestó el mismo día por la misma vía: "Mar del Plata, 30 de octubre de 1887-De los nombres propuestos, me quedo con Mira Mar. Aunque no sé que importancia tendrá como punto balneario el Mira Mar de Austria, sólo hará falta que fije su punto de residencia en el mismo un Maximiliano para darle nombre...", haciendo referencia al monarca Austríaco. A principios de 1888 comienzan las primeras edificaciones, a pesar de faltar la aprobación final que fue otorgada el 20 de septiembre del mismo año. Para 1890 Mira Mar, como se lo denominaba en sus comienzos, ya contaba con una escuela, un juzgado de paz, una iglesia en construcción, un hotel "El Argentino" y 860 habitantes parte de los cuales proclamaban la creación de un partido con asiento en esta ciudad.</p>
+    <p class="section__text">El 29 de septiembre de 1891 se crea el partido de General Alvarado, siendo declarada cabeza de partido la ciudad de Miramar.</p>
+    <p class="section__text --highlight">A principios de siglo Miramar fue incrementando el numero de turistas como consecuencia de los servicios que lentamente fue incorporando.</p>
+    <p class="section__text">En 1905 se crea el primer balneario propiedad del Sr. "Pascualín" de Marco , que consistía en una casilla de madera que se trasladaba diariamente desde las barrancas hasta la orilla del mar. La primer rambla que consistía en varias casillas de madera se construye en 1906, pertenecían a particulares, las cuales estaban unidas por una tarima. Esta rambla contaba en sus comienzos 50 metros de largo y 4 de ancho, luego fue ampliada hasta tener un largo de 85 metros. En 1909 se instala una confitería y de esta forma la rambla comienza a ser un lugar de paseo y de reunión social.</p>
+    <p class="section__text">Un temporal en 1911 logra destruir la rambla y el muelle que de ella surgía, esta catástrofe acaba con las construcciones pero no con las esperanzas, en ese mismo año comienza la reconstrucción de una nueva rambla de 100 metros de largo y 5 de ancho, la cual cuenta con mas servicios , balnearios, confitería, bazar, peluquería, etc . En el año 1912 se instala además la ayudantía marítima que contaba con marineros, los cuales velaban por la seguridad de los bañistas. Finalmente la rambla que había sufrido modificaciones y reconstrucciones fue demolida en el año 1954. Los veraneantes no tendrían que hacer la travesía que significaba ir hasta Mar del Plata en ferrocarril y luego en galera hasta Miramar.</p>
+    <p class="section__text">En el año 1911 llega el ferrocarril y con el un aluvión de turistas. Tan revolucionario como la llegada del tren en 1911, fue el aterrizaje del primer avión en 1920 de Virgilio Mira, al cual la gente corrió desesperadamente, saltando alambradas y cruzando campos ante el espectáculo que brindaba la aeronave. Los medanos fueron testigo de los cambios que sufrió la ciudad, pero a ellos también los tocaría la mano del progreso debido a su constante movimiento, más los fuertes vientos que inundaban de arena a la ciudad generando problemas para los pobladores y fue el gobernador Cantilo quien en 1922 en una visita a Miramar tuvo la idea de crear lo que es el actual Vivero Florentino Ameghino. Golf Club Miramar - Notesé que la Ruta 11 todavía no estaba construida.</p>
+    <p class="section__text">En el año 1924 se construye el primer chalet sobre la costa llamado Mamapina, la cual sobresalía notablemente porque todas las construcciones estaban alejadas a unas cuadras de la playa. En 1927 comienza la construcción del Golf Club Miramar en tierras del ferrocarril sud. En 1930 se construye en el Golf el hotel Dormy House, tiempo más tarde se realizaría el túnel que permite llegar desde el hotel hasta el mar. Con el paso de los años se suma a los sectores más altos de la sociedad, la incorporación de la clase media en el grupo de afluencia turística. Esto repercutió en la construcción de chalets que fueron cambiando la imagen de la ciudad, para dar paso más tarde a la construcción de los actuales edificios</p>
+  </div>
+</section>
+
+{% endblock %}

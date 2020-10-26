@@ -1,0 +1,71 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set miramar = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-historia') }}"><i class="fas fa-map-marked-alt"></i> Miramar</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-lugares-aeroclub-miramar') }}"><i class="fas fa-location-arrow"></i> Murales de la Bienal de Arte</a>
+      </li>
+    </ul>
+    <a href="{{ url('miramar-lugares') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Paseos</a>
+  </div>
+</div>
+
+<!-- Tab navigation -->
+<div class="tab-nav">
+  <div class="tab-nav__holder">
+    <ul>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-historia') }}" class="button --text --tab-button">Historia</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-fotos') }}" class="button --text --tab-button">Fotos</a>
+      </li>
+      <li class="tab-nav__item --active">
+        <a href="{{ url('miramar-lugares') }}" class="button --text --tab-button">Para conocer</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-cerca') }}" class="button --text --tab-button">Cerca de Normandie</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Lugares contenido -->
+<section class="section tab-content">
+  <div class="section__holder">
+    <h2 class="section__title">Murales de la Bienal de Arte</h2>
+    <figure class="section__image">
+      <img src="{{ asset('bundles/app/maquetado/images/places/bienal-arte.jpg') }}" alt="">
+    </figure>
+    <p class="section__text --highlight">DISTINTOS ARTISTAS HAN DEJARON PLASMADO SU ARTE EN MUROS Y EN DISTINTAS ESCULTURAS</p>
+    <p class="section__text">En abril de 2013 se desarrolló la  <strong>1º Bienal Internaciónal de Arte</strong>, en el predio que comunica el Anfiteatro con la Ruta 11 siguiendo la línea del arroyo El Durazno.
+      <br>Durante 10 días los artistas trabajaron sobre los 14 muros que integran la muestra, además de llevar adelante un mural en la Pared del Anfiteatro.
+      <br>Una experiencia que permitió a visitantes y residentes poder tomar contacto con muralistas de primer nivel y disfrutar de jornadas inolvidables que ofrecieron experiencias únicas desde el rol integrador del arte.</p>
+    <h3 class="section__subtitle">De la Bienal participaron:</h3>
+    <p class="section__text">Artistas Internacionales: Alberto Cerritos (Canadá), Chungtar Chong López (Venezuela), Maurizio Gobernattori (Italia), María Helena Leal Luca (Brasil), Vanessa Longo (Italia), Martha Ortiz Sotres (México), Miguel Hachen (Brasil), Teódulo Silfa Casso (Rep. Dominicana), María del Rosario Molina (Bolivia), y Polo Castellanos (México),
+      Artistas Nacionales: Juan Acosta (Bs As/ Mar de Cobos), Nilda Actis Goretta (CABA), Roberto Albizu (Jujuy), Silvia Albuiexch (Tucumán), Juan Bauk (Bs As/ Quilmes), Román Cura (Chubut), Gerardo Cianciolo (CABA), Mónica Corrales (CABA), Raúl Guzmán (Catamarca), Gabriel Quipildor (Bs As/ Quilmes), Saúl Terán Guaman (La Plata), Martín Albornoz (Formosa), Omar Brachetti (Córdoba), Jorge CRINEJO (Córdoba), Guillermo Cuenca (Balcarce), Marcos VOET (Necochea), Sol Ramos Weber (CABA), Sebastián Maiessa (CABA), Escuela de Cerámita R. Yrurtia (Mar del Plata). Artistas de Miramar: Marité Svast, Grupo Aquelarre, Miguel Comba, Fátima Maida, Teresa Karis, Virginia Carli, Mabel Anderson De Fyhn, Laura Mohana, Javier D'Onofrio, Wenceslao Moreno Ituarte; Luis Perchante; Ariel Pérez Corvalán, Lautaro Martínez, Melquíades Arrigoni Nanni, Natalia González, y Stella Román</p>
+    <p class="section__text">Luego, en abril de 2015 se realizó una segunda edición de esta <strong>bienal de arte</strong>, donde se sumaron nuevos artistas que dejaron plasmado su arte en nuevos muros, y se incorporaron distintos escultores que dejaron también diferentes obras en el lugar.</p>
+    <h3 class="section__subtitle">Muralistas:</h3>
+    <p class="section__text">Pancho Cárdenas (México), Rosario Molina Mitru (Bolivia), Kristy Kardoso (Paraguay), Freddy Arizaca Cutipa, (Perú), Nacho de la Vega (México), Fumio Itai (Japón), Escuela de Artes Visuales Martín Malharro (Mar del Plata), Escuela de Cerámica Rogelio Yrurtia (Mar del Plata), Patricia Nader (Tucumán), Daniel Ruiz Holgado (Tucumán), Sol Ramos (Buenos Aires), Florencia Delucchi (Buenos Aires), Fernanda Jaton (Buenos Aires), Juan Bejarano (Santiago del Estero), Carlos Miranda (Jujuy), Fabiana Guevara (Jujuy), Ariel Rioja (Jujuy), Elisa Algranati (Neuquén), Sonja Vitulic (Chubut), Guadalupe Bermúdez (Miramar), Lucía Sicuso (Villa Gesell) y Omar Brachetti, (Córdoba).</p>
+    <h3 class="section__subtitle">Esculturas:</h3>
+    <p class="section__text">Alberto Cerritos (Canadá), Maurizio, Governatori (Italia), Juan Pistil (Paraguay), Juan Bauk (Quilmes), Wanda Thill Malmierca (Miramar), Antonio Auriti Primavera (Miramar), Andrea Napolioni (Mar del Plata), Jorgelina Galicer (Mar del Plata). <br>
+        Mural Alto Relieve pared anfiteatro "José Hernández": Raúl Guzmán (Catamarca). <br>
+        A estos se suman una importante cantidad de artistas y colaboradores locales y regionales que le dan aún mayor trascendencia a este acontecimiento e intercambio cultural.</p>
+  </div>
+</section>
+
+{% endblock %}

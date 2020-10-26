@@ -1,0 +1,62 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set miramar = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-historia') }}"><i class="fas fa-map-marked-alt"></i> Miramar</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-lugares-aeroclub-miramar') }}"><i class="fas fa-location-arrow"></i> Cristo de la Hermandad</a>
+      </li>
+    </ul>
+    <a href="{{ url('miramar-lugares') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Paseos</a>
+  </div>
+</div>
+
+<!-- Tab navigation -->
+<div class="tab-nav">
+  <div class="tab-nav__holder">
+    <ul>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-historia') }}" class="button --text --tab-button">Historia</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-fotos') }}" class="button --text --tab-button">Fotos</a>
+      </li>
+      <li class="tab-nav__item --active">
+        <a href="{{ url('miramar-lugares') }}" class="button --text --tab-button">Para conocer</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-cerca') }}" class="button --text --tab-button">Cerca de Normandie</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Lugares contenido -->
+<section class="section tab-content">
+  <div class="section__holder">
+    <h2 class="section__title">Cristo de la Hermandad</h2>
+    <figure class="section__image">
+      <img src="{{ asset('bundles/app/maquetado/images/places/cristo-hermandad.jpg') }}" alt="">
+    </figure>
+    <p class="section__text --highlight">TALLADO EN LA SEMANA SANTA DEL 2006, SE ENCUENTRA EN EL INGRESO AL VIVERO DUNÍCOLA</p>
+    <p class="section__text">Tallado durante los días previos a la Semana Santa del 2006, el Cristo de la Hermandad es la obra número 33 del Artesano Luis Sissara, que realizara esculturas similares en distintos puntos del país, siendo esta la primera realizada en la Provincia de Buenos Aires.
+      <br>Realizado con un Eucalipto del Vivero Municipal, la talla llevó unos treinta días, en los que primero se dio forma al cristo de unos 9 metros y luego se lo colocó en la cruz. Este proceso se llevó a cabo en una carpa gigante que se instaló en pleno centro de la ciudad para que el publico que transita por el paseo céntrico pudiese apreciar el trabajo del artista. 
+      <br>La entronización, junto a la Baliza Punta Hermengo, se llevó a cabo el lunes 17 de abril de 2006, luego de ser bendecido por el obispo diocesano, Monseñor Puiggari. 
+      <br>Con más de 20 metros de alto, el cristo asume dimensiones monumentales y por su ubicación rápidamente se sumó a la postal de la ciudad.</p>
+  </div>
+</section>
+
+{% endblock %}

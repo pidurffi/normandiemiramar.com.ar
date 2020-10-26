@@ -1,220 +1,105 @@
 {% extends "AppBundle::Sitio/layout.html.twig" %}
-
+{% set home = true %}
 
 {% block content %}
 
-	{{ render(controller('AppBundle:Default:promociones')) }}
+<!-- Intro animation -->
+  <div class="intro">
+    <div class="owl-carousel intro-carousel">
+      <div class="intro__item one">
+        <p class="intro__text">
+          <span>A 300 metros del mar</span> <span>Y las principales áreas comerciales</span>
+        </p>
+      </div>
+      <div class="intro__item two">
+          <p class="intro__text">
+            <span>Miramar, una ciudad apacible</span> <span>Dedicada a los niños y la familia</span>
+          </p>
+      </div>
+    </div>
+  </div>
 
-	<section id="call-to-action">
-        <h3>WhatsApp directo !!!</h3>
-        <p>Hacé click acá y envianos tu consulta por WhatsApp, te responderemos inmediatamente</p>
-        <a href="https://wa.me/5491154152464" target="_blank"><i class="fab fa-whatsapp fa-10x" aria-hidden="true"></i></a>
-    </section>
-	
-	 <section class="cabanas" id="cabanas">
-		<div class="container">
-			<h2>Las habitaciones</h2>
-			<ul class="apartamentos-nav">
-				<li><a class="one active">Dobles</a></li>
-				<li><a class="two">Triples</a></li>
-				<li><a class="three">Departamentos</a></li>
-			</ul>
-			<div class="gal-wrapper">
-				<div class="gal-1 on">
-					<div class="wrapper">
-						<div class="controls controls-1">
-							<span class="icon-arrow-left"></span>
-							<span class="icon-arrow-right"></span>
-						</div>
-						<div class="owl-cabanas-1">
-							{% for img in galeria_loft.galeria %}
-							<div class="item">
-								<img src="{{ asset('/uploads/galerias/gallery/' ~ img) }}" alt="">
-							</div>
-							{% endfor %}
-						</div>
-					</div>
-					{#
-					<ul>
-						<li><span>&check;</span>Cabañas con capacidad hasta 6 personas</li>
-						<li><span>&check;</span>2 dormitorios, baño completo, toilette, cocina completa (heladera, vajilla completa)</li>
-						<li><span>&check;</span>Calefacción, ventiladores de techo</li>
-						<li><span>&check;</span>Piscina descubierta climatizada (con sector para niños) y reposeras</li>
-						<li><span>&check;</span>Estacionamiento semi cubierto para autos de los huéspedes (un auto por cabaña)</li>
-						<li><span>&check;</span>Vidrios tonalizados</li>
-						<li><span>&check;</span>La mesa del comedor se extiende hasta una capacidad de 12 personas para ocaciones de recibir visitas</li>
-						<li><span>&check;</span>T.V. por cable</li>
-						<li><span>&check;</span>Reproductor de DVD</li>
-						<li><span>&check;</span>Juegos para chicos</li>
-						<li><span>&check;</span>Parrillas individuales</li>
-						<li><span>&check;</span>Caja de seguridad</li>
-					</ul>
-					#}
-				</div>
-				<div class="gal-2">
-					<div class="wrapper">
-						<div class="controls controls-2">
-							<span class="icon-arrow-left"></span>
-							<span class="icon-arrow-right"></span>
-						</div>
-						<div class="owl-cabanas-2">
-							{% for img in galeria_3amb.galeria %}
-							<div class="item">
-								<img src="{{ asset('/uploads/galerias/gallery/' ~ img) }}" alt="">
-							</div>
-							{% endfor %}
-						</div>
-					</div>
-					{#
-					<ul>
-						<li><span>&check;</span>Cabañas con capacidad hasta 6 personas</li>
-						<li><span>&check;</span>2 dormitorios, baño completo, toilette, cocina completa (heladera, vajilla completa)</li>
-						<li><span>&check;</span>Calefacción, ventiladores de techo</li>
-						<li><span>&check;</span>Piscina descubierta climatizada (con sector para niños) y reposeras</li>
-						<li><span>&check;</span>Estacionamiento semi cubierto para autos de los huéspedes (un auto por cabaña)</li>
-						<li><span>&check;</span>Vidrios tonalizados</li>
-						<li><span>&check;</span>La mesa del comedor se extiende hasta una capacidad de 12 personas para ocaciones de recibir visitas</li>
-						<li><span>&check;</span>T.V. por cable</li>
-						<li><span>&check;</span>Reproductor de DVD</li>
-						<li><span>&check;</span>Juegos para chicos</li>
-						<li><span>&check;</span>Parrillas individuales</li>
-						<li><span>&check;</span>Caja de seguridad</li>
-					</ul>
-					#}
-				</div>
-				<div class="gal-3">
-					<div class="wrapper">
-						<div class="controls controls-3">
-							<span class="icon-arrow-left"></span>
-							<span class="icon-arrow-right"></span>
-						</div>
-						<div class="owl-cabanas-3">
-							{% for img in galeria_2amb.galeria %}
-							<div class="item">
-								<img src="{{ asset('/uploads/galerias/gallery/' ~ img) }}" alt="">
-							</div>
-							{% endfor %}
-						</div>
-					</div>
-					{#
-					<ul>
-						<li><span>&check;</span>Cabañas con capacidad hasta 6 personas</li>
-						<li><span>&check;</span>2 dormitorios, baño completo, toilette, cocina completa (heladera, vajilla completa)</li>
-						<li><span>&check;</span>Calefacción, ventiladores de techo</li>
-						<li><span>&check;</span>Piscina descubierta climatizada (con sector para niños) y reposeras</li>
-						<li><span>&check;</span>Estacionamiento semi cubierto para autos de los huéspedes (un auto por cabaña)</li>
-						<li><span>&check;</span>Vidrios tonalizados</li>
-						<li><span>&check;</span>La mesa del comedor se extiende hasta una capacidad de 12 personas para ocaciones de recibir visitas</li>
-						<li><span>&check;</span>T.V. por cable</li>
-						<li><span>&check;</span>Reproductor de DVD</li>
-						<li><span>&check;</span>Juegos para chicos</li>
-						<li><span>&check;</span>Parrillas individuales</li>
-						<li><span>&check;</span>Caja de seguridad</li>
-					</ul>
-					#}
-				</div>
-			</div>
-		</div>
-	</section> 
+  {# Promos #}
+  {{ render(controller('AppBundle:Default:promociones')) }}
 
-	<section class="gallery" id="gallery">
-		<div class="container">
-			<h2>Galería de fotos</h2>
-			<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-				<div class="row">
-					{% set i=0 %}
-					{% for img in galeria_ppal.galeria %}
-					{% set i=i+1 %}
-					<figure class="{% if i == 1 %}mobile-thumb {% endif %} col-sm-3" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-						<a href="{{ asset('/uploads/galerias/gallery/' ~ img) }}" itemprop="contentUrl" data-size="800x536">
-							<img src="{{ asset('/uploads/galerias/') }}{{ img|gallery_thumb(350,234) }}" itemprop="thumbnail" alt="Image description" />
-							<span class="mobile-label">Ver galeria</span>
-						</a>
-					</figure>
-					{% endfor %}
-				</div>
-			</div>
-		</div>
-	</section>
+  <!-- Hotel -->
+  <section class="section hotel">
+    <div class="section__holder">
+      <h2 class="section__title">Hotel Normandie</h2>
+      <p class="section__text">El Hotel está ubicado en la zona céntrica de Miramar, a 300 metros del mar y las principales áreas comerciales, ofrecemos un servicio de excelente calidad, brindando a nuestros huéspedes la calidez de nuestra gente, para hacerlos sentir como en su hogar.</p>
+      <p class="section__text">Miramar, una ciudad apacible, dedicada a los niños y la familia. Miramar dispone de una magnífica costa, con amplias playas de suave arena, que brindan todas las posibilidades para disfrutar del sol y el mar.</p>
+      <a href="{{ url('habitaciones') }}" class="section__button button --secondary --with-icon"><i class="fas fa-images"></i> Ver fotos del hotel</a>
+    </div>
+  </section>
 
-	<section class="services" id="services">
-		<div class="container">
-			<h2>Nuestros Servicios</h2>
-			<div class="row">
-				<div class="col-sm-6">
-					<div class="item">
-						<p><span class="icon-desayuno"></span>Desayuno Buffet</p>
-					</div>
-				</div>
-				<div class="col-sm-6">
-					<div class="item">
-						<p><span class="icon-limpieza"></span>Servicio de mucama</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-6">
-					<div class="item">
-						<p><span class="icon-cama"></span>Ropa blanca</p>
-					</div>
-				</div>
-				<div class="col-sm-6">
-					<div class="item">
-						<p><span class="icon-wifi"></span>WI-FI en todo el hotel</p>
-					</div>
-				</div>
-			</div>
-            
-			<div class="row">
-				<div class="col-sm-6">
-					<div class="item">
-						<p><span class="icon-alarma"></span>Caja de seguridad en cada habitación</p>
-					</div>
-				</div>
-				<div class="col-sm-6">
-					<div class="item">
-						<p><span class="icon-cuna"></span>Practicuna, sillita para comer y bañera para bebés</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+  <!-- Whatsapp -->
+  <section class="section whatsapp">
+    <h2 class="section__title">Whatsapp directo !</h2>
+    <p class="section__text">Hacé click acá y envianos tu consulta por WhatsApp, te responderemos inmediatamente</p>
+    <a href="https://wa.me/5491154152464" target="_blank" class="whatsapp-cta">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </section>
 
-	<section class="map" id="ubicacion">
-		<div class="container">
-			<h2>Ubicación</h2>
-		</div>
-		<div id="map"></div>
-	</section>
+  <!-- Location -->
+  <section class="section location" id="como-llegar">
+    <h2 class="section__title">Cómo llegar</h2>
+    <div class="section__holder">
+      <div class="location__info">
+        <p class="section__text location__text">El <span class="hotel">Hotel Normandie</span> se encuentra en Miramar, provincia de Buenos Aires, sobre la Calle 19 N° 910 esquina 18</p>
+        <p class="section__text location__text">Miramar se encuentra ubicado en el sudeste de la Provincia de Buenos Aires (Latitud 38º 16' Sur, Longitud 57º 50' Oeste), a 450 Km. de la Ciudad Autónoma de Buenos Aires, por la ruta Provincial Nº 2; y a 45 Km. al Sur de Mar del Plata por la ruta Provincial Nº 11.</p>
+        <h3 class="location__title">Accesos</h3>
+        <p class="section__text location__text">Desde el Norte: Por ruta Provincial Nº 2 y ruta Provincial Nº 11, y por Ferrocarril Ferrobaires</p>
+        <p class="section__text location__text">Desde el Sur: Por ruta Provincial Nº 88 y ruta Provincial Nº 77</p>
+        <p class="section__text location__text">Desde el Noroeste: Por ruta Provincial Nº 226 y rutas 11 y 88</p>
+      </div>
 
-	<section class="contact" id="contact">
-		<div class="container">
-			<div class="title">
-				<h2>Contacto</h2>
-			</div>
-			<div class="row">
-				<form  id="form_contacto" method="post" onsubmit="return validar_form();">
-				<div class="col-sm-6">
-					<input type="text" placeholder="Nombre" required="required" id="form_nombre">
-					<input type="text" placeholder="Teléfono" required="required" id="form_telefono">
-					<input type="email" placeholder="Mail" required="required" id="form_email">
-				</div>
-				<div class="col-sm-6">
-					<textarea placeholder="Comentario" id="form_mensaje"></textarea>
-				</div>
-				<div class="col-sm-12 btn">
-					<a class="send">Enviar</a>
-					<div class="spinner" id="form_img_loading">
-						<div class="rect1"></div>
-						<div class="rect2"></div>
-						<div class="rect3"></div>
-						<div class="rect4"></div>
-						<div class="rect5"></div>
-					</div>
-				</div>
-				</form>
-			</div>
-		</div>
-	</section>
+      <div class="location__map" id="map">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6264.674039196578!2d-57.83893036695965!3d-38.27167976815704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9585107cecfa1b19%3A0xc65883203d88de8c!2sHotel%20Normandie%20Miramar!5e0!3m2!1ses!2sar!4v1580823809609!5m2!1ses!2sar" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe> 
+      </div>
+    </div>
+  </section>
 
-{% endblock %}	
+  <!-- Users -->
+  <section class="section review">
+    <div class="section__holder">
+      <h2 class="section__title">Nuestros huéspedes</h2>
+      <p class="section__text">Conoce que opinan de nosotros los huéspedes que ya conocieron el <span class="hotel">Hotel Normandie</span></p>
+      <div class="owl-carousel review-carousel">
+        <div class="review__item">
+          <h3 class="review__title">Excelente! Lo recomiendo!</h3>
+          <p class="review__text">
+            <i class="fas fa-quote-left"></i>
+            Preciosas las instalaciones. Cómodo. Habitación (triple superior) muy amplia, dos espacios dividida por un baño amplio tambien. La comida riquísima y muy abundante. El personal excelente! Muy buena ubicacion, tranquilo, pero cerca de todo.
+            <i class="fas fa-quote-right"></i>
+          </p>
+        </div>
+        <div class="review__item">
+          <h3 class="review__title">Excelente comida</h3>
+          <p class="review__text">
+            <i class="fas fa-quote-left"></i>
+            No me hospedé en este hotel, pero si me recomendaron ir a comer. Fui a desayunar y había variedad de cosas para elegir. Después fui a cenar y la comida me encanto. También me gusto mucho la decoración del hotel.
+            <i class="fas fa-quote-right"></i>
+          </p>
+        </div>
+        <div class="review__item">
+          <h3 class="review__title">Lindas vacaciones</h3>
+          <p class="review__text">
+            <i class="fas fa-quote-left"></i>
+            Tuve una muy buena experiencia. El hotel está recién arreglado, la decoración es muy linda, el desayuno bastante variado y la atención muy agradable.
+            <i class="fas fa-quote-right"></i>
+          </p>
+        </div>
+        <div class="review__item">
+          <h3 class="review__title">Excelente lugar</h3>
+          <p class="review__text">
+            <i class="fas fa-quote-left"></i>
+            Tuve que viajar el fin de semana y fui sin reserva y me aconsejaron ir ahi la verdad el hotel es re lindo, super confortable, limpio, luminoso y el trato de primera. Es un hotel reciclado a nuevo la construcción es del año 50 y realmente parece que no tuviera mas de 50 años. Muy buen gusto. Es para volver.
+            <i class="fas fa-quote-right"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set servicios = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('servicios') }}"><i class="fas fa-concierge-bell"></i> Servicios</a>
+      </li>
+    </ul>
+    <a href="{{ url('home') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver al Inicio</a>
+  </div>
+</div>
+
+<!-- Habitaciones home -->
+<section class="section content-inside">
+  <div class="section__holder">
+    <h2 class="section__title">Servicios</h2>
+    <h3 class="section__subtitle">Salón comedor</h3>
+    <p class="section__text">Los huéspedes pueden usar el salon comedor para almorzar y cenar trayendo su comida. el Hotel les provee la vajilla correspondiente y se hace cargo de la limpieza.</p>
+    <h3 class="section__subtitle">Sala de juegos</h3>
+    <p class="section__text">Para los niños (y no tan niños) tenemos a disposición y sin cargo alguno: mesa de Ping Pong, Metegol, PlayStation y juegos de mesa.</p>
+    <h3 class="section__subtitle">Además</h3>
+    <p class="section__text">El Hotel dispone de una heladera para aquel pasajero que desee guardar algo (comida, bebida, medicamentos) y también un espacio para guardar sillas, reposeras, sombrillas etc para que no ocupen lugar en la habitación.</p>
+    <p class="section__text">Wifi libre en todo el hotel.</p>
+    <p class="section__text">Cualquier duda, estamos a tu disposición.</p>
+    <ul class="services__grid">
+      <li class="services__item">
+        <i class="fas fa-coffee"></i>
+        <h4 class="services__title">Desayuno buffet</h4>
+        <p class="services__text">Se sirve por la mañana en el salón</p>
+      </li>
+      <li class="services__item">
+        <i class="fas fa-broom"></i>
+        <h4 class="services__title">Servicio de limpieza</h4>
+        <p class="services__text">Limpieza diaria de la habitación</p>
+      </li>
+      <li class="services__item">
+        <i class="fas fa-bed"></i>
+        <h4 class="services__title">Ropa blanca</h4>
+        <p class="services__text">Recambio de sábanas y toallas</p>
+      </li>
+      <li class="services__item">
+        <i class="fas fa-wifi"></i>
+        <h4 class="services__title">Wifi</h4>
+        <p class="services__text">Wifi en todo el hotel</p>
+      </li>
+      <li class="services__item">
+        <i class="fas fa-key"></i>
+        <h4 class="services__title">Caja de seguridad</h4>
+        <p class="services__text">Una en cada habitación</p>
+      </li>
+      <li class="services__item">
+        <i class="fas fa-baby-carriage"></i>
+        <h4 class="services__title">Para bebés</h4>
+        <p class="services__text">Practicuna, sillita para comer y bañera</p>
+      </li>
+      <li class="services__item">
+          <i class="fas fa-gamepad"></i>
+        <h4 class="services__title">Sala de juegos</h4>
+        <p class="services__text">Ping Pong, Metegol, PlayStation y juegos de mesa</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+{% endblock %}

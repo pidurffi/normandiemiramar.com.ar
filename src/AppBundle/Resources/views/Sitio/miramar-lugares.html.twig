@@ -1,0 +1,222 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set miramar = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-historia') }}"><i class="fas fa-map-marked-alt"></i> Miramar</a>
+      </li>
+    </ul>
+    <a href="{{ url('home') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver al Inicio</a>
+  </div>
+</div>
+
+<!-- Tab navigation -->
+<div class="tab-nav">
+  <div class="tab-nav__holder">
+    <ul>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-historia') }}" class="button --text --tab-button">Historia</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-fotos') }}" class="button --text --tab-button">Fotos</a>
+      </li>
+      <li class="tab-nav__item --active">
+        <a href="{{ url('miramar-lugares') }}" class="button --text --tab-button">Para conocer</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-cerca') }}" class="button --text --tab-button">Cerca de Normandie</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Habitaciones home -->
+<section class="section tab-content">
+  <div class="section__holder">
+    <h2 class="section__title">Lugares y paseos en Miramar</h2>
+    <div class="tab-content__gallery --grid-3">
+      <div class="places__item">
+        <figure class="places__photo">
+          <img src="{{ asset('bundles/app/maquetado/images/places/aero-club-miramar.jpg') }}" alt="">
+        </figure>
+        <div class="places__content">
+          <h3 class="places__title">Aeroclub Miramar</h3>
+          <p class="places__description">Esta entidad de bien público, se encarga de fomentar la aviación civil y deportiva</p>
+          <a href="{{ url('miramar-lugares-aeroclub-miramar') }}" class="places__button button --text --secondary">Ver más</a>
+        </div>
+      </div>
+      <div class="places__item">
+        <figure class="places__photo">
+          <img src="{{ asset('bundles/app/maquetado/images/places/arbol-tallado.jpg') }}" alt="">
+        </figure>
+        <div class="places__content">
+          <h3 class="places__title">Arbol Tallado</h3>
+          <p class="places__description">El tronco de una lambertiana fue el lienzo de esta obra de arte en 2009</p>
+          <a href="{{ url('miramar-lugares-arbol-tallado') }}" class="places__button button --text --secondary">Ver más</a>
+        </div>
+      </div>
+      <div class="places__item">
+        <figure class="places__photo">
+          <img src="{{ asset('bundles/app/maquetado/images/places/bosque-energetico.jpg') }}" alt="">
+        </figure>
+        <div class="places__content">
+          <h3 class="places__title">Bosque Energético</h3>
+          <p class="places__description">También se lo llama Bosque Oscuro, un lugar icónico de la ciudad de Miramar</p>
+          <a href="{{ url('miramar-lugares-bosque-energetico') }}" class="places__button button --text --secondary">Ver más</a>
+        </div>
+      </div>
+      <div class="places__item">
+        <figure class="places__photo">
+          <img src="{{ asset('bundles/app/maquetado/images/places/vivero-dunicola.jpg') }}" alt="">
+        </figure>
+        <div class="places__content">
+          <h3 class="places__title">Bosque Vivero Dunícola</h3>
+          <p class="places__description">Tiene una extensión de 502 hectareas que sirven de pulmón a la ciudad</p>
+          <a href="{{ url('miramar-lugares-vivero-dunicola') }}" class="places__button button --text --secondary">Ver más</a>
+        </div>
+      </div>
+      <div class="places__item">
+        <figure class="places__photo">
+          <img src="{{ asset('bundles/app/maquetado/images/places/centinela-mar.jpg') }}" alt="">
+        </figure>
+        <div class="places__content">
+          <h3 class="places__title">Centinela del Mar</h3>
+          <p class="places__description">Paraíso de pescadores y con grandes recursos arqueológicos de dificil acceso</p>
+          <a href="{{ url('miramar-lugares-centinela-mar') }}" class="places__button button --text --secondary">Ver más</a>
+        </div>
+      </div>
+      <div class="places__item">
+        <figure class="places__photo">
+          <img src="{{ asset('bundles/app/maquetado/images/places/cristo-hermandad.jpg') }}" alt="">
+        </figure>
+        <div class="places__content">
+          <h3 class="places__title">Cristo de la Hermandad</h3>
+          <p class="places__description">Tallado en la Semana Santa del 2006, se encuentra en el ingreso al Vivero Dunícola</p>
+          <a href="{{ url('miramar-lugares-cristo-hermandad') }}" class="places__button button --text --secondary">Ver más</a>
+        </div>
+      </div>
+      <div class="places__item">
+        <figure class="places__photo">
+          <img src="{{ asset('bundles/app/maquetado/images/places/feria-artesanos.jpg') }}" alt="">
+        </figure>
+        <div class="places__content">
+          <h3 class="places__title">Feria de Artesanos</h3>
+          <p class="places__description">De las más grandes del país, por la cantidad de artesanos como por sus productos</p>
+          <a href="{{ url('miramar-lugares-feria-artesanos') }}" class="places__button button --text --secondary">Ver más</a>
+        </div>
+      </div>
+      <div class="places__item">
+        <figure class="places__photo">
+          <img src="{{ asset('bundles/app/maquetado/images/places/mar-sud.jpg') }}" alt="">
+        </figure>
+        <div class="places__content">
+          <h3 class="places__title">Mar del Sud</h3>
+          <p class="places__description">Cerca a Miramar, a 17km se ha convertido en un refugio de los que buscan tranquilidad</p>
+          <a href="{{ url('miramar-lugares-mar-sud') }}" class="places__button button --text --secondary">Ver más</a>
+        </div>
+      </div>
+      <div class="places__item">
+        <figure class="places__photo">
+          <img src="{{ asset('bundles/app/maquetado/images/places/monumentos-miramar.jpg') }}" alt="">
+        </figure>
+        <div class="places__content">
+          <h3 class="places__title">Monumentos de Miramar</h3>
+          <p class="places__description">Distintas piezas que hacen al patrimonio cultural de la ciudad de Miramar</p>
+          <a href="{{ url('miramar-lugares-monumentos-miramar') }}" class="places__button button --text --secondary">Ver más</a>
+        </div>
+      </div>
+      <div class="places__item">
+        <figure class="places__photo">
+          <img src="{{ asset('bundles/app/maquetado/images/places/muelle-pescadores.jpg') }}" alt="">
+        </figure>
+        <div class="places__content">
+          <h3 class="places__title">Muelle de Pescadores</h3>
+          <p class="places__description">Aparte de ser un gran lugar para pescar es también un buen punto fotográfico</p>
+          <a href="{{ url('miramar-lugares-muelle-pescadores') }}" class="places__button button --text --secondary">Ver más</a>
+        </div>
+      </div>
+      <div class="places__item">
+        <figure class="places__photo">
+          <img src="{{ asset('bundles/app/maquetado/images/places/bienal-arte.jpg') }}" alt="">
+        </figure>
+        <div class="places__content">
+          <h3 class="places__title">Murales de la Bienal de Arte</h3>
+          <p class="places__description">Distintos artistas han dejaron plasmado su arte en muros y en distintas esculturas</p>
+          <a href="{{ url('miramar-lugares-murales-bienal') }}" class="places__button button --text --secondary">Ver más</a>
+        </div>
+      </div>
+      <div class="places__item">
+        <figure class="places__photo">
+          <img src="{{ asset('bundles/app/maquetado/images/places/ciencias-naturales.jpg') }}" alt="">
+        </figure>
+        <div class="places__content">
+          <h3 class="places__title">Museo de Ciencias Naturales</h3>
+          <p class="places__description">Recientemente inaugurado, el Museo de Paleontológica y Ciencias Naturales se encuentra en la entrada principal</p>
+          <a href="{{ url('miramar-lugares-museo-naturales') }}" class="places__button button --text --secondary">Ver más</a>
+        </div>
+      </div>
+      <div class="places__item">
+        <figure class="places__photo">
+          <img src="{{ asset('bundles/app/maquetado/images/places/archivo-historico.jpg') }}" alt="">
+        </figure>
+        <div class="places__content">
+          <h3 class="places__title">Museo y Archivo Histórico de Miramar</h3>
+          <p class="places__description">Se encuentra en el corazón del Vivero y fué recientemente reconvertido</p>
+          <a href="{{ url('miramar-lugares-archivo-historico') }}" class="places__button button --text --secondary">Ver más</a>
+        </div>
+      </div>
+      <div class="places__item">
+        <figure class="places__photo">
+          <img src="{{ asset('bundles/app/maquetado/images/places/parque-patricios.jpg') }}" alt="">
+        </figure>
+        <div class="places__content">
+          <h3 class="places__title">Parque de los Patricios</h3>
+          <p class="places__description">Un espacio verde de recreación y esparcimiento, a metros del mar y del centro</p>
+          <a href="{{ url('miramar-lugares-parque-patricios') }}" class="places__button button --text --secondary">Ver más</a>
+        </div>
+      </div>
+      <div class="places__item">
+        <figure class="places__photo">
+          <img src="{{ asset('bundles/app/maquetado/images/places/paseo-medanos.jpg') }}" alt="">
+        </figure>
+        <div class="places__content">
+          <h3 class="places__title">Paseos por los Médanos</h3>
+          <p class="places__description">Un recorrido único por las playas al sur de la ciudad. Una gran actividad familiar</p>
+          <a href="{{ url('miramar-lugares-paseo-medanos') }}" class="places__button button --text --secondary">Ver más</a>
+        </div>
+      </div>
+      <div class="places__item">
+        <figure class="places__photo">
+          <img src="{{ asset('bundles/app/maquetado/images/places/playas-miramar.jpg') }}" alt="">
+        </figure>
+        <div class="places__content">
+          <h3 class="places__title">Playas de Miramar</h3>
+          <p class="places__description">Tienen cerca de 10km de extensión y son ideales para ser disfrutadas en familia</p>
+          <a href="{{ url('miramar-lugares-playas-miramar') }}" class="places__button button --text --secondary">Ver más</a>
+        </div>
+      </div>
+      <div class="places__item">
+        <figure class="places__photo">
+          <img src="{{ asset('bundles/app/maquetado/images/places/turismo-rural.jpg') }}" alt="">
+        </figure>
+        <div class="places__content">
+          <h3 class="places__title">Turismo Rural</h3>
+          <p class="places__description">Circuito llamado "Mar y Pampa" es una alternativa al mar y la playa</p>
+          <a href="{{ url('miramar-lugares-turismo-rural') }}" class="places__button button --text --secondary">Ver más</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

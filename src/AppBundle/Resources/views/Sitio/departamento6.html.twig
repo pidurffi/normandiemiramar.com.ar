@@ -1,0 +1,75 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set habitaciones = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('habitaciones') }}"><i class="fas fa-home"></i> Habitaciones</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('departamento') }}"><i class="fas fa-door-open"></i> Departamento 6 personas</a>
+      </li>
+    </ul>
+    <a href="{{ url('habitaciones') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Habitaciones</a>
+  </div>
+</div>
+
+<!-- Habitaciones home -->
+<section class="section content-inside">
+  <div class="section__holder">
+    <div class="content-inside__grid">
+      <div class="content-inside__gallery" id="lightgallery">
+        {{ render(controller('AppBundle:Default:galeria',{galeria_id: 9})) }}
+      </div>
+      <div class="content-inside__description">
+        <h2 class="content-inside__main-title">Departamento</h2>
+        <p class="content-inside__text">Hasta 6 personas</p>
+        <p class="content-inside__text">Ubicados en el 3er piso del hotel. 2 ambientes muy grandes y luminosos</p>
+        <h3 class="content-inside__title">Servicios</h3>
+        <ul class="content-inside__list">
+          <li><i class="fas fa-check"></i> LCD 40” tv por Cable</li>
+          <li><i class="fas fa-check"></i> Wi-Fi Libre</li>
+          <li><i class="fas fa-check"></i> Caja de seguridad individual</li>
+          <li><i class="fas fa-check"></i> Cocina (microondas, heladera bajo mesada, para eléctrica, vajilla)</li>
+          <li><i class="fas fa-check"></i> Split frío-calor en cada ambiente</li>
+          <li><i class="fas fa-check"></i> Secador de pelo</li>
+          <li><i class="fas fa-check"></i> Cómodos y nuevos sommiers</li>
+          <li><i class="fas fa-check"></i> Cortinas con black out</li>
+          <li><i class="fas fa-check"></i> Baño con bañadera</li>
+          <li><i class="fas fa-check"></i> Totalmente alfombrada como así también los pasillos y escaleras</li>
+          <li><i class="fas fa-check"></i> Ascensor</li>
+          <li><i class="fas fa-check"></i> Servicio de mucama y ropa blanca</li>
+        </ul>
+        <h3 class="content-inside__title">Salón</h3>
+        <h4 class="content-inside__subtitle">Mañana</h4>
+        <p class="content-inside__text">Se sirve el desayuno buffet</p>
+        <h4 class="content-inside__subtitle">Mediodía</h4>
+        <p class="content-inside__text">Se habilita para el huésped que quiera comprar comida en algún lugar y comer ahí (así abaratan costos), el Hotel les provee la vajilla correspondiente y se hace cargo de la limpieza</p>
+        <h3 class="content-inside__title">Sala de juegos</h3>
+        <p class="content-inside__text">Para los niños (y no tan niños) tenemos a disposición y sin cargo alguno</p>
+        <ul class="content-inside__list">
+          <li><i class="fas fa-gamepad"></i> Mesa de ping pong</li>
+          <li><i class="fas fa-gamepad"></i> Metegol</li>
+          <li><i class="fas fa-gamepad"></i> Play Station</li>
+          <li><i class="fas fa-gamepad"></i> Juegos de mesa</li>
+        </ul>
+        <h3 class="content-inside__title">Además</h3>
+        <p class="content-inside__text">El Hotel dispone de una heladera para aquel pasajero que desee guardar algo (comida, bebida, medicamentos) y también un espacio para guardar sillas, reposeras, sombrillas etc para que no ocupen lugar en la habitación</p>
+        <p class="content-inside__text">Wi-Fi libre en todo el hotel</p>
+        <p class="content-inside__text">Cualquier duda, estamos a su disposición</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

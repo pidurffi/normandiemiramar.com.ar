@@ -42,6 +42,7 @@ class Contacto
 	 */
 	private $fecha;
 	
+	
 
     /**
      * Get id
@@ -125,6 +126,8 @@ class Contacto
         return $this->telefono;
     }
     
+   
+    
     /**
      * Set fecha
      *
@@ -148,6 +151,8 @@ class Contacto
     {
         return $this->fecha;
     }
+    
+   
 
     /**
      * Set mensaje

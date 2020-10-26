@@ -4,7 +4,7 @@ parameters:
     database_port: null
     database_name: normandi_2016
     database_user: normandi_2016
-    database_password: WIk0UGM4T5Nw    
+    database_password: WIk0UGM4T5Nw        
     mailer_transport: smtp
     mailer_host: normandiemiramar.com.ar
     mailer_user: webmaster+normandiemiramar.com.ar
@@ -13,6 +13,5 @@ parameters:
     secret: 681ec15606bf7b3b838c03ff3b86031b39cbeb7d
     asunto_contacto: Contacto de _nombre_ desde normandiemiramar.com.ar
     contacto_from: webmaster@normandiemiramar.com.ar
-#   contacto_to: gabryel@gmail.com
     contacto_to: info@normandiemiramar.com.ar
     

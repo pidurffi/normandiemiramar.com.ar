@@ -1,0 +1,58 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set habitaciones = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('habitaciones') }}"><i class="fas fa-home"></i> Habitaciones</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('habitacion-triple-estandar') }}"><i class="fas fa-door-open"></i> Habitación Triple Estándar</a>
+      </li>
+    </ul>
+    <a href="{{ url('habitaciones') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Habitaciones</a>
+  </div>
+</div>
+
+<!-- Habitaciones home -->
+<section class="section content-inside">
+  <div class="section__holder">
+    <div class="content-inside__grid">
+      <div class="content-inside__gallery" id="lightgallery">
+        {{ render(controller('AppBundle:Default:galeria',{galeria_id: 4})) }}
+      </div>
+      <div class="content-inside__description">
+        <h2 class="content-inside__main-title">Habitación Triple Estándar</h2>
+        <p class="content-inside__text">Para 3 personas</p>
+        <h3 class="content-inside__title">Servicios</h3>
+        <ul class="content-inside__list">
+          <li><i class="fas fa-check"></i> LCD 32” tv por Cable</li>
+          <li><i class="fas fa-check"></i> Wi-Fi Libre</li>
+          <li><i class="fas fa-check"></i> Caja de seguridad individual</li>
+          <li><i class="fas fa-check"></i> Split frío-calor</li>
+          <li><i class="fas fa-check"></i> Secador de pelo</li>
+          <li><i class="fas fa-check"></i> Cómodos y nuevos sommiers</li>
+          <li><i class="fas fa-check"></i> Cortinas con black out</li>
+          <li><i class="fas fa-check"></i> Totalmente alfombrada como así también los pasillos y escaleras</li>
+          <li><i class="fas fa-check"></i> Ascensor</li>
+          <li><i class="fas fa-check"></i> Servicio de mucama y ropa blanca</li>
+        </ul>
+        
+        {{ render(controller('AppBundle:Default:infohabitaciones')) }}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

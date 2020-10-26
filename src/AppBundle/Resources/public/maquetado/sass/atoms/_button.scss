@@ -1,0 +1,119 @@
+// // // // BUTTON
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: size(8) size(20);
+  min-width: size(150);
+  height: size(40);
+  font-size: size(12);
+  font-weight: $f-semi-bold;
+  letter-spacing: size(0.5);
+  color: $c-white;
+  border-radius: size(30);
+  cursor: pointer;
+  transition: background-color .25s ease, color .25s ease;
+  &.--primary {
+    background-color: $c-primary;
+    &:hover {
+      background-color: $c-primary-hover;
+    }
+  }
+  &.--secondary {
+    color: $c-black;
+    background-color: $c-secondary;
+    &:hover {
+      background-color: $c-secondary-hover;
+    }
+  }
+  &.--tertiary {
+    color: $c-black;
+    background-color: $c-tertiary;
+    &:hover {
+      background-color: $c-tertiary-hover;
+    }
+  }
+  &.--hover-img {
+    background-color: $c-black-tr;
+    &:hover {
+      background-color: $c-black-tr-hover;
+    }
+  }
+  &.--whatsapp {
+    background-color: $c-whatsapp;
+    &:hover {
+      background-color: $c-whatsapp-hover;
+    }
+  }
+  &.--with-icon {
+    i {
+      margin-right: size(10);
+      font-size: size(24);
+    }
+  }
+  &.--text {
+    padding: 0;
+    min-width: auto;
+    height: auto;
+    border-radius: 0;
+    font-size: size(14);
+    font-weight: $f-medium;
+    text-transform: uppercase;
+    background-color: transparent;
+    &.--secondary {
+      color: $c-secondary;
+      &:hover {
+        color: $c-secondary-hover;
+      }
+    }
+    &.--header {
+      color: $c-white;
+      &:hover {
+        color: $c-secondary;
+      }
+    }
+    &.--tab-button {
+      font-size: size(10);
+      font-weight: $f-semi-bold;
+      color: $c-primary;
+      &:hover {
+        color: $c-primary-hover;
+      }
+    }
+    &.--small {
+      font-size: size(12);
+    }
+    &.--with-icon {
+      i {
+        margin-right: size(5);
+        font-weight: $f-semi-bold;
+      }
+    }
+    &:hover {
+      background-color: transparent;
+    }
+  }
+  &.--icon {
+    padding: 0;
+    min-width: auto;
+    border-radius: 0;
+    font-weight: $f-regular;
+    i {
+      font-size: size(20);
+    }
+    &.--header {
+      color: $c-white;
+      &:hover {
+        color: $c-secondary;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    &.--text {
+      &.--tab-button {
+        font-size: size(14);
+      }
+    }
+  }
+}

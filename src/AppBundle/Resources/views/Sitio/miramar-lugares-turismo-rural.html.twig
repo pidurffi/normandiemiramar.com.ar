@@ -1,0 +1,89 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set miramar = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-historia') }}"><i class="fas fa-map-marked-alt"></i> Miramar</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-lugares-aeroclub-miramar') }}"><i class="fas fa-location-arrow"></i> Turimos Rural</a>
+      </li>
+    </ul>
+    <a href="{{ url('miramar-lugares') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Paseos</a>
+  </div>
+</div>
+
+<!-- Tab navigation -->
+<div class="tab-nav">
+  <div class="tab-nav__holder">
+    <ul>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-historia') }}" class="button --text --tab-button">Historia</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-fotos') }}" class="button --text --tab-button">Fotos</a>
+      </li>
+      <li class="tab-nav__item --active">
+        <a href="{{ url('miramar-lugares') }}" class="button --text --tab-button">Para conocer</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-cerca') }}" class="button --text --tab-button">Cerca de Normandie</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Lugares contenido -->
+<section class="section tab-content">
+  <div class="section__holder">
+    <h2 class="section__title">Turismo Rural</h2>
+    <figure class="section__image">
+      <img src="{{ asset('bundles/app/maquetado/images/places/turismo-rural.jpg') }}" alt="">
+    </figure>
+    <p class="section__text --highlight">CIRCUITO LLAMADO "MAR Y PAMPA" ES UNA ALTERNATIVA AL MAR Y LA PLAYA</p>
+    <p class="section__text">Una de las alternativas más atractivas que presenta nuestra ciudad es el denominado Turismo Rural. En este circuito, llamado Circuito "Mar y Pampa" los visitantes podrán acceder a una propuesta por la cual se puede vivir una experiencia única. <br>
+    En los diferentes establecimientos, se pueden conocer paisajes y costumbres encantadores, en contacto directo con la naturaleza. Dulces caseros, tortas, productos artesanales, vegetación, animales, todo al alcance de la mano, pudiendo sentir en un instante las maravillas de la vida rural.</p>
+    <h3 class="section__subtitle">Quinta Storani</h3>
+    <p class="section__text">Ubicación: Avenida 37 entre 50 y 52
+    <br>Verduras orgánicas, dulces caseros. Tel: 02291 43 0647. 
+    <br>quintastorani@hotmail.com</p>
+    <h3 class="section__subtitle">Vivero La Criolla</h3>
+    <p class="section__text">Ubicación: Avenida 37 y 52 <br>
+        Servicio de desayuno y té con tortas Europeas- Laberinto vegetal <br>
+        Tel: 02291 43 0633. lacriollamiramar@yahoo.com.ar</p>
+    <h3 class="section__subtitle">Cabañas Pampa Grass</h3>
+    <p class="section__text">Ubicación: Av. 37 esq. 64. <br>
+        Cabañas con piscina en un entono natural <br>
+        Tel.: 0229115411335. cabanaspampagrass@miramarense.com.ar</p>
+    <h3 class="section__subtitle">Estancia Un Lugar</h3>
+    <p class="section__text">Ubicación: Avenida 37 y 74 <br>
+        Cabañas - Cancha de Polo - Salón de Té Quincho- Almuerzos y cenas</p>
+    <h3 class="section__subtitle">Los Dulces de Ofelia</h3>
+    <p class="section__text">Ubicación: Av. 37 al fondo más 100 metros <br>
+        Dulces artesanales <br>
+        Tel.: 02291 43-0606</p>
+    <h3 class="section__subtitle">Escuela de Equitación El Charaí</h3>
+    <p class="section__text">Ubicación: Calle 76 y 35 <br>
+        Cabalgatas - Clases de equitación - Caballos en Pensión Escuela de Verano.</p>
+    <h3 class="section__subtitle">Escuela Agrícola Irene Martínez de Hoz de Campos</h3>
+    <p class="section__text">Ubicación: Ruta 77 kilómetro 5,5 <br>
+        Venta de productos de granja - Elaboración de quesos, dulces, miel, pollos de campo, lechones, huevos, embutidos y chacinados. <br>
+        Tel: 02291 43 2532</p>
+    <h3 class="section__subtitle">Escuela Agropecuaria Bernardo Yraizoz</h3>
+    <p class="section__text">Stand en la Feria de artesanos. <br>
+        Venta de productos artesanales - Consultar por visitas guiadas al establecimiento.</p>
+  </div>
+</section>
+
+{% endblock %}

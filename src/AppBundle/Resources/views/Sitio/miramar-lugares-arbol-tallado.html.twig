@@ -1,0 +1,60 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% set interna = true %}
+{% set miramar = true %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-holder">
+    <ul>
+      <li class="breadcrumb__item">
+        <a href="{{ url('home') }}"><i class="fas fa-hotel"></i> Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-historia') }}"><i class="fas fa-map-marked-alt"></i> Miramar</a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+      <li class="breadcrumb__item --active">
+        <a href="{{ url('miramar-lugares-aeroclub-miramar') }}"><i class="fas fa-location-arrow"></i> Arbol Tallado</a>
+      </li>
+    </ul>
+    <a href="{{ url('miramar-lugares') }}" class="breadcrumb__back-button button --primary --with-icon"><i class="fas fa-long-arrow-alt-left"></i> Volver a Paseos</a>
+  </div>
+</div>
+
+<!-- Tab navigation -->
+<div class="tab-nav">
+  <div class="tab-nav__holder">
+    <ul>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-historia') }}" class="button --text --tab-button">Historia</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-fotos') }}" class="button --text --tab-button">Fotos</a>
+      </li>
+      <li class="tab-nav__item --active">
+        <a href="{{ url('miramar-lugares') }}" class="button --text --tab-button">Para conocer</a>
+      </li>
+      <li class="tab-nav__item">
+        <a href="{{ url('miramar-cerca') }}" class="button --text --tab-button">Cerca de Normandie</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Lugares contenido -->
+<section class="section tab-content">
+  <div class="section__holder">
+    <h2 class="section__title">Arbol Tallado</h2>
+    <figure class="section__image">
+      <img src="{{ asset('bundles/app/maquetado/images/places/arbol-tallado.jpg') }}" alt="">
+    </figure>
+    <p class="section__text --highlight">EL TRONCO DE UNA LAMBERTIANA FUE EL LIENZO DE ESTA OBRA DE ARTE EN 2009</p>
+    <p class="section__text">La vieja lambertiana que durante años acompañó la vida de la ciudad en la plaza Islas Malvinas cobró otro destino cuando se convirtió en la Talla Madre Naturaleza, que desde hace pocos años se transformó en una de las fotos obligadas de quienes llegan a Miramar. <br>Gracias a una iniciativa de la Dirección de Derechos Humanos local este hermoso árbol que contaba con unos 100 años y se encontraba sin posibilidades de continuar cumpliendo con su función encontró otro destino de la mano de un grupo de artesanos locales que pudieron convertirlo en esta hermosa escultura. El trabajo sobre el tronco demandó tres meses entre marzo y julio de 2009 para poder pasar a convertirse en el Paseo Madre Naturaleza.
+      Esta talla, permite valorizar y volver a ver nuestros árboles, valorando y comprendiendo la magia creadora de la naturaleza y nuestra relación con ella, esto en una ciudad que cuenta con una simbiosis muy particular entre el campo, el mar y los árboles. <br>Un recorrido para no perderse y disfrutar detallle a detalle.</p>
+  </div>
+</section>
+
+{% endblock %}
