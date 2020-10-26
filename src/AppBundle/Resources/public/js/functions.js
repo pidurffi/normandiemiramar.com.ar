@@ -1,8 +1,5 @@
 $(document).ready(function(){
 
-	/*slider intro 100% height responsive*/
-	$introHeight = $(window).height();
-	$('.owl-main-slider .item').css('height',$introHeight);
 
 	//MAIN SLIDER
 	var owlMainSlider = $(".owl-main-slider");
@@ -125,9 +122,9 @@ $(window).scroll(function(){
 
     if(scroll >= 200) {
         $('header').addClass('sticky');
-        $('.social-nav, .contact-info').hide();
+       
     } else {
         $('header').removeClass('sticky');
-        $('.social-nav, .contact-info').show();
+       
     }
 });

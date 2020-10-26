@@ -27,6 +27,7 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
 	<!-- GOOGLE FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/39f2458975.js"></script>
 	<!-- JS -->
 	<script type="text/javascript" src="{{ asset('bundles/app/js/jquery-2.2.3.min.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('bundles/app/js/functions.js') }}"></script>
@@ -81,36 +82,48 @@
 <body>
 
 	<section class="intro" id="home">
-		<div class="header-wrapper">
+		
+		<header>
 			<div class="container">
-				<header>
-				<button class="hamburger hamburger--spin" type="button">
-					<span class="hamburger-box">
-						<span class="hamburger-inner"></span>
-					</span>
-				</button>
+				
+				
 				<div class="logo"></div>
-					<div class="contact-info">
-						<p>(011) 15 5415-2464</p>
-					</div>
-					<nav>
-						<ul>
-							<li><a data-scroll href="#banners">El Hotel</a></li>
+				
+				
+				<div class="nav-wrapper">
+				    <span class="ws-phone">
+				        <a href=""><i class="fab fa-whatsapp"></i> (011) 5415.2464</a>
+				    </span>
+				    <span class="ws-phone --green">
+				        <a target="_blank" href="https://wa.me/5491154152464"><i class="fab fa-whatsapp"></i> Chatea por Whatsapp</a>
+				    </span>
+				    <nav>
+    					<ul>
+    						<li><a data-scroll href="#banners">El Hotel</a></li>
 							{# <li><a data-scroll href="#cabanas">Las Habitaciones</a></li> #}
 							<li><a data-scroll href="#gallery">Galería de Fotos</a></li>
 							<li><a data-scroll href="#services">Servicios</a></li>
 							<li><a data-scroll href="#ubicacion">Ubicación</a></li>
 							<li><a data-scroll href="#contact">Contacto</a></li>
-						</ul>
-					</nav>
-					<ul class="social-nav">
-						<li><a><span class="icon-fb"></span></a></li>
-						<li><a><span class="icon-tw"></span></a></li>
-						<li><a><span class="icon-gp"></span></a></li>
-					</ul>
-				</header>
+    					</ul>
+    				</nav>
+				</div>
+				<button class="hamburger hamburger--spin" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+				<div class="contact-wrapper">
+    				<ul class="social-nav">
+    					<li><a><i class="fab fa-facebook-f"></i></a></li>
+    					<li><a><i class="fab fa-twitter"></i></a></li>
+    				</ul>
+    				<div class="contact-info">
+    					<a href="mailto:info@normandiemiramar.com.ar?Subject=Consulta%20Caba&ntilde;as%20Ciromarino" target="_top">info@normandiemiramar.com.ar</a>
+    				</div>
+				</div>
 			</div>
-		</div>
+		</header>
 		<div class="owl-main-slider">
 			<div class="item one"></div>
 			<div class="item two"></div>
